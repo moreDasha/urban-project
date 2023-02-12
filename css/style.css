@@ -626,7 +626,6 @@ template {
   background-color: #FFFFFF;
 }
 .tabbar__container {
-  /* height: 81px */
   padding: 24px 40px 24px 118px;
   display: flex;
   align-items: center;
@@ -862,6 +861,9 @@ template {
   .icon-box__item {
     width: 26px;
     height: 26px;
+  }
+  .tabbar {
+    padding: 24px 16px 24px 16px;
   }
   .tabbar__button-wrapper {
     margin-right: 16px;
