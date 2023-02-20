@@ -933,6 +933,9 @@ template {
     height: 26px;
   }
   .tabbar {
+    padding-top: 50px;
+  }
+  .tabbar__container {
     padding: 24px 16px 24px 16px;
   }
   .tabbar__button-wrapper {
