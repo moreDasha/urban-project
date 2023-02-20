@@ -25,7 +25,7 @@ window.addEventListener('resize',function(){
 let lastScroll = 0;
 const header = document.querySelector('.header');
 
-const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
+const scrollPosition = () => document.documentElement.scrollTop;
 const containHide = () => header.classList.contains('hide');
 
 window.addEventListener('scroll', () => {
@@ -37,6 +37,5 @@ window.addEventListener('scroll', () => {
         //scroll up
         header.classList.remove('hide');
     }
-
     lastScroll = scrollPosition();
 })
