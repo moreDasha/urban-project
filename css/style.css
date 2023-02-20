@@ -681,7 +681,7 @@ template {
   transition: all 0.3s ease-in-out;
 }
 .tabbar__button:hover {
-  background: linear-gradient(to right, rgb(31, 218, 227), rgb(60, 75, 148), rgb(177, 124, 231));
+  background: -webkit-linear-gradient(left, rgb(31, 218, 227), rgb(60, 75, 148), rgb(177, 124, 231));
   transition: all 0.3s ease-in-out;
 }
 .tabbar__button_little {
@@ -693,9 +693,11 @@ template {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(to right, rgb(31, 218, 227), rgb(60, 75, 148), rgb(177, 124, 231));
-  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(left, rgb(31, 218, 227), rgb(60, 75, 148), rgb(177, 124, 231));
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   font-size: 14px;
   font-weight: 700;
   transition: all 0.3s ease-in-out;
@@ -728,14 +730,20 @@ template {
 .img-card-item:hover {
   cursor: pointer;
 }
-.img-card-item__img {
+.img-card-item__img-wrapper {
+  display: inline-block;
+  overflow: hidden;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  width: 100%;
   margin-bottom: 12px;
   border-bottom: 4px solid;
   border-image: linear-gradient(to right, rgb(31, 218, 227), rgb(60, 75, 148), rgb(177, 124, 231));
   border-image-slice: 1;
+}
+.img-card-item__img {
+  width: 100%;
+  display: block;
+  transition: all 0.4s ease-in-out;
 }
 .img-card-item__img-mask {
   position: absolute;
@@ -754,6 +762,17 @@ template {
   margin-bottom: min(39px, 10%);
   font-size: calc(18px + 0.3125vw);
   font-weight: 700;
+}
+.img-card-item__button-box {
+  padding-left: 16px;
+}
+
+.img-card-item:hover .img-card-item__img {
+  transform: scale(1.1);
+}
+
+.img-card-item:hover .img-card-item__title {
+  text-decoration: underline;
 }
 
 .card-item-sign {
@@ -844,14 +863,16 @@ template {
 }
 .card-item_other-color {
   background: linear-gradient(to right, #343D91, #8185C8);
+  color: #FFFFFF;
 }
 .card-item__title {
   width: 85%;
   font-size: calc(14px + 0.3125vw);
   font-weight: 700;
 }
-.card-item__title_white {
-  color: #FFFFFF;
+
+.card-item:hover .card-item__title {
+  text-decoration: underline;
 }
 
 .footer {

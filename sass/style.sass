@@ -140,7 +140,7 @@ $background-color: #FFFFFF
         background: $background-color
         transition: all 0.3s ease-in-out
         &:hover
-            background: linear-gradient(to right, rgba(31, 218, 227, 1), rgba(60, 75, 148, 1), rgba(177, 124, 231, 1))
+            background: -webkit-linear-gradient(left, rgba(31, 218, 227, 1), rgba(60, 75, 148, 1), rgba(177, 124, 231, 1))
             transition: all 0.3s ease-in-out
         &_little
             width: 87px
@@ -150,9 +150,11 @@ $background-color: #FFFFFF
         display: flex
         align-items: center
         justify-content: center
-        background-image: linear-gradient(to right, rgba(31, 218, 227, 1), rgba(60, 75, 148, 1), rgba(177, 124, 231, 1))
-        -webkit-text-fill-color: transparent
+        background: -webkit-linear-gradient(left, rgba(31, 218, 227, 1), rgba(60, 75, 148, 1), rgba(177, 124, 231, 1))
         -webkit-background-clip: text
+        -moz-background-clip: text
+        -webkit-text-fill-color: transparent
+        -moz-text-fill-color: transparent
         font-size: 14px
         font-weight: 700
         transition: all 0.3s ease-in-out
@@ -181,14 +183,19 @@ $background-color: #FFFFFF
     color: $text-color
     &:hover
         cursor: pointer
-    &__img
+    &__img-wrapper
+        display: inline-block
+        overflow: hidden
         border-top-right-radius: 10px
         border-top-left-radius: 10px
-        width: 100%
         margin-bottom: 12px
         border-bottom: 4px solid
         border-image: linear-gradient(to right, rgba(31, 218, 227, 1), rgba(60, 75, 148, 1), rgba(177, 124, 231, 1))
         border-image-slice: 1
+    &__img
+        width: 100%
+        display: block
+        transition: all 0.4s ease-in-out
     &__img-mask
         position: absolute
         width: 100%
@@ -204,6 +211,14 @@ $background-color: #FFFFFF
         margin-bottom: min(39px, 10%)
         font-size: calc(18px + 4 * (100vw / 1280))
         font-weight: 700
+    &__button-box
+        padding-left: 16px
+
+.img-card-item:hover .img-card-item__img
+    transform: scale(1.1)
+.img-card-item:hover .img-card-item__title
+    text-decoration: underline
+
 
 .card-item-sign
     position: absolute
@@ -280,12 +295,14 @@ $background-color: #FFFFFF
         cursor: pointer
     &_other-color
         background: linear-gradient(to right, #343D91, #8185C8)
+        color: $background-color
     &__title
         width: 85%
         font-size: calc(14px + 4 * (100vw / 1280))
         font-weight: 700
-        &_white
-            color: $background-color
+
+.card-item:hover .card-item__title
+    text-decoration: underline
 
 .footer
     border-top: 1.5px solid
