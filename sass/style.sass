@@ -46,7 +46,7 @@ $background-color: #FFFFFF
         justify-content: space-between
 
 .header.hide
-    transform: translateY(-52px)
+    transform: translateY(-54px)
 
 .logo-part
     display: flex
@@ -103,7 +103,6 @@ $background-color: #FFFFFF
         transition: all 0.4s ease-in-out
     &__link:hover:before
         width: 100%
-        
 
 .icon-box
     width: 19%
@@ -112,8 +111,11 @@ $background-color: #FFFFFF
     &__item
         width: 24px
         height: 24px
+        opacity: 80%
+        transition: all 0.4s ease-in-out
         &:hover
             cursor: pointer
+            opacity: 100%
 
 .tabbar
     padding-top: 52px
@@ -165,6 +167,23 @@ $background-color: #FFFFFF
             -webkit-text-fill-color: $background-color
             transition: all 0.3s ease-in-out
 
+.activ-button
+    background: -webkit-linear-gradient(left, rgba(31, 218, 227, 1), rgba(60, 75, 148, 1), rgba(177, 124, 231, 1))
+
+.tabbar__button.activ-button .tabbar__button-text
+    -webkit-text-fill-color: $background-color
+
+.main-section
+    opacity: 0 
+    transform: translateY(40%)
+    animation: ani 2s forwards
+@keyframes ani
+    0%
+        opacity: 0
+        transform: translateY(40%)
+    100%
+        opacity: 1
+        transform: translateY(0)
 
 .main-section
     &__container
