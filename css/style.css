@@ -568,7 +568,7 @@ template {
 }
 
 .header.hide {
-  transform: translateY(-52px);
+  transform: translateY(-54px);
 }
 
 .logo-part {
@@ -647,9 +647,12 @@ template {
 .icon-box__item {
   width: 24px;
   height: 24px;
+  opacity: 80%;
+  transition: all 0.4s ease-in-out;
 }
 .icon-box__item:hover {
   cursor: pointer;
+  opacity: 100%;
 }
 
 .tabbar {
@@ -711,6 +714,30 @@ template {
   transition: all 0.3s ease-in-out;
 }
 
+.activ-button {
+  background: -webkit-linear-gradient(left, rgb(31, 218, 227), rgb(60, 75, 148), rgb(177, 124, 231));
+}
+
+.tabbar__button.activ-button .tabbar__button-text {
+  -webkit-text-fill-color: #FFFFFF;
+}
+
+.main-section {
+  opacity: 0;
+  transform: translateY(40%);
+  animation: ani 2s forwards;
+}
+
+@keyframes ani {
+  0% {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .main-section__container {
   padding: 14px 128px 0 128px;
   display: flex;
