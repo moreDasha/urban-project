@@ -1029,6 +1029,9 @@ template {
     margin-bottom: 16px;
     font-size: 14px;
   }
+  .card-item::before {
+    min-height: 139px;
+  }
   .card-item-button-box__button-down {
     width: 24px;
     height: 24px;
