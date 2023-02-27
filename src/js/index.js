@@ -1,3 +1,8 @@
+import * as flsFunctions from "./modules/functions.js";
+
+//проверка поддержки webp
+flsFunctions.isWebp();
+
 let lastScroll = 0;
 const header = document.querySelector('.header');
 
