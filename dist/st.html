@@ -10,157 +10,63 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
 
-    <link rel="stylesheet" href="css/style.min.css?_v=20230227201759">
-    <script defer src="js/index.min.js?_v=20230227201759"></script>
+    <link rel="stylesheet" href="css/style.min.css?_v=20230228232325">
+    <script defer src="js/index.min.js?_v=20230228232325"></script>
 
     <title>УРБАН | Главная</title>
 </head>
 
 <body class="body-page">
 
-<header class="header">
-    <div class="header__container container">
-            <div class="logo-part">
-                <a href="index.html" class="logo-part__wrapper"> 
-                    <img class="logo-part__img" src="img/Logo.svg" alt="logo">
-                    <img class="logo-part__name-logo" src="img/Name-logo.svg" alt="logo">
-                </a>
-                <p class="logo-part__subtitle">Про метры в Казани</p>
+<span class="header-border"></span>
+<span class="header-border header-border_bottom"></span>
+<div class="header__container container">
+    <div class="header-top-part">
+        <div class="logo-part">
+            <a href="index.html" class="logo-part__wrapper"> 
+                <img class="logo-part__img" src="img/Logo.svg" alt="logo">
+                <img class="logo-part__name-logo" src="img/Name-logo.svg" alt="logo">
+            </a>
+            <p class="logo-part__subtitle">Про метры в Казани</p>
+        </div>
+        <nav class="nav-part">
+            <ul class="nav-menu">
+                <li class="nav-menu__item"><a class="nav-menu__link" href="#">Блог</a></li>
+                <li class="nav-menu__item"><a class="nav-menu__link" href="#">Квартиры</a></li>
+                <li class="nav-menu__item"><a class="nav-menu__link" href="#">Ипотека</a></li>
+            </ul>
+            <div class="icon-box">
+                 <img class="icon-box__item" src="img/search.svg" alt="search icon">
+                <img class="icon-box__item" src="img/user.svg" alt="search icon">
             </div>
-            <nav class="nav-part">
-                <ul class="nav-menu">
-                    <li class="nav-menu__item"><a class="nav-menu__link" href="#">Блог</a></li>
-                    <li class="nav-menu__item"><a class="nav-menu__link" href="#">Квартиры</a></li>
-                    <li class="nav-menu__item"><a class="nav-menu__link" href="#">Ипотека</a></li>
-                </ul>
-                <div class="icon-box">
-                    <img class="icon-box__item" src="img/search.svg" alt="search icon">
-                    <img class="icon-box__item" src="img/user.svg" alt="search icon">
-                </div>
-            </nav>
+        </nav>
     </div>
-</header>
-<div class="tabbar">
-    <div class="tabbar__container container">
-        <div class="tabbar__button-wrapper">
-            <button class="tabbar__button"><div class="tabbar__button-text">Популярное</div></button>
-        </div>
-        <div class="tabbar__button-wrapper tabbar__button-wrapper_little">
-            <button class="tabbar__button tabbar__button_little  activ-button"><div class="tabbar__button-text">Свежее</div></button>
-        </div>
+    <div class="category-menu-part">
+        <ul class="category-menu">
+            <li class="category-menu__item"><a class="category-menu__link" href="">Вникаем</a></li>
+            <li class="category-menu__point"></li>
+            <li class="category-menu__item"><a class="category-menu__link" href="">Выбираем</a></li>
+            <li class="category-menu__point"></li>
+            <li class="category-menu__item"><a class="category-menu__link" href="">Живем</a></li>
+            <li class="category-menu__point"></li>
+            <li class="category-menu__item"><a class="category-menu__link" href="">Город</a></li>
+            <li class="category-menu__point"></li>
+            <li class="category-menu__item"><a class="category-menu__link" href="">Рейтинг</a></li>
+        </ul>
     </div>
 </div>
 
-<main class="main-section">
-    <div class="main-section__container container">
 
-        <div class="card-item-wrapper">
 
-            <div class="img-card-item">
-                <div class="img-card-item__img-wrapper">
-                    <picture><source srcset="img/img1.webp" type="image/webp"><img class="img-card-item__img" src="img/img1.png" alt="news photo"></picture>
-                </div>
-                <div class="img-card-item__img-mask"></div>
-                <div class="card-item-sign">Город</div>
-                <h2 class="img-card-item__title">
-                    Как контролируют сделки с&nbsp;недвижимостью
-                </h2>
-                <div class="img-card-item__button-box card-item-button-box">
-                    <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
-                    </svg>
-                    <p class="card-item-button-box__open-count">513</p>
-                    <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
-                    </svg>
-                    <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
-                    </svg>
-                    <p class="card-item-button-box__comment-count">22</p>
-                </div>
-            </div>
-
-            <div class="card-item">
-                <div class="card-item-sign">Промо</div>
-                <h3 class="card-item__title">
-                    Глава ЦБ рассказала, в каком случае начнет снижаться ключевая ставка
-                </h3>
-                <div class="card-item-button-box">
-                    <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
-                    </svg>
-                    <p class="card-item-button-box__open-count">2</p>
-                    <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
-                    </svg>
-                    <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
-                    </svg>
-                    <p class="card-item-button-box__comment-count">0</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-item-wrapper">
-
-            <div class="card-item card-item_other-color">
-                <div class="card-item-sign card-item-sign_white">Живем</div>
-                <h3 class="card-item__title">
-                    Доля льготной ипотеки в общем объёме выдачи составила 25%
-                </h3>
-                <div class="card-item-button-box card-item-button-box_white">
-                    <svg class="card-item-button-box__button-down card-item-button-box__button-down_white" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
-                    </svg>
-                    <p class="card-item-button-box__open-count">71</p>
-                    <svg class="card-item-button-box__button-up card-item-button-box__button-up_white" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
-                    </svg>
-                    <svg class="card-item-button-box__button-message-square card-item-button-box__button-message-square_white" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
-                    </svg>
-                    <p class="card-item-button-box__comment-count">14</p>
-                </div>
-            </div>
-
-            <div class="img-card-item">
-                <div class="img-card-item__img-wrapper">
-                    <picture><source srcset="img/img2.webp" type="image/webp"><img class="img-card-item__img" src="img/img2.png" alt="news photo"></picture>
-                </div>
-                <div class="img-card-item__img-mask img-card-item__img-mask_dark"></div>
-                <div class="card-item-sign card-item-sign_white">Выбираем</div>
-                <h2 class="img-card-item__title">
-                    Объём выдачи жилищных кредитов за&nbsp;2021 год вырос на 30% 
-                </h2>
-                <div class="img-card-item__button-box card-item-button-box">
-                    <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
-                    </svg>
-                    <p class="card-item-button-box__open-count">71</p>
-                    <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
-                    </svg>
-                    <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
-                    </svg>
-                    <p class="card-item-button-box__comment-count">32</p>
-                </div>
-            </div>
-        </div>
+<div class="footer__container container">
+    <div class="logo-part">
+        <a href="index.html" class="logo-part__wrapper">
+            <img class="logo-part__img logo-part__img_large" src="img/Logo.svg" alt="logo">
+            <img class="logo-part__name-logo logo-part__name-logo_large" src="img/Name-logo.svg" alt="logo">
+        </a>
+        <p class="logo-part__subtitle logo-part__subtitle_large">Про метры в Казани</p>
     </div>
-</main>
-
-<footer class="footer">
-    <div class="footer__container container">
-        <div class="logo-part">
-            <a href="index.html" class="logo-part__wrapper">
-                <img class="logo-part__img logo-part__img_large" src="img/Logo.svg" alt="logo">
-                <img class="logo-part__name-logo logo-part__name-logo_large" src="img/Name-logo.svg" alt="logo">
-            </a>
-            <p class="logo-part__subtitle logo-part__subtitle_large">Про метры в Казани</p>
-        </div>
-    </div>
-</footer>
+</div>
 
 </body>
 </html>

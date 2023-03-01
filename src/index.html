@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 @@include('html/head.html', {
     "title":"УРБАН | Главная"
 })
 
 <body class="body-page">
-
-@@include('html/header.html', {})
-@@include('html/main.html', {})
-@@include('html/footer.html', {})
-
+    <header class="header">
+        @@include('html/header.html', {})
+    </header>
+    @@include('html/tabbar.html', {})
+    <main class="main-section">
+        <div class="main-section__container container">
+            @@include('html/cards-block.html', {})
+        </div>
+    </main>
+    <footer class="footer">
+        @@include('html/footer.html', {})
+    </footer>
 </body>
 </html>
