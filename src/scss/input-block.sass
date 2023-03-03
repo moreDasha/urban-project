@@ -1,0 +1,60 @@
+.input-block
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    width: 14.94%
+    &_area
+        width: 22.95%
+    &_room
+        width: 13.18%
+    &_square
+        width: 28.42%
+    &_price
+        width: 28.42%
+    &_target
+        width: 20%
+    &__title
+        margin-bottom: 4px
+        font-size: calc(9px + 5 * (100vw / 1280))
+        color: $grey-color
+        opacity: 80%
+    &__block
+        position: relative
+        height: 50px
+        width: 100%
+        border: 1px solid rgba(22, 41, 63, 0.6)
+        border-radius: 5px
+        padding: 0 12px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &_more
+            padding: 0 30%
+    &__block-value
+        opacity: 60%
+        &_thick
+            font-weight: 700
+            opacity: 80%
+        &_more
+            opacity: 80%
+    &__roller
+        position: absolute
+        bottom: -7.5px
+        left: 0
+        width: 15px
+        height: 15px
+        border-radius: 100px
+        background-color: #25CF51
+        &:hover
+            cursor: pointer
+    &__block-button
+        height: 26px
+        width: 26px
+        opacity: 80%
+        &:hover
+            cursor: pointer
+    &__block-button-add
+        height: 9.33px
+        width: 9.33px
+        &:hover
+            cursor: pointer

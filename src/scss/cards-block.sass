@@ -1,4 +1,5 @@
 .cards-part
+    margin-bottom: 88px
     display: flex
     justify-content: space-between
     flex-wrap: wrap
@@ -15,17 +16,19 @@
     position: relative
     width: 100%
     margin-bottom: 24px
+    border-radius: 10px 10px 0 0
+    overflow: hidden
     border-bottom: 1px solid $text-color
     color: $text-color
     &_reclame
         border-bottom: none
-    &:hover
-        cursor: pointer
     &__img-wrapper
-        display: inline-block
+        position: relative
+        z-index: 1
+        width: 100%
+        height: 310px
         overflow: hidden
-        border-top-right-radius: 10px
-        border-top-left-radius: 10px
+        border-radius: 10px 10px 0 0
         margin-bottom: 8px
         border-bottom: 4px solid
         border-image: linear-gradient(to right, rgba(31, 218, 227, 1), rgba(60, 75, 148, 1), rgba(177, 124, 231, 1))
@@ -34,20 +37,32 @@
             margin-bottom: 0
             border-radius: 10px
             border-bottom: none
+            height: 452px
     &__img
         width: 100%
-        display: block
+        height: 100%
+        border-radius: 10px 10px 0 0
+        object-fit: cover
+        object-position: center
+        will-change: transform
         transition: all 0.4s ease-in-out
     &__img-mask
         position: absolute
+        z-index: 2
         width: 100%
         height: 41%
-        border-radius: 10px
+        border-radius: 10px 10px 0 0
         background: linear-gradient(to bottom, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0))
         top: 0
         right: 0
         &_dark
             background: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, 0))
+    &__video-button
+        position: absolute
+        top: 111.5px
+        right: 43.234%
+        width: 67.67px
+        height: 87px
     &__title
         padding-left: 16px
         margin-bottom: min(39px, 10%)
@@ -59,14 +74,9 @@
     &__button-box
         padding-left: 16px
 
-.img-card-item:hover .img-card-item__img
-    transform: scale(1.1)
-.img-card-item:hover .img-card-item__title
-    text-decoration: underline
-
-
 .card-item-sign
     position: absolute
+    z-index: 4
     height: 25px
     padding: 4px 8px
     border: 1px solid $text-color
@@ -136,8 +146,6 @@
     flex-direction: column
     justify-content: space-between
     color: $text-color
-    &:hover
-        cursor: pointer
     &_turquoise-color
         background-image: linear-gradient(to right, #4EC3BB, #B4E9E3)
     &_purple-color
@@ -153,9 +161,6 @@
         font-size: calc(14px + 4 * (100vw / 1280))
         font-weight: 700
         z-index: 2
-
-.card-item:hover:before
-        opacity: 1
 
 .card-item_turquoise-color::before
     content: ''
@@ -180,8 +185,6 @@
     background: linear-gradient(to right, #1B2686, #555EAF, #8185C8 )
     opacity: 0
     transition: all 0.3s ease-in-out
-.card-item_purple-color:hover:before
-        opacity: 1
 
 .card-item_blue-color::before
     content: ''
@@ -195,8 +198,21 @@
     opacity: 0
     transition: all 0.3s ease-in-out
 
-.card-item:hover .card-item__title
-    text-decoration: underline
+@media (any-hover: hover)
+    .img-card-item:hover
+        cursor: pointer
+    .img-card-item:hover .img-card-item__img
+        transform: scale(1.1)
+    .img-card-item:hover .img-card-item__title
+        text-decoration: underline
+    .card-item:hover
+        cursor: pointer
+    .card-item:hover:before
+        opacity: 1
+    .card-item_purple-color:hover:before
+        opacity: 1
+    .card-item:hover .card-item__title
+        text-decoration: underline
 
 @media (max-width: 749px)
 

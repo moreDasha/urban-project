@@ -69,22 +69,11 @@
     display: flex
     justify-content: space-between
     &__link
-        position: relative
         text-decoration: none
         font-size: 16px
         color: $text-color
         opacity: 60%
-    &__link::before
-        content: ''
-        position: absolute
-        left: 0
-        bottom: -2px
-        width: 0
-        height: 1.5px
-        background: linear-gradient(to right, rgba(31, 218, 227, 1), rgba(60, 75, 148, 1), rgba(177, 124, 231, 1))
         transition: all 0.4s ease-in-out
-    &__link:hover:before
-        width: 100%
 
 .icon-box
     width: 19%
@@ -95,9 +84,6 @@
         height: 24px
         opacity: 80%
         transition: all 0.4s ease-in-out
-        &:hover
-            cursor: pointer
-            opacity: 100%
 
 .category-menu-part
     width: 100%
@@ -112,16 +98,37 @@
     justify-content: space-between
     align-items: center
     &__link
+        position: relative
+        height: 52px
+        display: flex
+        align-items: center
         text-decoration: none
         font-size: 16px
-        color: #293389
+        color: $icon-color
+    &__link::before
+        content: ''
+        position: absolute
+        left: 0
+        bottom: -1px
+        width: 0
+        height: 1.5px
+        background: $icon-color
+        transition: all 0.4s ease-in-out
     &__point
         width: 6px
         height: 6px
         border-radius: 50px
-        background-color: #293389
+        background-color: $icon-color
         opacity: 50%
 
+@media (any-hover: hover)
+    .nav-menu__link:hover
+        opacity: 100%
+    .icon-box__item:hover
+        cursor: pointer
+        opacity: 100%
+    .category-menu__link:hover:before
+        width: 150%
 
 @media (max-width: 749px)
     .logo-part

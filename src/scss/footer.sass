@@ -1,4 +1,8 @@
 .footer
+    display: flex
+    flex-direction: column
+
+.footer-link-part
     border-top: 1.5px solid
     border-image: linear-gradient(to right, rgba(31, 218, 227, .6), rgba(60, 75, 148, .6), rgba(177, 124, 231, .6))
     border-image-slice: 1
@@ -7,3 +11,94 @@
         padding: 0 128px
         display: flex
         align-items: center
+        justify-content: space-between
+
+.icon-part
+    width: 325px
+    padding-right: 85px
+    display: flex
+    justify-content: space-between
+    &__item
+        width: 35px
+        height: 35px
+        border-radius: 100px
+        background-color: $icon-color
+        transition: all 0.4s ease-in-out
+    &__link
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+    &__link-icon
+        width: 19.7px
+        height: 19.7px
+        fill: none
+    &__link-icon-white
+        fill: $background-color
+        transition: all 0.4s ease-in-out
+    &__link-icon-blue
+        fill: $icon-color
+        transition: all 0.4s ease-in-out
+
+.footer-menu-part
+    border-top: 1.5px solid
+    border-image: linear-gradient(to right, rgba(31, 218, 227, .6), rgba(60, 75, 148, .6), rgba(177, 124, 231, .6))
+    border-image-slice: 1
+    &__container
+        padding-right: 16.7%
+        padding: 32px 170px 32px 128px
+        display: flex
+        justify-content: space-between
+
+.footer-nav-menu
+    &__title
+        margin-bottom: 20px
+        font-size: 20px
+        color: $icon-color
+    &__item
+        margin-bottom: 12px
+        &:last-child
+            margin-bottom: 0
+    &__link
+        text-decoration: none
+        font-size: 16px
+        color: $text-color
+        opacity: 100%
+        transition: all 0.4s ease-in-out
+
+.footer-bottom-part
+    border-top: 1.5px solid
+    border-image: linear-gradient(to right, rgba(31, 218, 227, .6), rgba(60, 75, 148, .6), rgba(177, 124, 231, .6))
+    border-image-slice: 1
+    &__container
+        padding: 18px 197px 20px 128px
+        display: flex
+        justify-content: space-between
+    &__ilar-logo-wrap
+        min-width: 140px
+        display: flex
+        justify-content: space-between
+    &__ilar-logo
+        width: 47px
+        height: 13px
+    &__title
+        font-size: 13px
+        color: $text-color
+        opacity: 60%
+        &_thick
+            font-weight: 700
+            &:hover
+                cursor: pointer
+
+@media (any-hover: hover)
+    .icon-part__item:hover
+        border: 1px solid $icon-color
+        background-color: $background-color
+        cursor: pointer
+    .icon-part__item:hover .icon-part__link-icon-white
+        fill: $icon-color
+    .icon-part__item:hover .icon-part__link-icon-blue
+        fill: $background-color
+    .footer-nav-menu__link:hover
+        opacity: 60%
