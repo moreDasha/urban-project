@@ -1,2 +1,2 @@
 urban-project
-https://moredasha.github.io/urban-project/
+https://moredasha.github.io/urban-project/dist/
