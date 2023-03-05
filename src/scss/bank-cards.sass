@@ -1,0 +1,58 @@
+.bank-cards-part
+    margin-bottom: 112px
+    display: flex
+    flex-direction: column
+    &__wrap
+        width: 100%
+        display: flex
+        justify-content: space-between
+
+.bank-cards-item-border
+    position: relative
+    width: 31.75%
+    height: 412px
+    border-radius: 12px
+    background: linear-gradient(to right, rgba(31, 218, 227, 1), rgba(60, 75, 148, 1), rgba(177, 124, 231, 1))
+
+.bank-cards-item
+    position: absolute
+    z-index: 2
+    top: 1px
+    left: 1px
+    width: 99.38%
+    height: 410px
+    padding: 23px 0 41px 16px
+    border-radius: 12px
+    display: flex
+    flex-direction: column
+    background-color: $background-color
+    color: black
+    font-size: 18px
+    &:hover
+        cursor: pointer
+    &__emblem
+        margin-bottom: 48px
+        height: 28.5px
+        text-align: left
+        &_sber
+            width: 172.5px
+        &_vtb
+            width: 76.7px
+    &__percent
+        margin-bottom: 24px
+        font-size: 32px
+        font-weight: 700
+    &__name
+        margin-bottom: 48px
+        opacity: 80%
+    &__price
+        margin-bottom: 40px
+        font-weight: 700
+    &__term
+        margin-bottom: 16px
+    &__description
+        opacity: 60%
+
+@media (max-width: 1110px)
+    .bank-cards-item
+        font-size: 15px

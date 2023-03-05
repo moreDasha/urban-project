@@ -1,8 +1,8 @@
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import rename from 'gulp-rename';
-import cleanCss from 'gulp-clean-css';         //сжимает css файл
-import webpcss from 'gulp-webpcss';            //выводит webp изображения
+import cleanCss from 'gulp-clean-css';    //сжимает css файл
+import webpcss from 'gulp-webpcss';      //выводит webp изображения
 import autoprefixer from 'gulp-autoprefixer';  //добавляет вендорные префиксы
 import groupCssMediaQueries from 'gulp-group-css-media-queries';    //группирует медиа запросы
 

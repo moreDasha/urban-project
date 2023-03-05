@@ -50,4 +50,3 @@ export { deployZip };
 //выполнение сценария по умолчанию
 gulp.task('default', dev);
 
-

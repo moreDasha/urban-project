@@ -1,0 +1,23 @@
+.main-section
+    &__container
+        padding: 14px 128px 0 128px
+        display: flex
+        flex-direction: column
+
+.main-section
+    opacity: 0 
+    transform: translateY(40%)
+    animation: ani 2s forwards
+@keyframes ani
+    0%
+        opacity: 0
+        transform: translateY(40%)
+    100%
+        opacity: 1
+        transform: translateY(0)
+
+@media (max-width: 749px)
+
+    .main-section
+        &__container
+            flex-direction: column

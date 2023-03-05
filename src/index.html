@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 @@include('html/head.html', {
     "title":"УРБАН | Главная"
 })
 
 <body class="body-page">
-
-@@include('html/header.html', {})
-@@include('html/main.html', {})
-@@include('html/footer.html', {})
-
+    <header class="header">
+        @@include('html/header.html', {})
+    </header>
+    @@include('html/tabbar.html', {})
+    <main class="main-section">
+        <div class="main-section__container container">
+            @@include('html/cards-block_first.html', {})
+            @@include('html/apartment-search-filter.html', {})
+            @@include('html/apartments-cards.html', {})
+            @@include('html/cards-block_second.html', {})
+            @@include('html/calculator.html', {})
+            @@include('html/bank-cards.html', {})
+            @@include('html/cards-block_third.html', {})
+            @@include('html/seo-text.html', {})
+        </div>
+    </main>
+    <footer class="footer">
+        @@include('html/footer.html', {})
+    </footer>
 </body>
 </html>

@@ -1,57 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
 
-    <link rel="stylesheet" href="css/style.min.css?_v=20230227201759">
-    <script defer src="js/index.min.js?_v=20230227201759"></script>
+    <link rel="stylesheet" href="css/style.min.css?_v=20230303211154">
+    <script defer src="js/index.min.js?_v=20230303211154"></script>
 
     <title>УРБАН | Главная</title>
 </head>
 
 <body class="body-page">
-
-<header class="header">
-    <div class="header__container container">
-            <div class="logo-part">
-                <a href="index.html" class="logo-part__wrapper"> 
-                    <img class="logo-part__img" src="img/Logo.svg" alt="logo">
-                    <img class="logo-part__name-logo" src="img/Name-logo.svg" alt="logo">
-                </a>
-                <p class="logo-part__subtitle">Про метры в Казани</p>
+    <header class="header">
+        <span class="header-border"></span>
+<span class="header-border header-border_bottom"></span>
+<div class="header__container container">
+    <div class="header-top-part">
+        <div class="logo-part">
+            <a href="index.html" class="logo-part__wrapper"> 
+                <img class="logo-part__img" src="img/Logo.svg" alt="logo">
+                <img class="logo-part__name-logo" src="img/Name-logo.svg" alt="logo">
+            </a>
+            <p class="logo-part__subtitle">Про метры в Казани</p>
+        </div>
+        <nav class="nav-part">
+            <ul class="nav-menu">
+                <li class="nav-menu__item"><a class="nav-menu__link" href="#">Блог</a></li>
+                <li class="nav-menu__item"><a class="nav-menu__link" href="#">Квартиры</a></li>
+                <li class="nav-menu__item"><a class="nav-menu__link" href="#">Ипотека</a></li>
+            </ul>
+            <div class="icon-box">
+                 <img class="icon-box__item" src="img/search.svg" alt="search icon">
+                <img class="icon-box__item" src="img/user.svg" alt="search icon">
             </div>
-            <nav class="nav-part">
-                <ul class="nav-menu">
-                    <li class="nav-menu__item"><a class="nav-menu__link" href="#">Блог</a></li>
-                    <li class="nav-menu__item"><a class="nav-menu__link" href="#">Квартиры</a></li>
-                    <li class="nav-menu__item"><a class="nav-menu__link" href="#">Ипотека</a></li>
-                </ul>
-                <div class="icon-box">
-                    <img class="icon-box__item" src="img/search.svg" alt="search icon">
-                    <img class="icon-box__item" src="img/user.svg" alt="search icon">
-                </div>
-            </nav>
+        </nav>
     </div>
-</header>
-<div class="tabbar">
-    <div class="tabbar__container container">
-        <div class="tabbar__button-wrapper">
-            <button class="tabbar__button"><div class="tabbar__button-text">Популярное</div></button>
-        </div>
-        <div class="tabbar__button-wrapper tabbar__button-wrapper_little">
-            <button class="tabbar__button tabbar__button_little  activ-button"><div class="tabbar__button-text">Свежее</div></button>
-        </div>
+    <div class="category-menu-part">
+        <ul class="category-menu">
+            <li class="category-menu__item"><a class="category-menu__link" href="">Вникаем</a></li>
+            <li class="category-menu__point"></li>
+            <li class="category-menu__item"><a class="category-menu__link" href="">Выбираем</a></li>
+            <li class="category-menu__point"></li>
+            <li class="category-menu__item"><a class="category-menu__link" href="">Живем</a></li>
+            <li class="category-menu__point"></li>
+            <li class="category-menu__item"><a class="category-menu__link" href="">Город</a></li>
+            <li class="category-menu__point"></li>
+            <li class="category-menu__item"><a class="category-menu__link" href="">Рейтинг</a></li>
+        </ul>
     </div>
 </div>
-<main class="main-section">
-    <div class="main-section__container container">
+    </header>
+    <div class="tabbar">
+    <div class="tabbar__container container">
+        <div class="tabbar__button-wrapper">
+            <button class="tabbar__button">
+                <p class="tabbar__button-text">Популярное</p>
+            </button>
+        </div>
+        <div class="tabbar__button-wrapper tabbar__button-wrapper_little">
+            <button class="tabbar__button tabbar__button_little  activ-button">
+                <p class="tabbar__button-text">Свежее</p>
+            </button>
+        </div>
+        
+    </div>
+</div>
+    <main class="main-section">
+        <div class="main-section__container container">
+                <div class="cards-part">
 
         <div class="card-item-wrapper">
 
@@ -62,7 +85,7 @@
                 <div class="img-card-item__img-mask"></div>
                 <div class="card-item-sign">Город</div>
                 <h2 class="img-card-item__title">
-                    Как контролируют сделки с&nbsp;недвижимостью
+                        Как контролируют сделки с&nbsp;недвижимостью
                 </h2>
                 <div class="img-card-item__button-box card-item-button-box">
                     <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
@@ -78,11 +101,11 @@
                     <p class="card-item-button-box__comment-count">22</p>
                 </div>
             </div>
-
-            <div class="card-item">
+    
+            <div class="card-item card-item_turquoise-color">
                 <div class="card-item-sign">Промо</div>
                 <h3 class="card-item__title">
-                    Глава ЦБ рассказала, в каком случае начнет снижаться ключевая ставка
+                        Глава ЦБ рассказала, в каком случае начнет снижаться ключевая ставка
                 </h3>
                 <div class="card-item-button-box">
                     <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
@@ -90,7 +113,7 @@
                     </svg>
                     <p class="card-item-button-box__open-count">2</p>
                     <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                         <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
                     </svg>
                     <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
@@ -99,13 +122,13 @@
                 </div>
             </div>
         </div>
-
+    
         <div class="card-item-wrapper">
-
-            <div class="card-item card-item_other-color">
+    
+            <div class="card-item card-item_purple-color">
                 <div class="card-item-sign card-item-sign_white">Живем</div>
                 <h3 class="card-item__title">
-                    Доля льготной ипотеки в общем объёме выдачи составила 25%
+                        Доля льготной ипотеки в общем объёме выдачи составила 25%
                 </h3>
                 <div class="card-item-button-box card-item-button-box_white">
                     <svg class="card-item-button-box__button-down card-item-button-box__button-down_white" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
@@ -113,15 +136,15 @@
                     </svg>
                     <p class="card-item-button-box__open-count">71</p>
                     <svg class="card-item-button-box__button-up card-item-button-box__button-up_white" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                            <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
                     </svg>
                     <svg class="card-item-button-box__button-message-square card-item-button-box__button-message-square_white" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                         <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
                     </svg>
                     <p class="card-item-button-box__comment-count">14</p>
                 </div>
             </div>
-
+    
             <div class="img-card-item">
                 <div class="img-card-item__img-wrapper">
                     <picture><source srcset="img/img2.webp" type="image/webp"><img class="img-card-item__img" src="img/img2.png" alt="news photo"></picture>
@@ -129,7 +152,7 @@
                 <div class="img-card-item__img-mask img-card-item__img-mask_dark"></div>
                 <div class="card-item-sign card-item-sign_white">Выбираем</div>
                 <h2 class="img-card-item__title">
-                    Объём выдачи жилищных кредитов за&nbsp;2021 год вырос на 30% 
+                        Объём выдачи жилищных кредитов за&nbsp;2021 год вырос на 30% 
                 </h2>
                 <div class="img-card-item__button-box card-item-button-box">
                     <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
@@ -137,7 +160,7 @@
                     </svg>
                     <p class="card-item-button-box__open-count">71</p>
                     <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                            <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
                     </svg>
                     <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
@@ -146,10 +169,610 @@
                 </div>
             </div>
         </div>
+
+        <div class="card-item-wrapper card-item-wrapper_third">
+
+            <div class="img-card-item">
+                <div class="img-card-item__img-wrapper">
+                    <picture><source srcset="img/img3.webp" type="image/webp"><img class="img-card-item__img" src="img/img3.png" alt="news photo"></picture>
+                </div>
+                <div class="img-card-item__img-mask"></div>
+                <div class="card-item-sign">Вникаем</div>
+                <h2 class="img-card-item__title img-card-item__title_third">
+                        Как контролируют сделки с&nbsp;недвижимостью
+                </h2>
+                <div class="img-card-item__button-box card-item-button-box">
+                    <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                    </svg>
+                    <p class="card-item-button-box__open-count">513</p>
+                    <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                    </svg>
+                    <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                    </svg>
+                    <p class="card-item-button-box__comment-count">22</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-item-wrapper card-item-wrapper_third">
+
+            <div class="card-item card-item_white-color">
+                <div class="card-item-sign">Промо</div>
+                <h3 class="card-item__title">
+                    В Казани стартовал первый Всероссийский архитектурный форум
+                </h3>
+                <div class="card-item-button-box">
+                    <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                    </svg>
+                    <p class="card-item-button-box__open-count">71</p>
+                    <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                    </svg>
+                    <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                    </svg>
+                    <p class="card-item-button-box__comment-count">14</p>
+                </div>
+            </div>
+            <div class="card-item card-item_blue-color">
+                <div class="card-item-sign">Рейтинг</div>
+                <h3 class="card-item__title">
+                    Топ лучших районов для жизни в Казани
+                </h3>
+                <div class="card-item-button-box">
+                    <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                    </svg>
+                    <p class="card-item-button-box__open-count">71</p>
+                    <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                    </svg>
+                    <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                    </svg>
+                    <p class="card-item-button-box__comment-count">14</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-item-wrapper card-item-wrapper_third">
+
+            <div class="img-card-item img-card-item_reclame">
+                <div class="img-card-item__img-wrapper img-card-item__img-wrapper_reclame">
+                    <picture><source srcset="img/img4.webp" type="image/webp"><img class="img-card-item__img" src="img/img4.png" alt="news photo"></picture>
+                </div>
+                <div class="card-item-sign">Реклама</div>
+            </div>
+        </div>
     </div>
-</main>
-<footer class="footer">
-    <div class="footer__container container">
+            <div class="apartment-search-filter">
+    <h4 class="apartment-search-filter__title title-blue">
+        &#35; Ищу квартиру
+    </h4>
+    <div class="apartment-search-filter__wrap search-filter">
+        <div class="search-filter__item input-block input-block_area">
+            <h5 class="input-block__title">Район</h5>
+            <div class="input-block__block">
+                <p class="input-block__block-value">Любой</p>
+                <img class="input-block__block-button" src="img/chevron-down.svg" alt="button down">
+            </div>
+        </div>
+        <div class="search-filter__item input-block input-block_room">
+            <h5 class="input-block__title">Комнат</h5>
+            <div class="input-block__block">
+                <p class="input-block__block-value">Любое</p>
+                <img class="input-block__block-button" src="img/chevron-down.svg" alt="button down">
+            </div>
+        </div>
+        <div class="search-filter__item input-block input-block_square">
+            <h5 class="input-block__title">Площадь</h5>
+            <div class="input-block__block">
+                <p class="input-block__block-value">от</p>
+                <p class="input-block__block-value">&#8212; до</p>
+                <p class="input-block__block-value input-block__block-value_thick">м&#178;</p>
+            </div>
+        </div>
+        <div class="search-filter__item input-block input-block_price">
+            <h5 class="input-block__title">Цена</h5>
+            <div class="input-block__block">
+                <p class="input-block__block-value">от</p>
+                <p class="input-block__block-value">&#8212; до</p>
+                <p class="input-block__block-value input-block__block-value_thick">&#8381;</p>
+            </div>
+        </div>
+    </div>
+    <button class="apartment-search-filter__button">
+        Показать 109 объектов
+    </button>
+</div>
+            <div class="apartments-cards-part">
+    <h4 class="apartments-cards-part__title title-blue">
+        Квартиры
+    </h4>
+    <div class="apartments-cards-part__slider apartments-slider">
+        <div class="apartments-slider__button-left">
+            <img class="apartments-slider__button-pointer-left" src="img/chevron-down.svg" alt="button">
+        </div>
+        <div class="apartments-slider__button-right">
+            <img class="apartments-slider__button-pointer-right" src="img/chevron-down.svg" alt="button">
+        </div>
+        <div class="apartments-slider__item">
+            <div class="apartments-slider__img-wrap">
+                <picture><source srcset="img/apartment1.webp" type="image/webp"><img class="apartments-slider__img" src="img/apartment1.png" alt="apartment photo"></picture>
+            </div>
+            <h5 class="apartments-slider__title">2-х комн. квартира 59,7 м&#178;</h5>
+            <p class="apartments-slider__price">6 500 000 &#8381;</p>
+            <p class="apartments-slider__adress">Казань, Советский р-н, село Константиновка, ул. Московская 56</p>
+        </div>
+        <div class="apartments-slider__item">
+            <div class="apartments-slider__img-wrap">
+                <picture><source srcset="img/apartment2.webp" type="image/webp"><img class="apartments-slider__img" src="img/apartment2.png" alt="apartment photo"></picture>
+            </div>
+            <h5 class="apartments-slider__title">2-х комн. квартира 59,7 м&#178;</h5>
+            <p class="apartments-slider__price">8 300 000 &#8381;</p>
+            <p class="apartments-slider__adress">Казань, Вахитовский р-н, ул. Парижской коммуны 25/8</p>
+        </div>
+        <div class="apartments-slider__item">
+            <div class="apartments-slider__img-wrap">
+                <picture><source srcset="img/apartment3.webp" type="image/webp"><img class="apartments-slider__img" src="img/apartment3.png" alt="apartment photo"></picture>
+            </div>
+            <h5 class="apartments-slider__title">2-х комн. квартира 59,7 м&#178;</h5>
+            <p class="apartments-slider__price">4 100 000 &#8381;</p>
+            <p class="apartments-slider__adress">Казань, Приволжский р-н, ул. Коммунистическая , 117</p>
+        </div>
+    </div>
+</div>
+            <div class="cards-part">
+
+    <div class="card-item-wrapper">
+
+        <div class="img-card-item">
+            <div class="img-card-item__img-wrapper">
+                <picture><source srcset="img/news2.1.webp" type="image/webp"><img class="img-card-item__img" src="img/news2.1.png" alt="news photo"></picture>
+            </div>
+            <div class="img-card-item__img-mask"></div>
+            <div class="card-item-sign">Выбираем</div>
+            <h2 class="img-card-item__title">
+                Перспективные районы Казани для покупки квартиры
+            </h2>
+            <div class="img-card-item__button-box card-item-button-box">
+                <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                </svg>
+                <p class="card-item-button-box__open-count">2</p>
+                <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                </svg>
+                <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                </svg>
+                <p class="card-item-button-box__comment-count">42</p>
+            </div>
+        </div>
+
+        <div class="card-item card-item_turquoise-color">
+            <div class="card-item-sign">Промо</div>
+            <h3 class="card-item__title">
+                    Глава ЦБ рассказала, в каком случае начнет снижаться ключевая ставка
+            </h3>
+            <div class="card-item-button-box">
+                <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                </svg>
+                <p class="card-item-button-box__open-count">2</p>
+                <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                </svg>
+                <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                </svg>
+                <p class="card-item-button-box__comment-count">0</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-item-wrapper">
+
+        <div class="card-item card-item_purple-color">
+            <div class="card-item-sign card-item-sign_white">Живем</div>
+            <h3 class="card-item__title">
+                    Доля льготной ипотеки в общем объёме выдачи составила 25%
+            </h3>
+            <div class="card-item-button-box card-item-button-box_white">
+                <svg class="card-item-button-box__button-down card-item-button-box__button-down_white" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                </svg>
+                <p class="card-item-button-box__open-count">71</p>
+                <svg class="card-item-button-box__button-up card-item-button-box__button-up_white" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                </svg>
+                <svg class="card-item-button-box__button-message-square card-item-button-box__button-message-square_white" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                </svg>
+                <p class="card-item-button-box__comment-count">14</p>
+            </div>
+        </div>
+
+        <div class="img-card-item">
+            <div class="img-card-item__img-wrapper">
+                <picture><source srcset="img/news2.2.webp" type="image/webp"><img class="img-card-item__img" src="img/news2.2.png" alt="news photo"></picture>
+            </div>
+            <div class="img-card-item__img-mask img-card-item__img-mask_dark"></div>
+            <div class="card-item-sign card-item-sign_white">Живем</div>
+            <img class="img-card-item__video-button"src="img/Vector.svg" alt="">
+            <h2 class="img-card-item__title">
+                Как платить налог на недвижимость
+            </h2>
+            <div class="img-card-item__button-box card-item-button-box">
+                <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                </svg>
+                <p class="card-item-button-box__open-count">71</p>
+                <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                </svg>
+                <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                </svg>
+                <p class="card-item-button-box__comment-count">0</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-item-wrapper card-item-wrapper_third">
+
+        <div class="img-card-item">
+            <div class="img-card-item__img-wrapper">
+                <picture><source srcset="img/news2.3.webp" type="image/webp"><img class="img-card-item__img" src="img/news2.3.png" alt="news photo"></picture>
+            </div>
+            <div class="img-card-item__img-mask img-card-item__img-mask_dark"></div>
+            <div class="card-item-sign card-item-sign_white">Живем</div>
+            <h2 class="img-card-item__title img-card-item__title_third">
+                Как выбрать застройщика, чтобы не остаться без квартиры
+            </h2>
+            <div class="img-card-item__button-box card-item-button-box">
+                <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                </svg>
+                <p class="card-item-button-box__open-count">513</p>
+                <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                </svg>
+                <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                </svg>
+                <p class="card-item-button-box__comment-count">22</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-item-wrapper card-item-wrapper_third">
+
+        <div class="card-item card-item_white-color">
+            <div class="card-item-sign">Рейтинг</div>
+            <h3 class="card-item__title">
+                Сравниваем все новостройки Казани по срокам старта продаж
+            </h3>
+            <div class="card-item-button-box">
+                <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                </svg>
+                <p class="card-item-button-box__open-count">513</p>
+                <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                </svg>
+                <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                </svg>
+                <p class="card-item-button-box__comment-count">22</p>
+            </div>
+        </div>
+        <div class="card-item card-item_blue-color">
+            <div class="card-item-sign">Вникаем</div>
+            <h3 class="card-item__title">
+                Какие документы должны быть у надёжного застройщика
+            </h3>
+            <div class="card-item-button-box">
+                <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                </svg>
+                <p class="card-item-button-box__open-count">71</p>
+                <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                </svg>
+                <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                </svg>
+                <p class="card-item-button-box__comment-count">3</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-item-wrapper card-item-wrapper_third">
+
+        <div class="img-card-item img-card-item_reclame">
+            <div class="img-card-item__img-wrapper img-card-item__img-wrapper_reclame">
+                <picture><source srcset="img/img4.webp" type="image/webp"><img class="img-card-item__img" src="img/img4.png" alt="news photo"></picture>
+            </div>
+            <div class="card-item-sign">Реклама</div>
+        </div>
+    </div>
+</div>
+            <div class="calculator-part">
+    <h4 class="calculator-part__title title-blue">
+        &#35; Рассчитать ипотеку
+    </h4>
+    <div class="calculator-part__wrap calculator">
+        <div class="calculator__item input-block input-block_target">
+            <h5 class="input-block__title">Цель ипотеки</h5>
+            <div class="input-block__block">
+                <p class="input-block__block-value">Любая</p>
+                <img class="input-block__block-button" src="img/chevron-down.svg" alt="button down">
+            </div>
+        </div>
+        <div class="calculator__item input-block">
+            <h5 class="input-block__title">Стоимость недвижимости</h5>
+            <div class="input-block__block">
+                <p class="input-block__block-value">0</p>
+                <span class="input-block__roller"></span>
+            </div>
+        </div>
+        <div class="calculator__item input-block">
+            <h5 class="input-block__title">Первоначальный взнос</h5>
+            <div class="input-block__block">
+                <p class="input-block__block-value">0</p>
+                <span class="input-block__roller"></span>
+            </div>
+        </div>
+        <div class="calculator__item input-block">
+            <h5 class="input-block__title">Срок</h5>
+            <div class="input-block__block">
+                <p class="input-block__block-value">Любой</p>
+                <img class="input-block__block-button" src="img/chevron-down.svg" alt="button down">
+            </div>
+        </div>
+        <div class="calculator__item input-block">
+            <div class="input-block__block input-block__block_more">
+                <p class="input-block__block-value input-block__block-value_more">Еще</p>
+                <img class="input-block__block-button-add" src="img/add.svg" alt="button add">
+            </div>
+        </div>
+        <button class="calculator__button">
+            ПОКАЗАТЬ (174)
+        </button>
+    </div>
+</div>
+            <div class="bank-cards-part">
+    <h4 class="bank-cards-part__title title-blue">
+        Предложения банков
+    </h4>
+    <div class="bank-cards-part__wrap">
+        <div class="bank-cards-item-border">
+            <div class="bank-cards-item">
+                <img class="bank-cards-item__emblem bank-cards-item__emblem_sber" src="img/sber.svg" alt="">
+                <span class="bank-cards-item__percent">4,7&#37;</span>
+                <span class="bank-cards-item__name">&#171;Семейная&#187;</span>
+                <span class="bank-cards-item__price">600 000 &#8381; – 12 000 000 &#8381;</span>
+                <span class="bank-cards-item__term">На срок до 30 лет</span>
+                <span class="bank-cards-item__description">Возраст от 21 года<br>Стаж от 4 месяцев<br>4 документа</span>
+            </div>
+        </div>
+        <div class="bank-cards-item-border">
+            <div class="bank-cards-item">
+                <picture><source srcset="img/alfa.webp" type="image/webp"><img class="bank-cards-item__emblem" src="img/alfa.png" alt=""></picture>
+                <span class="bank-cards-item__percent">4,69&#37;</span>
+                <span class="bank-cards-item__name">&#171;Семейная&#187;</span>
+                <span class="bank-cards-item__price">600 000 &#8381; – 12 000 000 &#8381;</span>
+                <span class="bank-cards-item__term">На срок до 30 лет</span>
+                <span class="bank-cards-item__description">Возраст от 18 лет<br>Стаж от 4 месяцев<br>4 документа</span>
+            </div>
+        </div>
+        <div class="bank-cards-item-border">
+            <div class="bank-cards-item">
+                <img class="bank-cards-item__emblem bank-cards-item__emblem_vtb" src="img/vtb.svg" alt="">
+                <span class="bank-cards-item__percent">6,35&#37;</span>
+                <span class="bank-cards-item__name">&#171;Господдержка 2020&#187;</span>
+                <span class="bank-cards-item__price">600 000 &#8381; – 3 000 000 &#8381;</span>
+                <span class="bank-cards-item__term">На срок до 30 лет</span>
+                <span class="bank-cards-item__description">Возраст от 21 лет<br>3 документа</span>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="cards-part">
+
+    <div class="card-item-wrapper">
+
+        <div class="img-card-item">
+            <div class="img-card-item__img-wrapper">
+                <picture><source srcset="img/news3.1.webp" type="image/webp"><img class="img-card-item__img" src="img/news3.1.jpeg" alt="news photo"></picture>
+            </div>
+            <div class="img-card-item__img-mask"></div>
+            <div class="card-item-sign">Промо</div>
+            <h2 class="img-card-item__title">
+                Что можно и что нельзя делать с подаренной квартирой
+            </h2>
+            <div class="img-card-item__button-box card-item-button-box">
+                <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                </svg>
+                <p class="card-item-button-box__open-count">51</p>
+                <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                </svg>
+                <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                </svg>
+                <p class="card-item-button-box__comment-count">5</p>
+            </div>
+        </div>
+
+        <div class="card-item card-item_turquoise-color">
+            <div class="card-item-sign">Живем</div>
+            <h3 class="card-item__title">
+                Что можно и что нельзя делать с подаренной квартирой
+            </h3>
+            <div class="card-item-button-box">
+                <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                </svg>
+                <p class="card-item-button-box__open-count">47</p>
+                <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                </svg>
+                <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                </svg>
+                <p class="card-item-button-box__comment-count">1</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-item-wrapper">
+
+        <div class="card-item card-item_purple-color">
+            <div class="card-item-sign card-item-sign_white">Живем</div>
+            <h3 class="card-item__title">
+                Глава ЦБ рассказала, в каком случае начнет снижаться ключевая ставка
+            </h3>
+            <div class="card-item-button-box card-item-button-box_white">
+                <svg class="card-item-button-box__button-down card-item-button-box__button-down_white" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                </svg>
+                <p class="card-item-button-box__open-count">98</p>
+                <svg class="card-item-button-box__button-up card-item-button-box__button-up_white" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                </svg>
+                <svg class="card-item-button-box__button-message-square card-item-button-box__button-message-square_white" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                </svg>
+                <p class="card-item-button-box__comment-count">63</p>
+            </div>
+        </div>
+
+        <div class="img-card-item">
+            <div class="img-card-item__img-wrapper">
+                <picture><source srcset="img/news3.2.webp" type="image/webp"><img class="img-card-item__img" src="img/news3.2.jpeg" alt="news photo"></picture>
+            </div>
+            <div class="img-card-item__img-mask"></div>
+            <div class="card-item-sign">Выбираем</div>
+            <h2 class="img-card-item__title">
+                Покупать ли квартиру, которую еще не построили?
+            </h2>
+            <div class="img-card-item__button-box card-item-button-box">
+                <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                </svg>
+                <p class="card-item-button-box__open-count">32</p>
+                <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                </svg>
+                <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                </svg>
+                <p class="card-item-button-box__comment-count">0</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-item-wrapper card-item-wrapper_third">
+
+        <div class="img-card-item">
+            <div class="img-card-item__img-wrapper">
+                <picture><source srcset="img/news3.3.webp" type="image/webp"><img class="img-card-item__img" src="img/news3.3.jpeg" alt="news photo"></picture>
+            </div>
+            <div class="img-card-item__img-mask"></div>
+            <div class="card-item-sign">Вникаем</div>
+            <h2 class="img-card-item__title img-card-item__title_third">
+                    Как контролируют сделки с&nbsp;недвижимостью
+            </h2>
+            <div class="img-card-item__button-box card-item-button-box">
+                <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                </svg>
+                <p class="card-item-button-box__open-count">41</p>
+                <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                </svg>
+                <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                </svg>
+                <p class="card-item-button-box__comment-count">19</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-item-wrapper card-item-wrapper_third">
+
+        <div class="card-item card-item_white-color">
+            <div class="card-item-sign">Рейтинг</div>
+            <h3 class="card-item__title">
+                Сравниваем все новостройки Казани по срокам старта продаж
+            </h3>
+            <div class="card-item-button-box">
+                <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                </svg>
+                <p class="card-item-button-box__open-count">513</p>
+                <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                </svg>
+                <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                </svg>
+                <p class="card-item-button-box__comment-count">22</p>
+            </div>
+        </div>
+        <div class="card-item card-item_blue-color">
+            <div class="card-item-sign">Вникаем</div>
+            <h3 class="card-item__title">
+                Какие документы должны быть у надёжного застройщика
+            </h3>
+            <div class="card-item-button-box">
+                <svg class="card-item-button-box__button-down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                </svg>
+                <p class="card-item-button-box__open-count">71</p>
+                <svg class="card-item-button-box__button-up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                </svg>
+                <svg class="card-item-button-box__button-message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                </svg>
+                <p class="card-item-button-box__comment-count">3</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-item-wrapper card-item-wrapper_third">
+
+        <div class="img-card-item img-card-item_reclame">
+            <div class="img-card-item__img-wrapper img-card-item__img-wrapper_reclame">
+                <picture><source srcset="img/img4.webp" type="image/webp"><img class="img-card-item__img" src="img/img4.png" alt="news photo"></picture>
+            </div>
+            <div class="card-item-sign">Реклама</div>
+        </div>
+    </div>
+</div>
+            <div class="seo-text-part">
+    <h6 class="seo-text-part__title">Seo</h6>
+    <div class="seo-text-part__text-wrap">
+        <p class="seo-text-part__text">
+            Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности требуют от нас анализа соответствующий условий активизации. Товарищи! дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий.
+        </p>
+        <div class="seo-text-part__text-mask"></div>
+    </div>
+    <div class="seo-text-part__button">Показать полностью</div>
+</div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-link-part">
+    <div class="footer-link-part__container container">
         <div class="logo-part">
             <a href="index.html" class="logo-part__wrapper">
                 <img class="logo-part__img logo-part__img_large" src="img/Logo.svg" alt="logo">
@@ -157,8 +780,88 @@
             </a>
             <p class="logo-part__subtitle logo-part__subtitle_large">Про метры в Казани</p>
         </div>
+        <div class="icon-part">
+            <div class="icon-part__item">
+                <a class="icon-part__link" href="#">
+                    <svg class="icon-part__link-icon" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
+                        <path class="icon-part__link-icon-white" d="M7.47659 2.69922C5.21497 2.69922 3.375 4.53918 3.375 6.80078V13.3633C3.375 15.6249 5.21497 17.4648 7.47659 17.4648H14.0391C16.3007 17.4648 18.1407 15.6249 18.1407 13.3633V6.80078C18.1407 4.53918 16.3007 2.69922 14.0391 2.69922H7.47659ZM7.47659 4.33984H14.0391C15.3959 4.33984 16.5001 5.44398 16.5001 6.80078V13.3633C16.5001 14.7201 15.3959 15.8242 14.0391 15.8242H7.47659C6.11978 15.8242 5.01563 14.7201 5.01563 13.3633V6.80078C5.01563 5.44398 6.11978 4.33984 7.47659 4.33984ZM14.8594 5.16016C14.6419 5.16016 14.4332 5.24658 14.2794 5.40042C14.1256 5.55426 14.0391 5.76291 14.0391 5.98047C14.0391 6.19803 14.1256 6.40668 14.2794 6.56052C14.4332 6.71435 14.6419 6.80078 14.8594 6.80078C15.077 6.80078 15.2857 6.71435 15.4395 6.56052C15.5933 6.40668 15.6798 6.19803 15.6798 5.98047C15.6798 5.76291 15.5933 5.55426 15.4395 5.40042C15.2857 5.24658 15.077 5.16016 14.8594 5.16016ZM10.7579 5.98047C8.49624 5.98047 6.65627 7.82043 6.65627 10.082C6.65627 12.3436 8.49624 14.1836 10.7579 14.1836C13.0195 14.1836 14.8594 12.3436 14.8594 10.082C14.8594 7.82043 13.0195 5.98047 10.7579 5.98047ZM10.7579 7.62109C12.1147 7.62109 13.2188 8.72523 13.2188 10.082C13.2188 11.4388 12.1147 12.543 10.7579 12.543C9.40105 12.543 8.2969 11.4388 8.2969 10.082C8.2969 8.72523 9.40105 7.62109 10.7579 7.62109Z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="icon-part__item">
+                <a class="icon-part__link" href="#">
+                    <svg class="icon-part__link-icon" viewBox="0 0 20 21" xmlns="http://www.w3.org/2000/svg">
+                        <path class="icon-part__link-icon-white" d="M10.7907 14.8059L8.29237 17.2663C8.29237 17.2663 8.18372 17.3501 8.0386 17.3538C7.98829 17.3553 7.93433 17.3472 7.87891 17.3224L8.58187 12.9727L10.7907 14.8059Z"/>
+                        <path class="icon-part__link-icon-white" d="M18.776 3.49875L16.0446 17.4457C16.0446 17.4457 15.9272 18.0831 15.1368 18.0831C14.7168 18.0831 14.5002 17.8833 14.5002 17.8833L8.58375 12.9735L5.68896 11.5143L1.97385 10.5262C1.97385 10.5262 1.3125 10.3352 1.3125 9.78824C1.3125 9.33248 1.99281 9.11518 1.99281 9.11518L17.5357 2.94017C17.535 2.93944 18.0104 2.7688 18.3568 2.76953C18.5697 2.76953 18.8125 2.86069 18.8125 3.13414C18.8125 3.31645 18.776 3.49875 18.776 3.49875Z"/>
+                        <path class="icon-part__link-icon-blue" d="M15.8214 5.83035C15.6982 5.66992 15.4707 5.64075 15.3102 5.76253L5.6875 11.5212C5.6875 11.5212 7.22323 15.8177 7.45731 16.5615C7.69212 17.306 7.88025 17.3235 7.88025 17.3235L8.58322 12.9738L15.7529 6.3408C15.9133 6.21902 15.9432 5.99078 15.8214 5.83035Z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="icon-part__item">
+                <a class="icon-part__link" href="#">
+                    <svg class="icon-part__link-icon" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
+                        <path class="icon-part__link-icon-white" d="M18.6289 14.1433C18.4648 15.0047 17.7676 15.661 16.9063 15.784C15.5527 15.9891 13.2969 16.2352 10.7539 16.2352C8.25195 16.2352 5.99609 15.9891 4.60156 15.784C3.74023 15.661 3.04297 15.0047 2.87891 14.1433C2.71484 13.1999 2.55078 11.8052 2.55078 10.0825C2.55078 8.35968 2.71484 6.96505 2.87891 6.02163C3.04297 5.16024 3.74023 4.50395 4.60156 4.38089C5.95508 4.1758 8.21094 3.92969 10.7539 3.92969C13.2969 3.92969 15.5117 4.1758 16.9063 4.38089C17.7676 4.50395 18.4648 5.16024 18.6289 6.02163C18.793 6.96505 18.998 8.35968 18.998 10.0825C18.957 11.8052 18.793 13.1999 18.6289 14.1433Z"/>
+                        <path class="icon-part__link-icon-blue" d="M9.11328 12.9535V7.21094L14.0355 10.0822L9.11328 12.9535Z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="icon-part__item">
+                <a class="icon-part__link" href="#">
+                    <svg class="icon-part__link-icon" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+                        <path class="icon-part__link-icon-white" d="M11.0855 3.15684C11.8915 3.14453 12.6914 3.15069 13.4912 3.14453C13.5404 4.08624 13.8788 5.04641 14.568 5.71114C15.2571 6.39434 16.2292 6.70824 17.1767 6.81287V9.29331C16.2907 9.26254 15.3986 9.07789 14.5926 8.69628C14.2419 8.53626 13.9158 8.33314 13.5958 8.12388C13.5897 9.92112 13.602 11.7184 13.5835 13.5094C13.5343 14.3711 13.2513 15.2267 12.7529 15.9345C11.9469 17.1162 10.5502 17.8856 9.1166 17.9102C8.23676 17.9595 7.35691 17.7194 6.60628 17.2763C5.36342 16.5438 4.48972 15.2021 4.36052 13.7618C4.34821 13.454 4.34206 13.1463 4.35436 12.8447C4.46511 11.6753 5.04347 10.5551 5.94178 9.79186C6.96314 8.90555 8.39058 8.48086 9.72573 8.73321C9.73803 9.64414 9.70112 10.5551 9.70112 11.466C9.09199 11.269 8.37827 11.3244 7.84298 11.6937C7.45536 11.9461 7.16003 12.3339 7.00621 12.7709C6.877 13.0848 6.91391 13.4294 6.92007 13.7618C7.06773 14.7712 8.03987 15.6206 9.07353 15.5283C9.76264 15.5221 10.421 15.122 10.7779 14.5373C10.8948 14.3342 11.024 14.1249 11.0301 13.8849C11.0916 12.7832 11.067 11.6876 11.0732 10.5858C11.0793 8.10541 11.067 5.63113 11.0855 3.15684Z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="icon-part__item">
+                <a class="icon-part__link" href="#">
+                    <svg class="icon-part__link-icon" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
+                        <path class="icon-part__link-icon-white" d="M19.6061 14.6771C18.869 13.3505 16.9704 11.7566 16.1866 11.0629C15.9721 10.873 15.9491 10.5445 16.1444 10.3344C17.6402 8.72693 18.8366 6.87987 19.2484 5.76376C19.4301 5.27072 19.054 4.74979 18.5241 4.74979H16.9848C16.4774 4.74979 16.1804 4.93191 16.0389 5.22191C14.7958 7.76956 13.7294 8.87214 12.9829 9.51654C12.5649 9.8775 11.9132 9.57848 11.9132 9.02924C11.9132 7.97096 11.9132 6.603 11.9132 5.63291C11.9132 5.16243 11.5285 4.78178 11.0539 4.78178L8.24187 4.74979C7.88791 4.74979 7.6857 5.15054 7.89816 5.43151L8.36246 6.09806C8.53719 6.32899 8.63152 6.60997 8.63152 6.89833L8.62906 9.90006C8.62906 10.4222 7.99619 10.6774 7.62049 10.3115C6.34941 9.07354 5.2465 6.54557 4.84947 5.33676C4.73463 4.98687 4.40691 4.75061 4.03531 4.74979L2.51896 4.74609C1.95008 4.74609 1.53418 5.28549 1.68881 5.82857C3.07431 10.6921 5.91711 15.319 10.9834 15.8207C11.4825 15.8699 11.9132 15.4679 11.9132 14.9703V13.3928C11.9132 12.9403 12.268 12.5515 12.7241 12.54C12.7401 12.5396 12.7561 12.5396 12.772 12.5396C14.112 12.5396 15.6128 14.49 16.1378 15.4023C16.2887 15.6648 16.5709 15.8248 16.8761 15.8248H18.9158C19.5109 15.8248 19.8928 15.1935 19.6061 14.6771Z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </div>
-</footer>
-
+</div>
+<div class="footer-menu-part">
+    <div class="footer-menu-part__container container">
+        <nav class="footer-nav-menu">
+            <h6 class="footer-nav-menu__title">Главное</h6>
+            <ul class="footer-nav-menu__content">
+                <li class="footer-nav-menu__item"><a class="footer-nav-menu__link" href="#">Блог</a></li>
+                <li class="footer-nav-menu__item"><a class="footer-nav-menu__link" href="#">Квартиры</a></li>
+                <li class="footer-nav-menu__item"><a class="footer-nav-menu__link" href="#">Ипотека</a></li>
+            </ul>
+        </nav>
+        <nav class="footer-nav-menu">
+            <h6 class="footer-nav-menu__title">Рубрики</h6>
+            <ul class="footer-nav-menu__content">
+                <li class="footer-nav-menu__item"><a class="footer-nav-menu__link" href="">Вникаем</a></li>
+                <li class="footer-nav-menu__item"><a class="footer-nav-menu__link" href="">Выбираем</a></li>
+                <li class="footer-nav-menu__item"><a class="footer-nav-menu__link" href="">Живем</a></li>
+                <li class="footer-nav-menu__item"><a class="footer-nav-menu__link" href="">Город</a></li>
+                <li class="footer-nav-menu__item"><a class="footer-nav-menu__link" href="">Рейтинг</a></li>
+            </ul>
+        </nav>
+        <nav class="footer-nav-menu">
+            <h6 class="footer-nav-menu__title">О журнале</h6>
+            <ul class="footer-nav-menu__content">
+                <li class="footer-nav-menu__item"><a class="footer-nav-menu__link" href="#">Говорим о проекте</a></li>
+                <li class="footer-nav-menu__item"><a class="footer-nav-menu__link" href="#">Реклама</a></li>
+                <li class="footer-nav-menu__item"><a class="footer-nav-menu__link" href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="footer-bottom-part">
+    <div class="footer-bottom-part__container container">
+        <div class="footer-bottom-part__ilar-logo-wrap">
+            <p class="footer-bottom-part__title">Разработано:</p>
+            <a href="#"><img class="footer-bottom-part__ilar-logo" src="img/ilar-logo.svg" alt="ilar logo"></a>
+        </div>
+        <p class="footer-bottom-part__title footer-bottom-part__title_thick">Политика конфиденциальности</p>
+        <p class="footer-bottom-part__title">&#169; &#171;Урбан медиа&#187; Все права защищены</p>
+    </div>
+</div>
+    </footer>
 </body>
 </html>
