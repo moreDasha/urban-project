@@ -1,0 +1,32 @@
+.main-section__container {
+  padding: 14px 128px 0 128px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-section {
+  opacity: 0;
+  transform: translateY(40%);
+  animation: ani 2s forwards;
+}
+
+@keyframes ani {
+  0% {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1024px) {
+  .main-section__container {
+    padding: 0 87px;
+  }
+}
+@media (max-width: 749px) {
+  .main-section__container {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=main-section.css.map */

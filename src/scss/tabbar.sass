@@ -16,6 +16,7 @@
             margin-right: 0 
     &__button
         position: absolute
+        z-index: 5
         top: 1px
         left: 1px
         width: 119px
@@ -35,18 +36,38 @@
         transition: all 0.3s ease-in-out
 
 .activ-button
-    background: -webkit-linear-gradient(left, rgba(31, 218, 227, 1), rgba(60, 75, 148, 1), rgba(177, 124, 231, 1))
+    background: linear-gradient(90deg,#1fdae3 0,#3c4b94 48.44%,#b17ce7 100%)
 
+.tabbar__button.activ-button .tabbar__button-text
+    -webkit-text-fill-color: $background-color
 
 @media (any-hover: hover)
     .tabbar__button:hover
-        background: linear-gradient(to right, rgba(31, 218, 227, 1), rgba(60, 75, 148, 1), rgba(177, 124, 231, 1))
+        background: linear-gradient(90deg,#1fdae3 0,#3c4b94 48.44%,#b17ce7 100%)
     .tabbar__button:hover .tabbar__button-text
         -webkit-text-fill-color: $background-color
     .tabbar__button.activ-button .tabbar__button-text
         -webkit-text-fill-color: $background-color
 
-@media (max-width: 749px)
+
+@media (max-width: 1024px)
+    .tabbar
+        padding-top: 104px
+        &__container
+            padding: 24px 87px 24px
+        &__button-wrapper
+            margin-right: 16px
+
+
+@media (max-width: 910px)
+    .tabbar
+        padding-top: 58px
+        &__container
+            padding-top: 24px
+            padding-bottom: 25px
+
+
+@media (max-width: 360px)
 
     .tabbar
         padding-top: 50px

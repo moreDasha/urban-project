@@ -33,9 +33,10 @@
     &__emblem
         margin-bottom: 48px
         height: 28.5px
-        text-align: left
         &_sber
             width: 172.5px
+        &_alfa
+            height: 25px
         &_vtb
             width: 76.7px
     &__percent
@@ -56,3 +57,52 @@
 @media (max-width: 1110px)
     .bank-cards-item
         font-size: 15px
+
+
+@media (max-width: 1024px)
+    .bank-cards-part
+        margin-bottom: 96px
+    .bank-cards-item-border
+            height: 340px
+            border-radius: 10px
+    .bank-cards-item
+            height: 338px
+            padding: 24px 0 24px 16px
+            border-radius: 10px
+            font-size: 16px
+            line-height: 14.46px
+            &__emblem
+                margin-bottom: 45px
+                height: 23px
+                &_sber
+                    width: 136px
+                &_alfa
+                    height: 21.5px
+                &_vtb
+                    width: 63px
+            &__percent
+                margin-bottom: 8px
+                font-size: 30px
+                line-height: 27.12px
+            &__name
+                margin-bottom: 40px
+            &__price
+                margin-bottom: 32px
+            &__description
+                line-height: 19.36px
+
+
+@media (max-width: 910px)
+    .bank-cards-part
+        margin-bottom: 72px
+    .bank-cards-item-border
+            height: 320px
+    .bank-cards-item
+        width: 99.05%
+        height: 318px
+        line-height: 20px
+        &__emblem
+            &_alfa
+                height: 18.6px
+        &__description
+                display: none
