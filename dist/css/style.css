@@ -996,6 +996,7 @@ input[type=button] {
 
 .tabbar__button {
   position: absolute;
+  z-index: 5;
   top: 1px;
   left: 1px;
   width: 119px;
@@ -1026,7 +1027,13 @@ input[type=button] {
 }
 
 .activ-button {
-  background: -webkit-linear-gradient(left, rgb(31, 218, 227), rgb(60, 75, 148), rgb(177, 124, 231));
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #1fdae3), color-stop(48.44%, #3c4b94), to(#b17ce7));
+  background: -o-linear-gradient(left, #1fdae3 0, #3c4b94 48.44%, #b17ce7 100%);
+  background: linear-gradient(90deg, #1fdae3 0, #3c4b94 48.44%, #b17ce7 100%);
+}
+
+.tabbar__button.activ-button .tabbar__button-text {
+  -webkit-text-fill-color: #FFFFFF;
 }
 
 .main-section__container {
@@ -1105,6 +1112,9 @@ input[type=button] {
 
 .card-item-wrapper_third {
   width: 31.75%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .img-card-item {
@@ -1128,7 +1138,7 @@ input[type=button] {
   height: 310px;
   overflow: hidden;
   border-radius: 10px 10px 0 0;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   border-bottom: 4px solid;
   -o-border-image: -o-linear-gradient(left, rgb(31, 218, 227), rgb(60, 75, 148), rgb(177, 124, 231));
      border-image: -webkit-gradient(linear, left top, right top, from(rgb(31, 218, 227)), color-stop(rgb(60, 75, 148)), to(rgb(177, 124, 231)));
@@ -1178,6 +1188,7 @@ input[type=button] {
 
 .img-card-item__video-button {
   position: absolute;
+  z-index: 5;
   top: 111.5px;
   right: 43.234%;
   width: 67.67px;
@@ -1185,6 +1196,7 @@ input[type=button] {
 }
 
 .img-card-item__title {
+  width: 95%;
   padding-left: 16px;
   margin-bottom: min(39px, 10%);
   font-size: calc(18px + 0.3125vw);
@@ -1234,49 +1246,32 @@ input[type=button] {
   color: #FFFFFF;
 }
 
-.card-item-button-box__button-down {
+.card-item-button-box__button {
   width: 29px;
   height: 29px;
+  stroke-width: 1.82;
+  stroke: #16293F;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.card-item-button-box__button_down {
   margin-right: 11.63px;
-  stroke-width: 1.82;
-  stroke: #16293F;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
-.card-item-button-box__button-down_white {
-  stroke: #FFFFFF;
-}
-
-.card-item-button-box__button-up {
-  width: 29px;
-  height: 29px;
+.card-item-button-box__button_up {
   margin-right: 32px;
-  stroke-width: 1.82;
-  stroke: #16293F;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
-.card-item-button-box__button-up_white {
+.card-item-button-box__button_white {
   stroke: #FFFFFF;
 }
 
-.card-item-button-box__button-message-square {
+.card-item-button-box__button_message-square {
   width: 17px;
   height: 17px;
   margin-right: 12px;
-  stroke-width: 1.82;
-  stroke: #16293F;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.card-item-button-box__button-message-square_white {
-  stroke: #FFFFFF;
 }
 
 .card-item-button-box__open-count {
@@ -1331,7 +1326,7 @@ input[type=button] {
 }
 
 .card-item__title {
-  width: 85%;
+  width: 90%;
   font-size: calc(14px + 0.3125vw);
   font-weight: 700;
   z-index: 2;
@@ -1343,7 +1338,7 @@ input[type=button] {
   left: 0;
   top: 0;
   width: 100%;
-  min-height: 214px;
+  min-height: 100%;
   border-radius: 10px;
   background: -webkit-gradient(linear, left top, right top, from(#0AB2A7), color-stop(#4EC3BB), to(#B4E9E3));
   background: -o-linear-gradient(left, #0AB2A7, #4EC3BB, #B4E9E3);
@@ -1360,7 +1355,7 @@ input[type=button] {
   left: 0;
   top: 0;
   width: 100%;
-  min-height: 214px;
+  min-height: 100%;
   border-radius: 10px;
   background: -webkit-gradient(linear, left top, right top, from(#1B2686), color-stop(#555EAF), to(#8185C8));
   background: -o-linear-gradient(left, #1B2686, #555EAF, #8185C8);
@@ -1377,7 +1372,7 @@ input[type=button] {
   left: 0;
   top: 0;
   width: 100%;
-  min-height: 214px;
+  min-height: 100%;
   border-radius: 10px;
   background: -webkit-gradient(linear, left top, right top, from(#4FAADA), color-stop(#74BFE6), to(#B2DAE9));
   background: -o-linear-gradient(left, #4FAADA, #74BFE6, #B2DAE9);
@@ -1443,7 +1438,6 @@ input[type=button] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 14px;
 }
 
 .apartments-cards-part {
@@ -1581,6 +1575,7 @@ input[type=button] {
 }
 
 .input-block {
+  width: 14.94%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1591,7 +1586,7 @@ input[type=button] {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 14.94%;
+  font-size: 18px;
 }
 
 .input-block_area {
@@ -1599,7 +1594,7 @@ input[type=button] {
 }
 
 .input-block_room {
-  width: 13.18%;
+  width: 15%;
 }
 
 .input-block_square {
@@ -1715,15 +1710,15 @@ input[type=button] {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  font-size: 14px;
 }
 
 .calculator__button {
   height: 50px;
-  width: 14.94%;
+  width: 15%;
   border: 1px solid #25CF51;
   border-radius: 5px;
   background-color: #FFFFFF;
+  font-size: 13px;
   color: #25CF51;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -1789,11 +1784,14 @@ input[type=button] {
 .bank-cards-item__emblem {
   margin-bottom: 48px;
   height: 28.5px;
-  text-align: left;
 }
 
 .bank-cards-item__emblem_sber {
   width: 172.5px;
+}
+
+.bank-cards-item__emblem_alfa {
+  height: 25px;
 }
 
 .bank-cards-item__emblem_vtb {
@@ -1972,14 +1970,17 @@ input[type=button] {
 }
 
 .footer-menu-part__container {
-  padding-right: 16.7%;
-  padding: 32px 170px 32px 128px;
+  padding: 32px 22.46% 32px 128px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.footer-nav-menu__title-button {
+  display: none;
 }
 
 .footer-nav-menu__title {
@@ -2004,6 +2005,10 @@ input[type=button] {
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+}
+
+.footer-nav-menu__border {
+  display: none;
 }
 
 .footer-bottom-part {
@@ -2032,6 +2037,9 @@ input[type=button] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer-bottom-part__ilar-logo {
@@ -2059,7 +2067,747 @@ input[type=button] {
   }
 }
 
-@media (max-width: 749px) {
+@media (max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding: 0 24px;
+  }
+
+  .header-border {
+    top: 48px;
+  }
+
+  .header-border_bottom {
+    top: 96px;
+  }
+
+  .header-top-part {
+    height: 48px;
+  }
+
+  .logo-part__img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+
+  .logo-part__img_large {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo-part__name-logo {
+    width: 73px;
+    height: 10px;
+  }
+
+  .logo-part__name-logo_large {
+    width: 96px;
+    height: 13px;
+  }
+
+  .logo-part__subtitle {
+    font-size: 12px;
+  }
+
+  .nav-part__link {
+    font-size: 14px;
+  }
+
+  .icon-box {
+    width: 18%;
+  }
+
+  .icon-box__item {
+    width: 20px;
+    height: 20px;
+  }
+
+  .category-menu-part {
+    height: 48px;
+    padding: 0 63px;
+  }
+
+  .category-menu__link {
+    height: 48px;
+    font-size: 14px;
+  }
+
+  .tabbar {
+    padding-top: 104px;
+  }
+
+  .tabbar__container {
+    padding: 24px 87px 24px;
+  }
+
+  .tabbar__button-wrapper {
+    margin-right: 16px;
+  }
+
+  .main-section__container {
+    padding: 0 87px;
+  }
+
+  .cards-part {
+    margin-bottom: 72px;
+  }
+
+  .img-card-item__img-wrapper {
+    height: 256px;
+  }
+
+  .img-card-item__img-wrapper_reclame {
+    height: 376px;
+  }
+
+  .img-card-item__title {
+    margin-bottom: min(29px, 10%);
+    font-size: calc(16px + 0.390625vw);
+  }
+
+  .img-card-item__title_third {
+    font-size: calc(12px + 0.3125vw);
+    margin-bottom: min(39px, 17%);
+  }
+
+  .img-card-item__video-button {
+    top: 90.5px;
+    right: 42.2%;
+    width: 58px;
+    height: 75px;
+  }
+
+  .card-item-button-box {
+    font-size: 14px;
+  }
+
+  .card-item-button-box__button {
+    width: 24px;
+    height: 24px;
+  }
+
+  .card-item-button-box__button_down {
+    margin-right: 8px;
+  }
+
+  .card-item-button-box__button_up {
+    margin-right: 24px;
+  }
+
+  .card-item-button-box__button_message-square {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+  }
+
+  .card-item-button-box__open-count {
+    margin-right: 8px;
+  }
+
+  .card-item {
+    min-height: 176px;
+    padding-top: min(65px, 28%);
+  }
+
+  .card-item__title {
+    width: 95%;
+    margin-bottom: 10px;
+    font-size: calc(12px + 0.390625vw);
+  }
+
+  .title-blue {
+    margin-bottom: 32px;
+    font-size: 30px;
+  }
+
+  .apartment-search-filter {
+    margin-bottom: 96px;
+  }
+
+  .apartment-search-filter__button {
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .search-filter {
+    margin-bottom: 24px;
+  }
+
+  .apartments-cards-part {
+    margin-bottom: 96px;
+  }
+
+  .apartments-slider__img-wrap {
+    height: 267px;
+  }
+
+  .apartments-slider__img {
+    width: 120%;
+    height: 110%;
+  }
+
+  .apartments-slider__title {
+    font-size: 16px;
+  }
+
+  .apartments-slider__price {
+    margin-bottom: 28px;
+    font-size: 18px;
+  }
+
+  .apartments-slider__adress {
+    font-size: 12px;
+  }
+
+  .input-block {
+    font-size: 16px;
+  }
+
+  .input-block_calculator {
+    font-size: 14px;
+  }
+
+  .input-block__title {
+    font-size: 14px;
+  }
+
+  .input-block__block {
+    height: 48px;
+  }
+
+  .input-block__block_calculator {
+    height: 39px;
+  }
+
+  .input-block__block_more {
+    height: 39px;
+  }
+
+  .input-block__block-button {
+    height: 24px;
+    width: 24px;
+  }
+
+  .calculator-part {
+    margin-bottom: 96px;
+  }
+
+  .calculator {
+    font-size: calc(9px + 0.390625vw);
+  }
+
+  .calculator__button {
+    height: 39px;
+  }
+
+  .bank-cards-part {
+    margin-bottom: 96px;
+  }
+
+  .bank-cards-item-border {
+    height: 340px;
+    border-radius: 10px;
+  }
+
+  .bank-cards-item {
+    height: 338px;
+    padding: 24px 0 24px 16px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 14.46px;
+  }
+
+  .bank-cards-item__emblem {
+    margin-bottom: 45px;
+    height: 23px;
+  }
+
+  .bank-cards-item__emblem_sber {
+    width: 136px;
+  }
+
+  .bank-cards-item__emblem_alfa {
+    height: 21.5px;
+  }
+
+  .bank-cards-item__emblem_vtb {
+    width: 63px;
+  }
+
+  .bank-cards-item__percent {
+    margin-bottom: 8px;
+    font-size: 30px;
+    line-height: 27.12px;
+  }
+
+  .bank-cards-item__name {
+    margin-bottom: 40px;
+  }
+
+  .bank-cards-item__price {
+    margin-bottom: 32px;
+  }
+
+  .bank-cards-item__description {
+    line-height: 19.36px;
+  }
+
+  .seo-text-part {
+    margin-bottom: 96px;
+  }
+
+  .seo-text-part__title {
+    margin-bottom: 22px;
+    font-size: 22px;
+  }
+
+  .seo-text-part__text {
+    font-size: 12px;
+    line-height: 14.52px;
+  }
+
+  .seo-text-part__button {
+    font-size: 12px;
+  }
+
+  .footer-link-part__container {
+    min-height: 65px;
+    padding: 0 88px;
+  }
+
+  .icon-part {
+    width: 270px;
+    padding-right: 60px;
+  }
+
+  .icon-part__item {
+    width: 32px;
+    height: 32px;
+  }
+
+  .icon-part__link-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .footer-menu-part__container {
+    padding: 24px 22.46% 24px 88px;
+  }
+
+  .footer-nav-menu__title {
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+
+  .footer-nav-menu__link {
+    font-size: 14px;
+  }
+
+  .footer-bottom-part__container {
+    padding: 16px 120px 16px 88px;
+  }
+
+  .footer-bottom-part__ilar-logo-wrap {
+    min-width: 123px;
+  }
+
+  .footer-bottom-part__ilar-logo {
+    width: 39px;
+    height: 11px;
+  }
+
+  .footer-bottom-part__title {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 910px) {
+  .container {
+    max-width: 768px;
+    padding: 0 48px;
+  }
+
+  .header-border {
+    height: 1px;
+    top: 50px;
+  }
+
+  .header-border_bottom {
+    display: none;
+  }
+
+  .header-top-part {
+    height: 50px;
+  }
+
+  .logo-part__img {
+    width: 26px;
+    height: 26px;
+    margin-right: 13px;
+  }
+
+  .logo-part__img_large {
+    width: 37px;
+    height: 37px;
+    margin-right: 19px;
+  }
+
+  .logo-part__name-logo {
+    width: 78px;
+    height: 11px;
+  }
+
+  .logo-part__name-logo_large {
+    width: 112px;
+    height: 15px;
+  }
+
+  .logo-part__subtitle {
+    display: none;
+  }
+
+  .logo-part__subtitle_large {
+    display: block;
+  }
+
+  .nav-part {
+    width: 13%;
+  }
+
+  .icon-box {
+    width: 100%;
+  }
+
+  .icon-box__item {
+    width: 26px;
+    height: 26px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .category-menu-part {
+    display: none;
+  }
+
+  .tabbar {
+    padding-top: 58px;
+  }
+
+  .tabbar__container {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  .cards-part {
+    margin-bottom: 40px;
+  }
+
+  .card-item-wrapper {
+    width: 100%;
+  }
+
+  .img-card-item {
+    margin-bottom: 32px;
+  }
+
+  .img-card-item__img-wrapper {
+    height: 426px;
+  }
+
+  .img-card-item__img-wrapper_reclame {
+    height: 328px;
+  }
+
+  .img-card-item__img {
+    height: 110%;
+  }
+
+  .img-card-item__img-mask {
+    height: 49%;
+  }
+
+  .img-card-item__title {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+
+  .img-card-item__title_third {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .img-card-item__video-button {
+    top: 148px;
+    right: 42.5%;
+    width: 101px;
+    height: 130px;
+  }
+
+  .card-item {
+    min-height: 124px;
+    padding-top: 57px;
+    margin-bottom: 32px;
+  }
+
+  .card-item__title {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .title-blue {
+    margin-bottom: 24px;
+    font-size: 26px;
+  }
+
+  .apartment-search-filter {
+    margin-bottom: 72px;
+  }
+
+  .apartment-search-filter__button {
+    height: 50px;
+    width: 100%;
+  }
+
+  .search-filter {
+    min-height: 332px;
+    margin-bottom: 37px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .apartments-cards-part {
+    margin-bottom: 72px;
+  }
+
+  .apartments-slider__item {
+    width: 48.8%;
+  }
+
+  .apartments-slider__item_third {
+    display: none;
+  }
+
+  .apartments-slider__img-wrap {
+    height: 328px;
+  }
+
+  .apartments-slider__price {
+    margin-bottom: 31px;
+  }
+
+  .apartments-slider__adress {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .input-block {
+    width: 100%;
+  }
+
+  .input-block_calculator {
+    font-size: 16px;
+  }
+
+  .input-block__block {
+    height: 50px;
+  }
+
+  .input-block__block_more {
+    padding: 0 45.7%;
+  }
+
+  .input-block__block-button {
+    height: 26px;
+    width: 26px;
+  }
+
+  .input-block__block-button-add {
+    height: 10.5px;
+    width: 10.5px;
+  }
+
+  .calculator-part {
+    margin-bottom: 72px;
+  }
+
+  .calculator {
+    min-height: 512px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .calculator__button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .bank-cards-part {
+    margin-bottom: 72px;
+  }
+
+  .bank-cards-item-border {
+    height: 320px;
+  }
+
+  .bank-cards-item {
+    width: 99.05%;
+    height: 318px;
+    line-height: 20px;
+  }
+
+  .bank-cards-item__emblem_alfa {
+    height: 18.6px;
+  }
+
+  .bank-cards-item__description {
+    display: none;
+  }
+
+  .seo-text-part {
+    margin-bottom: 72px;
+  }
+
+  .seo-text-part__title {
+    margin-bottom: 19px;
+    font-size: 18px;
+  }
+
+  .seo-text-part__text {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .seo-text-part__button {
+    font-size: 14px;
+  }
+
+  .footer-link-part {
+    border-top: 1px solid;
+  }
+
+  .footer-link-part__container {
+    min-height: 156px;
+    padding-top: 16px;
+    padding-bottom: 24px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .icon-part {
+    width: 290px;
+    padding-right: 0px;
+  }
+
+  .icon-part__item {
+    width: 43px;
+    height: 43px;
+  }
+
+  .icon-part__link-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer-menu-part {
+    border-top: 1px solid;
+  }
+
+  .footer-menu-part__container {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer-nav-menu {
+    position: relative;
+  }
+
+  .footer-nav-menu__title-button {
+    display: block;
+  }
+
+  .footer-nav-menu__title-wrap {
+    max-width: 768px;
+    min-height: 70px;
+    padding: 0 48px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .footer-nav-menu__title {
+    margin: 0;
+  }
+
+  .footer-nav-menu__title-button {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer-nav-menu__content {
+    display: none;
+    max-width: 768px;
+    padding: 0 48px;
+    margin: 0 auto;
+  }
+
+  .footer-nav-menu__border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline;
+    width: 100%;
+    height: 1px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(31, 218, 227, 0.6)), color-stop(rgba(60, 75, 148, 0.6)), to(rgba(177, 124, 231, 0.6)));
+    background-image: -o-linear-gradient(left, rgba(31, 218, 227, 0.6), rgba(60, 75, 148, 0.6), rgba(177, 124, 231, 0.6));
+    background-image: linear-gradient(to right, rgba(31, 218, 227, 0.6), rgba(60, 75, 148, 0.6), rgba(177, 124, 231, 0.6));
+  }
+
+  .footer-bottom-part__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 24px;
+    padding-bottom: 26px;
+  }
+
+  .footer-bottom-part__ilar-logo-wrap {
+    width: 121px;
+  }
+
+  .footer-bottom-part__title {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 360px) {
   .container {
     max-width: 360px;
     padding: 0 16px;
@@ -2199,13 +2947,13 @@ input[type=button] {
   }
 
   .category-menu__link:hover:before {
-    width: 150%;
+    width: 100%;
   }
 
   .tabbar__button:hover {
-    background: -webkit-gradient(linear, left top, right top, from(rgb(31, 218, 227)), color-stop(rgb(60, 75, 148)), to(rgb(177, 124, 231)));
-    background: -o-linear-gradient(left, rgb(31, 218, 227), rgb(60, 75, 148), rgb(177, 124, 231));
-    background: linear-gradient(to right, rgb(31, 218, 227), rgb(60, 75, 148), rgb(177, 124, 231));
+    background: -webkit-gradient(linear, left top, right top, color-stop(0, #1fdae3), color-stop(48.44%, #3c4b94), to(#b17ce7));
+    background: -o-linear-gradient(left, #1fdae3 0, #3c4b94 48.44%, #b17ce7 100%);
+    background: linear-gradient(90deg, #1fdae3 0, #3c4b94 48.44%, #b17ce7 100%);
   }
 
   .tabbar__button:hover .tabbar__button-text {

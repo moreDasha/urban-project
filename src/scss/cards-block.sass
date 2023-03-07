@@ -11,6 +11,7 @@
     justify-content: space-between
     &_third
         width: 31.75%
+        justify-content: flex-end
 
 .img-card-item
     position: relative
@@ -29,7 +30,7 @@
         height: 310px
         overflow: hidden
         border-radius: 10px 10px 0 0
-        margin-bottom: 8px
+        margin-bottom: 12px
         border-bottom: 4px solid
         border-image: linear-gradient(to right, rgba(31, 218, 227, 1), rgba(60, 75, 148, 1), rgba(177, 124, 231, 1))
         border-image-slice: 1
@@ -59,11 +60,13 @@
             background: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, 0))
     &__video-button
         position: absolute
+        z-index: 5
         top: 111.5px
         right: 43.234%
         width: 67.67px
         height: 87px
     &__title
+        width: 95%
         padding-left: 16px
         margin-bottom: min(39px, 10%)
         font-size: calc(18px + 4 * (100vw / 1280))
@@ -97,39 +100,24 @@
     z-index: 2
     &_white
         color: $background-color
-    &__button-down
+    &__button
         width: 29px
         height: 29px
-        margin-right: 11.63px
         stroke-width: 1.82
         stroke: $text-color
         fill: none
         stroke-linecap: round
         stroke-linejoin: round
+        &_down
+            margin-right: 11.63px
+        &_up
+            margin-right: 32px
         &_white
             stroke: $background-color
-    &__button-up
-        width: 29px
-        height: 29px
-        margin-right: 32px
-        stroke-width: 1.82
-        stroke: $text-color
-        fill: none
-        stroke-linecap: round
-        stroke-linejoin: round
-        &_white
-            stroke: $background-color
-    &__button-message-square
-        width: 17px
-        height: 17px
-        margin-right: 12px
-        stroke-width: 1.82
-        stroke: $text-color
-        fill: none
-        stroke-linecap: round
-        stroke-linejoin: round
-        &_white
-            stroke: $background-color
+        &_message-square
+            width: 17px
+            height: 17px
+            margin-right: 12px
     &__open-count
         margin-right: 12px
 
@@ -157,7 +145,7 @@
         border: 1px solid #16293F
         background: #FFFFFF
     &__title
-        width: 85%
+        width: 90%
         font-size: calc(14px + 4 * (100vw / 1280))
         font-weight: 700
         z-index: 2
@@ -168,7 +156,7 @@
     left: 0
     top: 0
     width: 100%
-    min-height: 214px
+    min-height: 100%
     border-radius: 10px
     background: linear-gradient(to right, #0AB2A7, #4EC3BB, #B4E9E3)
     opacity: 0
@@ -180,7 +168,7 @@
     left: 0
     top: 0
     width: 100%
-    min-height: 214px
+    min-height: 100%
     border-radius: 10px
     background: linear-gradient(to right, #1B2686, #555EAF, #8185C8 )
     opacity: 0
@@ -192,7 +180,7 @@
     left: 0
     top: 0
     width: 100%
-    min-height: 214px
+    min-height: 100%
     border-radius: 10px
     background: linear-gradient(to right, #4FAADA, #74BFE6, #B2DAE9)
     opacity: 0
@@ -214,8 +202,87 @@
     .card-item:hover .card-item__title
         text-decoration: underline
 
-@media (max-width: 749px)
 
+@media (max-width: 1024px)
+    .cards-part
+        margin-bottom: 72px
+    .img-card-item
+        &__img-wrapper
+            height: 256px
+            &_reclame
+                height: 376px
+        &__title
+            margin-bottom: min(29px, 10%)
+            font-size: calc(16px + 4 * (100vw / 1024))
+            &_third
+                font-size: calc(12px + 4 * (100vw / 1280))
+                margin-bottom: min(39px, 17%)
+        &__video-button
+            top: 90.5px
+            right: 42.2%
+            width: 58px
+            height: 75px
+    .card-item-button-box
+        font-size: 14px
+        &__button
+            width: 24px
+            height: 24px
+            &_down
+                margin-right: 8px
+            &_up
+                margin-right: 24px
+            &_message-square
+                width: 14px
+                height: 14px
+                margin-right: 8px
+        &__open-count
+            margin-right: 8px
+    .card-item
+        min-height: 176px
+        padding-top: min(65px, 28%)
+        &__title
+            width: 95%
+            margin-bottom: 10px
+            font-size: calc(12px + 4 * (100vw / 1024))
+
+
+@media (max-width: 910px)
+    .cards-part
+        margin-bottom: 40px
+    .card-item-wrapper
+        width: 100%
+    .img-card-item
+        margin-bottom: 32px
+        &__img-wrapper
+            height: 426px
+            &_reclame
+                height: 328px
+        &__img
+            height: 110%
+        &__img-mask
+            height: 49%
+        &__title
+            margin-bottom: 16px
+            font-size: 20px
+            &_third
+                font-size: 20px
+                margin-bottom: 16px
+        &__video-button
+            top: 148px
+            right: 42.5%
+            width: 101px
+            height: 130px
+    .card-item
+        min-height: 124px
+        padding-top: 57px
+        margin-bottom: 32px
+        &__title
+            margin-bottom: 10px
+            font-size: 16px
+
+
+
+@media (max-width: 360px)
     .card-item-wrapper
         width: 100%
 

@@ -9,13 +9,13 @@
     flex-direction: row
     justify-content: space-between
     align-items: flex-end
-    font-size: 14px
     &__button
         height: 50px
-        width: 14.94%
+        width: 15%
         border: 1px solid #25CF51
         border-radius: 5px
         background-color: $background-color
+        font-size: 13px
         color: #25CF51
         transition: all 0.3s ease-in-out
 
@@ -23,3 +23,23 @@
     .calculator__button:hover
         background-color:#25CF51
         color: $background-color
+
+
+@media (max-width: 1024px)
+    .calculator-part
+        margin-bottom: 96px
+    .calculator
+        font-size: calc(9px + 4 * (100vw / 1024))
+        &__button
+            height: 39px
+
+
+@media (max-width: 910px)
+    .calculator-part
+        margin-bottom: 72px
+    .calculator
+        min-height: 512px
+        flex-direction: column
+        &__button
+            width: 100%
+            font-size: 16px
