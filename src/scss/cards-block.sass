@@ -62,7 +62,8 @@
         position: absolute
         z-index: 5
         top: 111.5px
-        right: 43.234%
+        left:50%
+        transform: translate(-50%, 0)
         width: 67.67px
         height: 87px
     &__title
@@ -219,7 +220,6 @@
                 margin-bottom: min(39px, 17%)
         &__video-button
             top: 90.5px
-            right: 42.2%
             width: 58px
             height: 75px
     .card-item-button-box
@@ -269,7 +269,6 @@
                 margin-bottom: 16px
         &__video-button
             top: 148px
-            right: 42.5%
             width: 101px
             height: 130px
     .card-item
@@ -282,41 +281,20 @@
 
 
 
-@media (max-width: 360px)
-    .card-item-wrapper
-        width: 100%
-
+@media (max-width: 500px)
+    .cards-part
+        margin-bottom: 32px
     .img-card-item
-        margin-bottom: 32px
+        &__img-wrapper
+            height: 208px
+            &_reclame
+                height: 160px
         &__title
-            margin-bottom: 16px
             font-size: 18px
-
+        &__video-button
+            display: none
     .card-item
-        min-height: 139px
-        margin-bottom: 32px
+        min-height: 140px
         &__title
             margin-bottom: 16px
             font-size: 14px
-
-    .card-item::before
-        min-height: 139px
-
-    .card-item-button-box
-        &__button-down
-            width: 24px
-            height: 24px
-            margin-right: 8px
-        &__button-up
-            width: 24px
-            height: 24px
-            margin-right: 24px
-        &__button-message-square
-            width: 14px
-            height: 14px
-            margin-right: 8px
-        &__open-count
-            margin-right: 8px
-
-    .card-item-sign
-        left: 8px

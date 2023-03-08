@@ -6,10 +6,8 @@
     width: 100%
     display: flex
     justify-content: space-between
-    &__button-left
+    &__button
         position: absolute
-        top: 45.78%
-        left: 16px
         z-index: 3
         height: 40px
         width: 40px
@@ -20,24 +18,16 @@
         align-items: center
         &:hover
             cursor: pointer
+        &_left
+            top: 45.78%
+            left: 16px
+        &_right
+            top: 45.78%
+            right: 16px
     &__button-pointer-left
         width: 30px
         height: 30px
         transform: rotate(90deg)
-    &__button-right
-        position: absolute
-        top: 45.78%
-        right: 16px
-        z-index: 3
-        height: 40px
-        width: 40px
-        border-radius: 100px
-        background-color: $background-color
-        display: flex
-        justify-content: center
-        align-items: center
-        &:hover
-            cursor: pointer
     &__button-pointer-right
         width: 30px
         height: 30px
@@ -77,6 +67,11 @@
         color: #16293F
         opacity: 80%
 
+@media (any-hover: hover)
+    .apartments-slider__button:hover
+        cursor: pointer
+        opacity: 60%
+
 
 @media (max-width: 1024px)
     .apartments-cards-part
@@ -112,3 +107,51 @@
         &__adress
             font-size: 13px
             margin-bottom: 10px
+
+@media (max-width: 600px)
+    .apartments-slider
+        justify-content: center
+        &__button
+            border: 1px solid black
+            &_left
+                left: 3%
+            &_right
+                right: 3%
+        &__item
+            width: 250px
+            &_second
+                display: none
+
+
+@media (max-width: 500px)
+    .apartments-cards-part
+        margin-bottom: 64px
+    .apartments-slider
+        &__img-wrap
+            height: 250px
+        &__button
+            height: 30px
+            width: 30px
+            &_left
+                top: 43%
+                left: 0
+            &_right
+                top: 43%
+                right: 0
+        &__button-pointer-left
+            width: 20px
+            height: 20px
+        &__button-pointer-right
+            width: 20px
+            height: 20px
+        &__title
+            margin-bottom: 8px
+            font-size: 14px
+            line-height: 19.3px
+        &__price
+            margin-bottom: 8px
+            font-size: 16px
+            line-height: 19.3px
+        &__adress
+            margin-bottom: 8px
+            font-size: 12px

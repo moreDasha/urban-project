@@ -1190,7 +1190,10 @@ input[type=button] {
   position: absolute;
   z-index: 5;
   top: 111.5px;
-  right: 43.234%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   width: 67.67px;
   height: 87px;
 }
@@ -1455,10 +1458,8 @@ input[type=button] {
           justify-content: space-between;
 }
 
-.apartments-slider__button-left {
+.apartments-slider__button {
   position: absolute;
-  top: 45.78%;
-  left: 16px;
   z-index: 3;
   height: 40px;
   width: 40px;
@@ -1475,8 +1476,18 @@ input[type=button] {
           align-items: center;
 }
 
-.apartments-slider__button-left:hover {
+.apartments-slider__button:hover {
   cursor: pointer;
+}
+
+.apartments-slider__button_left {
+  top: 45.78%;
+  left: 16px;
+}
+
+.apartments-slider__button_right {
+  top: 45.78%;
+  right: 16px;
 }
 
 .apartments-slider__button-pointer-left {
@@ -1485,30 +1496,6 @@ input[type=button] {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
-}
-
-.apartments-slider__button-right {
-  position: absolute;
-  top: 45.78%;
-  right: 16px;
-  z-index: 3;
-  height: 40px;
-  width: 40px;
-  border-radius: 100px;
-  background-color: #FFFFFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.apartments-slider__button-right:hover {
-  cursor: pointer;
 }
 
 .apartments-slider__button-pointer-right {
@@ -1746,6 +1733,10 @@ input[type=button] {
           justify-content: space-between;
 }
 
+.bank-cards-part__button {
+  display: none;
+}
+
 .bank-cards-item-border {
   position: relative;
   width: 31.75%;
@@ -1763,7 +1754,7 @@ input[type=button] {
   left: 1px;
   width: 99.38%;
   height: 410px;
-  padding: 23px 0 41px 16px;
+  padding: 23px 16px 41px 16px;
   border-radius: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2173,7 +2164,6 @@ input[type=button] {
 
   .img-card-item__video-button {
     top: 90.5px;
-    right: 42.2%;
     width: 58px;
     height: 75px;
   }
@@ -2312,7 +2302,7 @@ input[type=button] {
 
   .bank-cards-item {
     height: 338px;
-    padding: 24px 0 24px 16px;
+    padding: 24px 16px 24px 16px;
     border-radius: 10px;
     font-size: 16px;
     line-height: 14.46px;
@@ -2472,7 +2462,7 @@ input[type=button] {
   }
 
   .nav-part {
-    width: 13%;
+    width: 92px;
   }
 
   .icon-box {
@@ -2541,7 +2531,6 @@ input[type=button] {
 
   .img-card-item__video-button {
     top: 148px;
-    right: 42.5%;
     width: 101px;
     height: 130px;
   }
@@ -2634,6 +2623,10 @@ input[type=button] {
     width: 10.5px;
   }
 
+  .input-block__block_more {
+    padding: 0 135px;
+  }
+
   .calculator-part {
     margin-bottom: 72px;
   }
@@ -2648,6 +2641,7 @@ input[type=button] {
 
   .calculator__button {
     width: 100%;
+    height: 50px;
     font-size: 16px;
   }
 
@@ -2656,21 +2650,19 @@ input[type=button] {
   }
 
   .bank-cards-item-border {
-    height: 320px;
+    width: 48.8%;
+  }
+
+  .bank-cards-item-border_third {
+    display: none;
   }
 
   .bank-cards-item {
-    width: 99.05%;
-    height: 318px;
-    line-height: 20px;
+    width: 99.2%;
   }
 
   .bank-cards-item__emblem_alfa {
     height: 18.6px;
-  }
-
-  .bank-cards-item__description {
-    display: none;
   }
 
   .seo-text-part {
@@ -2799,68 +2791,119 @@ input[type=button] {
   }
 
   .footer-bottom-part__ilar-logo-wrap {
-    width: 121px;
+    width: 124px;
+    margin-bottom: 12px;
   }
 
   .footer-bottom-part__title {
     margin-bottom: 12px;
   }
+
+  .footer-bottom-part__title_logo {
+    margin-bottom: 0;
+  }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 600px) {
+  .apartments-slider {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .apartments-slider__button {
+    border: 1px solid black;
+  }
+
+  .apartments-slider__button_left {
+    left: 3%;
+  }
+
+  .apartments-slider__button_right {
+    right: 3%;
+  }
+
+  .apartments-slider__item {
+    width: 250px;
+  }
+
+  .apartments-slider__item_second {
+    display: none;
+  }
+
+  .bank-cards-part__wrap {
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .bank-cards-part__button {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    border: 1px solid black;
+    background-color: #FFFFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .bank-cards-part__button_left {
+    top: 45%;
+    left: 3%;
+  }
+
+  .bank-cards-part__button_right {
+    top: 45%;
+    right: 3%;
+  }
+
+  .bank-cards-part__button-pointer-left {
+    width: 30px;
+    height: 30px;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+
+  .bank-cards-part__button-pointer-right {
+    width: 30px;
+    height: 30px;
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+
+  .bank-cards-item-border {
+    width: 250px;
+  }
+
+  .bank-cards-item-border_second {
+    display: none;
+  }
+
+  .bank-cards-item {
+    width: 248px;
+  }
+}
+
+@media (max-width: 500px) {
   .container {
     max-width: 360px;
     padding: 0 16px;
-  }
-
-  .logo-part__img {
-    width: 26px;
-    height: 26px;
-    margin-right: 13.28px;
-  }
-
-  .logo-part__img_large {
-    width: 37px;
-    height: 37px;
-    margin-right: 19px;
-  }
-
-  .logo-part__name-logo {
-    width: 78.7px;
-    height: 11px;
-    margin-right: 0;
-  }
-
-  .logo-part__name-logo_large {
-    width: 112px;
-    height: 15.87px;
-    margin-right: 16px;
-  }
-
-  .logo-part__subtitle {
-    display: none;
-  }
-
-  .logo-part__subtitle_large {
-    display: block;
-    font-size: 12px;
-  }
-
-  .nav-part {
-    width: 28%;
-  }
-
-  .nav-menu {
-    display: none;
-  }
-
-  .icon-box {
-    width: 100%;
-  }
-
-  .icon-box__item {
-    width: 26px;
-    height: 26px;
   }
 
   .tabbar {
@@ -2868,36 +2911,32 @@ input[type=button] {
   }
 
   .tabbar__container {
-    padding: 24px 16px 24px 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 
-  .tabbar__button-wrapper {
-    margin-right: 16px;
-  }
-
-  .main-section__container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .card-item-wrapper {
-    width: 100%;
-  }
-
-  .img-card-item {
+  .cards-part {
     margin-bottom: 32px;
+  }
+
+  .img-card-item__img-wrapper {
+    height: 208px;
+  }
+
+  .img-card-item__img-wrapper_reclame {
+    height: 160px;
   }
 
   .img-card-item__title {
-    margin-bottom: 16px;
     font-size: 18px;
   }
 
+  .img-card-item__video-button {
+    display: none;
+  }
+
   .card-item {
-    min-height: 139px;
-    margin-bottom: 32px;
+    min-height: 140px;
   }
 
   .card-item__title {
@@ -2905,34 +2944,178 @@ input[type=button] {
     font-size: 14px;
   }
 
-  .card-item::before {
-    min-height: 139px;
+  .title-blue {
+    font-size: 24px;
   }
 
-  .card-item-button-box__button-down {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
+  .apartment-search-filter {
+    margin-bottom: 64px;
   }
 
-  .card-item-button-box__button-up {
-    width: 24px;
-    height: 24px;
-    margin-right: 24px;
+  .apartments-cards-part {
+    margin-bottom: 64px;
   }
 
-  .card-item-button-box__button-message-square {
-    width: 14px;
-    height: 14px;
-    margin-right: 8px;
+  .apartments-slider__img-wrap {
+    height: 250px;
   }
 
-  .card-item-button-box__open-count {
-    margin-right: 8px;
+  .apartments-slider__button {
+    height: 30px;
+    width: 30px;
   }
 
-  .card-item-sign {
-    left: 8px;
+  .apartments-slider__button_left {
+    top: 43%;
+    left: 0;
+  }
+
+  .apartments-slider__button_right {
+    top: 43%;
+    right: 0;
+  }
+
+  .apartments-slider__button-pointer-left {
+    width: 20px;
+    height: 20px;
+  }
+
+  .apartments-slider__button-pointer-right {
+    width: 20px;
+    height: 20px;
+  }
+
+  .apartments-slider__title {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 19.3px;
+  }
+
+  .apartments-slider__price {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 19.3px;
+  }
+
+  .apartments-slider__adress {
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+
+  .calculator-part {
+    margin-bottom: 64px;
+  }
+
+  .bank-cards-part {
+    margin-bottom: 64px;
+  }
+
+  .bank-cards-part__button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .bank-cards-part__button_left {
+    left: 0;
+  }
+
+  .bank-cards-part__button_right {
+    right: 0;
+  }
+
+  .bank-cards-part__button-pointer-left {
+    width: 20px;
+    height: 20px;
+  }
+
+  .bank-cards-part__button-pointer-right {
+    width: 20px;
+    height: 20px;
+  }
+
+  .bank-cards-item-border {
+    height: 258px;
+  }
+
+  .bank-cards-item {
+    height: 256px;
+    padding: 16px 8px 12px 8px;
+    font-size: 14px;
+    line-height: 12.66px;
+  }
+
+  .bank-cards-item__emblem {
+    margin-bottom: 28px;
+    height: 18px;
+  }
+
+  .bank-cards-item__emblem_sber {
+    width: 106px;
+  }
+
+  .bank-cards-item__percent {
+    font-size: 25px;
+    line-height: 22.6px;
+  }
+
+  .bank-cards-item__name {
+    margin-bottom: 24px;
+  }
+
+  .bank-cards-item__price {
+    margin-bottom: 24px;
+  }
+
+  .bank-cards-item__description {
+    line-height: 16.94px;
+  }
+
+  .seo-text-part {
+    margin-bottom: 64px;
+  }
+
+  .seo-text-part__title {
+    margin-bottom: 16px;
+  }
+
+  .footer-link-part__container {
+    min-height: 151px;
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+
+  .icon-part {
+    width: 250px;
+  }
+
+  .icon-part__item {
+    width: 37px;
+    height: 37px;
+  }
+
+  .icon-part__link-icon {
+    width: 21px;
+    height: 21px;
+  }
+
+  .footer-menu-part {
+    border-top: 1px solid;
+  }
+
+  .footer-menu-part__container {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .footer-nav-menu__title-wrap {
+    max-width: 360px;
+    padding: 0 16px;
+  }
+
+  .footer-bottom-part__container {
+    padding-top: 24px;
+    padding-bottom: 32px;
   }
 }
 
@@ -2999,9 +3182,19 @@ input[type=button] {
     color: #FFFFFF;
   }
 
+  .apartments-slider__button:hover {
+    cursor: pointer;
+    opacity: 60%;
+  }
+
   .calculator__button:hover {
     background-color: #25CF51;
     color: #FFFFFF;
+  }
+
+  .bank-cards-part__button:hover {
+    cursor: pointer;
+    opacity: 60%;
   }
 
   .icon-part__item:hover {
