@@ -11,8 +11,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
 
-    <link rel="stylesheet" href="css/style.min.css?_v=20230307181711">
-    <script defer src="js/index.min.js?_v=20230307181711"></script>
+    <link rel="stylesheet" href="css/style.min.css?_v=20230308191647">
+    <script defer src="js/index.min.js?_v=20230308191647"></script>
 
     <title>УРБАН | Главная</title>
 </head>
@@ -37,7 +37,7 @@
                 <li class="nav-menu__item"><a class="nav-menu__link" href="#">Ипотека</a></li>
             </ul>
             <div class="icon-box">
-                 <img class="icon-box__item" src="img/search.svg" alt="search icon">
+                <img class="icon-box__item icon-box__item_first" src="img/search.svg" alt="search icon">
                 <img class="icon-box__item" src="img/user.svg" alt="search icon">
             </div>
         </nav>
@@ -294,10 +294,10 @@
         Квартиры
     </h4>
     <div class="apartments-cards-part__slider apartments-slider">
-        <div class="apartments-slider__button-left">
+        <div class="apartments-slider__button apartments-slider__button_left">
             <img class="apartments-slider__button-pointer-left" src="img/chevron-down.svg" alt="button">
         </div>
-        <div class="apartments-slider__button-right">
+        <div class="apartments-slider__button apartments-slider__button_right">
             <img class="apartments-slider__button-pointer-right" src="img/chevron-down.svg" alt="button">
         </div>
         <div class="apartments-slider__item">
@@ -308,7 +308,7 @@
             <p class="apartments-slider__price">6 500 000 &#8381;</p>
             <p class="apartments-slider__adress">Казань, Советский р-н, село Константиновка, ул. Московская 56</p>
         </div>
-        <div class="apartments-slider__item">
+        <div class="apartments-slider__item apartments-slider__item_second">
             <div class="apartments-slider__img-wrap">
                 <picture><source srcset="img/apartment2.webp" type="image/webp"><img class="apartments-slider__img" src="img/apartment2.png" alt="apartment photo"></picture>
             </div>
@@ -551,6 +551,12 @@
         Предложения банков
     </h4>
     <div class="bank-cards-part__wrap">
+        <div class="bank-cards-part__button bank-cards-part__button_left">
+            <img class="bank-cards-part__button-pointer-left" src="img/chevron-down.svg" alt="button">
+        </div>
+        <div class="bank-cards-part__button bank-cards-part__button_right">
+            <img class="bank-cards-part__button-pointer-right" src="img/chevron-down.svg" alt="button">
+        </div>
         <div class="bank-cards-item-border">
             <div class="bank-cards-item">
                 <img class="bank-cards-item__emblem bank-cards-item__emblem_sber" src="img/sber.svg" alt="">
@@ -561,7 +567,7 @@
                 <span class="bank-cards-item__description">Возраст от 21 года<br>Стаж от 4 месяцев<br>4 документа</span>
             </div>
         </div>
-        <div class="bank-cards-item-border">
+        <div class="bank-cards-item-border bank-cards-item-border_second">
             <div class="bank-cards-item">
                 <picture><source srcset="img/alfa.webp" type="image/webp"><img class="bank-cards-item__emblem bank-cards-item__emblem_alfa" src="img/alfa.png" alt=""></picture>
                 <span class="bank-cards-item__percent">4,69&#37;</span>
@@ -571,7 +577,7 @@
                 <span class="bank-cards-item__description">Возраст от 18 лет<br>Стаж от 4 месяцев<br>4 документа</span>
             </div>
         </div>
-        <div class="bank-cards-item-border">
+        <div class="bank-cards-item-border bank-cards-item-border_third">
             <div class="bank-cards-item">
                 <img class="bank-cards-item__emblem bank-cards-item__emblem_vtb" src="img/vtb.svg" alt="">
                 <span class="bank-cards-item__percent">6,35&#37;</span>
@@ -866,7 +872,7 @@
 <div class="footer-bottom-part">
     <div class="footer-bottom-part__container container">
         <div class="footer-bottom-part__ilar-logo-wrap">
-            <p class="footer-bottom-part__title">Разработано:</p>
+            <p class="footer-bottom-part__title footer-bottom-part__title_logo">Разработано:</p>
             <a href="#"><img class="footer-bottom-part__ilar-logo" src="img/ilar-logo.svg" alt="ilar logo"></a>
         </div>
         <p class="footer-bottom-part__title footer-bottom-part__title_thick">Политика конфиденциальности</p>
