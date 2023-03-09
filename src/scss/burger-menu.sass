@@ -1,0 +1,31 @@
+@media (max-width: 910px)
+    .burger-menu-part
+        display: none
+        width: 100%
+        height: calc( 100vh - 82px )
+        background-color: $background-color
+        overflow: auto
+    .burger-menu
+        border-bottom: 1px solid
+        border-image: linear-gradient(to right, rgba(31, 218, 227, .6), rgba(60, 75, 148, .6), rgba(177, 124, 231, .6))
+        border-image-slice: 1
+        &__container
+            padding-top: 100px
+        &__item
+            margin-bottom: 48px
+        &__link
+            text-decoration: none
+            font-size: 40px
+            color: #16293F
+            transition: all 0.3s ease-in-out
+    .burger-menu-icon-part
+        &__container
+            padding-top: 24px
+            padding-bottom: 24px
+
+    .bottom-menu-section.burger-menu-open .burger-menu-part
+        display: block
+
+@media (any-hover: hover)
+    .burger-menu__link:hover
+        color: $icon-color
