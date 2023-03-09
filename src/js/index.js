@@ -7,19 +7,19 @@ flsFunctions.isWebp();
 let lastScroll = 0;
 const header = document.querySelector('.header');
 
-const scrollsPosition = () => window.pageYOffset || document.documentElement.scrollTop;
+const getScrollPosition = () => window.scrollY;
 const containHide = () => header.classList.contains('hide');
 
 window.addEventListener('scroll', () => {
-    if(scrollsPosition() > lastScroll && !containHide()) {
+    if(getScrollPosition() > lastScroll && !containHide()) {
         //scroll down
         header.classList.add('hide');
     }
-    else if(scrollsPosition() < lastScroll && containHide()){
+    else if(getScrollPosition() < lastScroll && containHide()) {
         //scroll up
         header.classList.remove('hide');
     }
-    lastScroll = scrollsPosition();
+    lastScroll = getScrollPosition();
 })
 
 //таб бар
@@ -61,3 +61,6 @@ burgerButton.addEventListener('click', function() {
         startScroll();
     }
 })
+
+
+//=> window.pageYOffset || document.documentElement.scrollTop;

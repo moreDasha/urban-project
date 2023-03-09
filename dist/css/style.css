@@ -3074,6 +3074,27 @@ input[type=button] {
     padding-bottom: 24px;
   }
 
+  .burger-menu__container {
+    padding-top: 82px;
+  }
+
+  .burger-menu__item {
+    margin-bottom: 32px;
+  }
+
+  .burger-menu__link {
+    font-size: 30px;
+  }
+
+  .burger-menu-icon-part__container {
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+
+  .bottom-menu__title {
+    font-size: 12px;
+  }
+
   .cards-part {
     margin-bottom: 32px;
   }
