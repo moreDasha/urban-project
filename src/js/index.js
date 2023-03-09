@@ -3,24 +3,26 @@ import * as flsFunctions from "./modules/functions.js";
 //проверка поддержки webp
 flsFunctions.isWebp();
 
+//выплывающий хэдр
 let lastScroll = 0;
 const header = document.querySelector('.header');
 
-const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
+const scrollsPosition = () => window.pageYOffset || document.documentElement.scrollTop;
 const containHide = () => header.classList.contains('hide');
 
 window.addEventListener('scroll', () => {
-    if(scrollPosition() > lastScroll && !containHide()) {
+    if(scrollsPosition() > lastScroll && !containHide()) {
         //scroll down
         header.classList.add('hide');
     }
-    else if(scrollPosition() < lastScroll && containHide()){
+    else if(scrollsPosition() < lastScroll && containHide()){
         //scroll up
         header.classList.remove('hide');
     }
-    lastScroll = scrollPosition();
+    lastScroll = scrollsPosition();
 })
 
+//таб бар
 const button = document.querySelectorAll('.tabbar__button');
 
 button.forEach(function(b) {
@@ -30,4 +32,32 @@ button.forEach(function(b) {
         })
         b.classList.toggle('activ-button')
     } )
+})
+
+//запрет скролла при открытом бургер-меню
+let scrollPosition = 0;
+const stopScroll =() => {
+        scrollPosition = window.scrollY;
+        document.body.style.cssText = `
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        `;
+    };
+const startScroll = () => {
+    document.body.style.cssText = '';
+    window.scroll({top: scrollPosition})
+}
+
+//бургер-меню
+const burgerButton = document.querySelector('.burger-menu-button');
+const burgerMenu = document.querySelector('.bottom-menu-section');
+burgerButton.addEventListener('click', function() {
+    burgerMenu.classList.toggle('burger-menu-open');
+    burgerButton.classList.toggle('link-active');
+    if (burgerMenu.classList.contains('burger-menu-open')) {
+        stopScroll();
+    } else {
+        startScroll();
+    }
 })

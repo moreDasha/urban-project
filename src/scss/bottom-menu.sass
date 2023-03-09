@@ -1,0 +1,67 @@
+.bottom-menu-section
+    display: none
+
+@media (max-width: 910px)
+    .bottom-menu-section
+        display: block
+        position: sticky
+        z-index: 10
+        bottom: 0
+        width: 100%
+    .bottom-menu-part
+        border-top: 1.5px solid
+        border-image: linear-gradient(to right, rgba(31, 218, 227, .6), rgba(60, 75, 148, .6), rgba(177, 124, 231, .6))
+        border-image-slice: 1
+        background-color: $background-color
+    .bottom-menu
+        max-width: 768px
+        height: 82px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &__link
+            text-decoration: none
+            display: flex
+            flex-direction: column
+            align-items: center
+            opacity: 60%
+            transition: all 0.3s ease-in-out
+        &__icon
+            width: 30px
+            height: 30px
+            margin-bottom: 8px
+        &__title
+            font-size: 13px
+            color: $icon-color
+        &__burger-button
+            position: relative
+            width: 30px
+            height: 30px
+            margin-bottom: 8px
+        &__burger-span
+            position: absolute
+            top: 5.3px
+            left: 0
+            width: 30px
+            height: 1.5px
+            background-color: $icon-color
+            transition: transform .4s, opacity .4s
+        &__burger-span:nth-child(2)
+            transform: translateY(9px)
+        &__burger-span:nth-child(3)
+            transform: translateY(19px)
+    .link-active
+        opacity: 100%
+    
+    .bottom-menu-section.burger-menu-open .bottom-menu__burger-span:nth-child(2)
+        opacity: 0
+    .bottom-menu-section.burger-menu-open .bottom-menu__burger-span:nth-child(1)
+        transform: translateY(9px) rotate(45deg)
+    .bottom-menu-section.burger-menu-open .bottom-menu__burger-span:nth-child(3)
+        transform: translateY(9px) rotate(-45deg)
+
+
+@media (any-hover: hover)
+    .bottom-menu__link:hover
+        opacity: 100%
+        cursor: pointer
