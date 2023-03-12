@@ -1843,6 +1843,8 @@ input[type=button] {
 }
 
 .seo-text-part__text {
+  height: 48px;
+  overflow: hidden;
   font-size: 13px;
   line-height: 15.73px;
   color: #16293F;
@@ -1858,15 +1860,28 @@ input[type=button] {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0)));
   background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
   background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .seo-text-part__button {
   font-size: 13px;
   color: #293389;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.seo-text-part__button:hover {
-  cursor: pointer;
+.seo-text-part__text-wrap.seo-text-open .seo-text-part__text {
+  height: 100%;
+}
+
+.seo-text-part__text-wrap.seo-text-open .seo-text-part__text-mask {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .footer {
@@ -2357,6 +2372,7 @@ input[type=button] {
   }
 
   .seo-text-part__text {
+    height: 45px;
     font-size: 12px;
     line-height: 14.52px;
   }
@@ -2834,6 +2850,7 @@ input[type=button] {
   }
 
   .seo-text-part__text {
+    height: 35px;
     font-size: 14px;
     line-height: 17px;
   }
@@ -3297,6 +3314,10 @@ input[type=button] {
     margin-bottom: 64px;
   }
 
+  .seo-text-part__text {
+    height: 50px;
+  }
+
   .seo-text-part__title {
     margin-bottom: 16px;
   }
@@ -3433,6 +3454,11 @@ input[type=button] {
   .bank-cards-part__button:hover {
     cursor: pointer;
     opacity: 60%;
+  }
+
+  .seo-text-part__button:hover {
+    cursor: pointer;
+    color: #652989;
   }
 
   .icon-part__item:hover {

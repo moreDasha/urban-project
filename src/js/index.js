@@ -75,5 +75,17 @@ for (let currentAccordionButton of accordionButton) {
     })
 }
 
+//сео
+const seoButton = document.querySelector('.seo-text-part__button');
+const seoText = document.querySelector('.seo-text-part__text-wrap');
+seoButton.addEventListener("click", function() {
+    seoText.classList.toggle("seo-text-open");
+    if (seoText.classList.contains("seo-text-open")) {
+        seoButton.textContent = 'Скрыть';
+    } else {
+        seoButton.textContent = 'Показать полностью';
+    }
+})
+
 
 //=> window.pageYOffset || document.documentElement.scrollTop;
