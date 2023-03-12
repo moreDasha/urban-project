@@ -62,5 +62,18 @@ burgerButton.addEventListener('click', function() {
     }
 })
 
+//аккордион
+const accordionButton = document.querySelectorAll('.footer-nav-menu__title-button');
+const accordionContent = document.querySelectorAll('.footer-nav-menu');
+for (let currentAccordionButton of accordionButton) {
+    currentAccordionButton.addEventListener("click", function() {
+        accordionContent.forEach((el) => {
+            if (el.classList.contains(currentAccordionButton.id)) {
+                el.classList.toggle("footer-nav-menu-open");
+            }
+        })
+    })
+}
+
 
 //=> window.pageYOffset || document.documentElement.scrollTop;
