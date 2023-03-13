@@ -1062,6 +1062,7 @@ input[type=button] {
 }
 
 .message-button_bottom {
+  opacity: 0;
   bottom: 60px;
   background-color: #FFFFFF;
 }
@@ -2633,7 +2634,7 @@ input[type=button] {
 
   .bottom-menu-section {
     display: block;
-    position: sticky;
+    position: fixed;
     z-index: 10;
     bottom: 0;
     width: 100%;

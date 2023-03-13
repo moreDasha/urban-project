@@ -22,6 +22,25 @@ window.addEventListener('scroll', () => {
     lastScroll = getScrollPosition();
 })
 
+//кнопка вверх
+const buttonUp = document.getElementById('button-up');
+let pageHeight = document.documentElement.clientHeight;
+
+buttonUp.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0, 
+        left: pageXOffset, 
+        behavior: 'smooth',
+    });
+});
+
+window.addEventListener("scroll", function() {
+    if (window.pageYOffset > pageHeight) {
+        buttonUp.style.opacity = '1'
+        } else { 
+            buttonUp.style.opacity = '0' }
+    });
+
 //таб бар
 const button = document.querySelectorAll('.tabbar__button');
 
