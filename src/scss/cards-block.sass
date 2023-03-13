@@ -13,6 +13,15 @@
         width: 31.75%
         justify-content: flex-end
 
+.element-hidden
+    opacity: 0
+    transform: translateY(20%)
+
+.element-show
+    opacity: 1
+    transform: translateY(0)
+    transition: all 0.7s ease-in-out
+
 .img-card-item
     position: relative
     width: 100%
@@ -186,6 +195,7 @@
     background: linear-gradient(to right, #4FAADA, #74BFE6, #B2DAE9)
     opacity: 0
     transition: all 0.3s ease-in-out
+
 
 @media (any-hover: hover)
     .img-card-item:hover
