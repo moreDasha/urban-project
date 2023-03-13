@@ -62,5 +62,30 @@ burgerButton.addEventListener('click', function() {
     }
 })
 
+//аккордион
+const accordionButton = document.querySelectorAll('.footer-nav-menu__title-button');
+const accordionContent = document.querySelectorAll('.footer-nav-menu');
+for (let currentAccordionButton of accordionButton) {
+    currentAccordionButton.addEventListener("click", function() {
+        accordionContent.forEach((el) => {
+            if (el.classList.contains(currentAccordionButton.id)) {
+                el.classList.toggle("footer-nav-menu-open");
+            }
+        })
+    })
+}
+
+//сео
+const seoButton = document.querySelector('.seo-text-part__button');
+const seoText = document.querySelector('.seo-text-part__text-wrap');
+seoButton.addEventListener("click", function() {
+    seoText.classList.toggle("seo-text-open");
+    if (seoText.classList.contains("seo-text-open")) {
+        seoButton.textContent = 'Скрыть';
+    } else {
+        seoButton.textContent = 'Показать полностью';
+    }
+})
+
 
 //=> window.pageYOffset || document.documentElement.scrollTop;
