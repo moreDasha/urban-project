@@ -1036,6 +1036,53 @@ input[type=button] {
   -webkit-text-fill-color: #FFFFFF;
 }
 
+.message-button {
+  display: inline;
+  position: fixed;
+  z-index: 100;
+  bottom: 120px;
+  left: calc(50% + 50vw - 128px + 15px);
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  border: 1px solid #293389;
+  background-color: #293389;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.message-button_bottom {
+  bottom: 60px;
+  background-color: #FFFFFF;
+}
+
+.message-button__icon {
+  width: 22.5px;
+  height: 22.5px;
+  stroke-width: 1.2px;
+  stroke: #FFFFFF;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.message-button__icon_bottom {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 2px;
+  stroke: #293389;
+}
+
 .bottom-menu-section {
   display: none;
 }
@@ -2071,6 +2118,12 @@ input[type=button] {
   cursor: pointer;
 }
 
+@media (min-width: 1281px) {
+  .message-button {
+    left: calc(50% + 512px + 15px);
+  }
+}
+
 @media (max-width: 1110px) {
   .bank-cards-item {
     font-size: 15px;
@@ -2153,6 +2206,10 @@ input[type=button] {
 
   .tabbar__button-wrapper {
     margin-right: 16px;
+  }
+
+  .message-button {
+    left: calc(50% + 50vw - 87px + 15px);
   }
 
   .main-section__container {
@@ -2509,6 +2566,27 @@ input[type=button] {
   .tabbar__container {
     padding-top: 24px;
     padding-bottom: 25px;
+  }
+
+  .message-button {
+    bottom: 170px;
+    left: calc(50% + 336px + 15px);
+    width: 34px;
+    height: 34px;
+  }
+
+  .message-button_bottom {
+    bottom: 120px;
+  }
+
+  .message-button__icon {
+    width: 18.5px;
+    height: 18.5px;
+  }
+
+  .message-button__icon_bottom {
+    width: 24px;
+    height: 24px;
   }
 
   .burger-menu-part {
@@ -3023,6 +3101,12 @@ input[type=button] {
   }
 }
 
+@media (max-width: 768px) {
+  .message-button {
+    left: calc(50% + 50vw - 48px - 40px);
+  }
+}
+
 @media (max-width: 600px) {
   .apartments-slider {
     -webkit-box-pack: center;
@@ -3132,6 +3216,10 @@ input[type=button] {
   .tabbar__container {
     padding-top: 24px;
     padding-bottom: 24px;
+  }
+
+  .message-button {
+    left: calc(50% + 50vw - 16px - 40px);
   }
 
   .burger-menu__container {
@@ -3395,6 +3483,23 @@ input[type=button] {
 
   .tabbar__button.activ-button .tabbar__button-text {
     -webkit-text-fill-color: #FFFFFF;
+  }
+
+  .message-button:hover {
+    cursor: pointer;
+    background-color: #FFFFFF;
+  }
+
+  .message-button_bottom:hover {
+    background-color: #293389;
+  }
+
+  .message-button:hover .message-button__icon {
+    stroke: #293389;
+  }
+
+  .message-button_bottom:hover .message-button__icon_bottom {
+    stroke: #FFFFFF;
   }
 
   .burger-menu__link:hover {

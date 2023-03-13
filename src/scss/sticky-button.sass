@@ -1,0 +1,67 @@
+.message-button
+    display: inline
+    position: fixed
+    z-index: 100
+    bottom: 120px
+    left: calc( 50% + (50vw - 128px + 15px ))
+    width: 40px
+    height: 40px
+    border-radius: 100px
+    border: 1px solid $icon-color
+    background-color: $icon-color
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: all 0.3s ease-in-out
+    &_bottom
+        bottom: 60px
+        background-color: $background-color
+    &__icon
+        width: 22.5px
+        height: 22.5px
+        stroke-width: 1.2px
+        stroke: $background-color
+        transition: all 0.3s ease-in-out
+        &_bottom
+            width: 30px 
+            height: 30px
+            margin-bottom: 2px
+            stroke: $icon-color
+
+@media (any-hover: hover)
+    .message-button:hover
+        cursor: pointer
+        background-color: $background-color
+    .message-button_bottom:hover
+        background-color: $icon-color
+    .message-button:hover .message-button__icon
+        stroke: $icon-color
+    .message-button_bottom:hover .message-button__icon_bottom
+        stroke: $background-color
+
+@media (min-width: 1281px)
+    .message-button
+        left: calc( 50% + 512px + 15px)
+@media (max-width: 1024px)
+    .message-button
+        left: calc( 50% + (50vw - 87px + 15px ))
+@media (max-width: 910px)
+    .message-button
+        bottom: 170px
+        left: calc( 50% + 336px + 15px)
+        width: 34px
+        height: 34px
+        &_bottom
+            bottom: 120px
+        &__icon
+            width: 18.5px
+            height: 18.5px
+            &_bottom
+                width: 24px
+                height: 24px
+@media (max-width: 768px)
+    .message-button
+        left: calc( 50% + (50vw - 48px - 40px))
+@media (max-width: 500px)
+    .message-button
+        left: calc( 50% + (50vw - 16px - 40px))
