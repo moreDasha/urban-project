@@ -786,7 +786,7 @@ input[type=button] {
 }
 
 .header-border_bottom {
-  top: 104px;
+  top: 102.5px;
   background-image: -webkit-gradient(linear, right top, left top, from(rgba(31, 218, 227, 0.6)), color-stop(rgba(60, 75, 148, 0.6)), to(rgba(177, 124, 231, 0.6)));
   background-image: -o-linear-gradient(right, rgba(31, 218, 227, 0.6), rgba(60, 75, 148, 0.6), rgba(177, 124, 231, 0.6));
   background-image: linear-gradient(to left, rgba(31, 218, 227, 0.6), rgba(60, 75, 148, 0.6), rgba(177, 124, 231, 0.6));
@@ -907,7 +907,6 @@ input[type=button] {
 .category-menu-part {
   width: 100%;
   height: 52px;
-  padding: 0 88px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -930,8 +929,8 @@ input[type=button] {
 }
 
 .category-menu__link {
-  position: relative;
   height: 52px;
+  padding: 0 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -941,19 +940,15 @@ input[type=button] {
   text-decoration: none;
   font-size: 16px;
   color: #293389;
-}
-
-.category-menu__link::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 0;
-  height: 1.5px;
-  background: #293389;
-  -webkit-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%, transparent), color-stop(90%, #293389), to(#293389));
+  background-image: -o-linear-gradient(transparent 0%, transparent 90%, #293389 90%, #293389 100%);
+  background-image: linear-gradient(transparent 0%, transparent 90%, #293389 90%, #293389 100%);
+  background-repeat: no-repeat;
+  background-size: 0% 107%;
+  background-position-x: right;
+  -webkit-transition: background-size 0.3s;
+  -o-transition: background-size 0.3s;
+  transition: background-size 0.3s;
 }
 
 .category-menu__point {
@@ -1062,6 +1057,7 @@ input[type=button] {
 }
 
 .message-button_bottom {
+  opacity: 0;
   bottom: 60px;
   background-color: #FFFFFF;
 }
@@ -1098,43 +1094,6 @@ input[type=button] {
           flex-direction: column;
 }
 
-.main-section {
-  opacity: 0;
-  -webkit-transform: translateY(40%);
-      -ms-transform: translateY(40%);
-          transform: translateY(40%);
-  -webkit-animation: ani 2s forwards;
-          animation: ani 2s forwards;
-}
-
-@-webkit-keyframes ani {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(40%);
-            transform: translateY(40%);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes ani {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(40%);
-            transform: translateY(40%);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
 .cards-part {
   margin-bottom: 88px;
   display: -webkit-box;
@@ -1166,6 +1125,23 @@ input[type=button] {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.element-hidden {
+  opacity: 0;
+  -webkit-transform: translateY(20%);
+      -ms-transform: translateY(20%);
+          transform: translateY(20%);
+}
+
+.element-show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
 .img-card-item {
@@ -2124,6 +2100,12 @@ input[type=button] {
   }
 }
 
+@media (max-width: 1130px) {
+  .category-menu__link {
+    padding: 0 50px;
+  }
+}
+
 @media (max-width: 1110px) {
   .bank-cards-item {
     font-size: 15px;
@@ -2489,6 +2471,12 @@ input[type=button] {
   }
 }
 
+@media (max-width: 990px) {
+  .category-menu__link {
+    padding: 0 40px;
+  }
+}
+
 @media (max-width: 910px) {
   .container {
     max-width: 768px;
@@ -2633,7 +2621,7 @@ input[type=button] {
 
   .bottom-menu-section {
     display: block;
-    position: sticky;
+    position: fixed;
     z-index: 10;
     bottom: 0;
     width: 100%;
@@ -3467,8 +3455,9 @@ input[type=button] {
     opacity: 100%;
   }
 
-  .category-menu__link:hover:before {
-    width: 100%;
+  .category-menu__link:hover {
+    background-size: 100% 107%;
+    background-position-x: left;
   }
 
   .tabbar__button:hover {

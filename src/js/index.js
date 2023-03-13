@@ -20,7 +20,46 @@ window.addEventListener('scroll', () => {
         header.classList.remove('hide');
     }
     lastScroll = getScrollPosition();
-})
+});
+
+//плавное появление секций
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+     change.target.classList.add('element-show');
+    }
+  });
+}
+
+let options = {
+    rootMargin: '120px',
+    threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, options);
+const elemHidden = document.querySelectorAll('.element-hidden');
+
+for (let elm of elemHidden) {
+  observer.observe(elm);
+}
+
+
+//кнопка вверх
+const buttonUp = document.getElementById('button-up');
+let pageHeight = document.documentElement.clientHeight;
+
+buttonUp.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0, 
+        left: pageXOffset, 
+        behavior: 'smooth',
+    });
+});
+
+window.addEventListener("scroll", function() {
+    if (window.pageYOffset > pageHeight) {
+        buttonUp.style.opacity = '1'
+        } else { 
+            buttonUp.style.opacity = '0' }
+    });
 
 //таб бар
 const button = document.querySelectorAll('.tabbar__button');
@@ -86,6 +125,3 @@ seoButton.addEventListener("click", function() {
         seoButton.textContent = 'Показать полностью';
     }
 })
-
-
-//=> window.pageYOffset || document.documentElement.scrollTop;
