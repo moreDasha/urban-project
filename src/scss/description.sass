@@ -1,0 +1,61 @@
+.description-part
+    padding: 160px 0 56px
+    display: flex
+    font-size: 14px
+    color: $text-color
+    &__text
+        opacity: 0.8
+        margin-right: 56px
+        span
+            opacity: 0.8
+        &_blue
+            margin-right: 0
+            opacity: 1
+    &__text-link
+        text-decoration: none
+        color: $icon-color
+    &__icon-wrap
+        padding: 0 48px
+        display: flex
+    &__icon
+        width: 18px 
+        height: 18px
+        stroke-width: 1.5px
+        stroke-linecap: round
+        stroke-linejoin: round
+        fill: none
+        margin-right: 4px
+        opacity: 0.6
+        &_bookmark
+            margin-right: 32px
+            transition: all 0.3s ease-in-out
+    &__count
+        margin-right: 30px
+        opacity: 0.6
+        &_two
+            margin-right: 0
+    &__info-wrap
+        display: flex
+
+@media (any-hover: hover)
+    .description-part__icon_bookmark:hover
+        fill: $text-color
+    .description-part__icon_bookmark:hover
+        cursor: pointer
+
+@media (max-width: 1024px)
+    .description-part
+        padding: 144px 0 48px
+        font-size: 13px
+
+@media (max-width: 910px)
+    .description-part
+        padding: 82px 0 12px
+    .description-part__icon-wrap
+        display: none
+    .description-part__info-wrap
+        display: none
+
+@media (max-width: 500px)
+    .description-part
+        padding: 74px 0 6px
