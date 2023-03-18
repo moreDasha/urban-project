@@ -1020,12 +1020,14 @@ html {
   left: 1px;
   width: 119px;
   height: 31px;
+  padding: 8px 16px;
   border: none;
   border-radius: 100px;
   background: #FFFFFF;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
 }
 
 .tabbar__button_little {
@@ -1163,9 +1165,9 @@ html {
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
-  -webkit-transition: all 0.7s ease-in-out;
-  -o-transition: all 0.7s ease-in-out;
-  transition: all 0.7s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .img-card-item {
@@ -1281,6 +1283,7 @@ html {
   top: 16px;
   left: 16px;
   font-size: 14px;
+  color: #16293F;
 }
 
 .card-item-sign_white {

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+    "title":"Урбан | Популярное"
+
+})
+
+<body class="body-page">
+    <header class="header">
+        @@include('html/header.html', {})
+    </header>
+    <section class="tabbar-section" id="tabbar-popular">
+        @@include('html/tabbar.html', {})
+    </section>
+    <main class="main-section">
+        <div class="main-section__container container">
+            <div class="cards-part" id="cards-part-first">
+            </div>
+            @@include('html/apartment-search-filter.html', {})
+            @@include('html/apartments-cards.html', {})
+            <div class="cards-part" id="cards-part-second">
+            </div>
+            @@include('html/calculator.html', {})
+            @@include('html/bank-cards.html', {})
+            <div class="cards-part" id="cards-part-third">
+            </div>
+            @@include('html/seo-text.html', {})
+        </div>
+    </main>
+    @@include('html/fix-button.html', {})
+    <footer class="footer">
+        @@include('html/footer.html', {})
+    </footer>
+    <section class="bottom-menu-section">
+        @@include('html/burger-menu.html', {})
+        @@include('html/bottom-menu.html', {})
+    </section>
+</body>
+</html>
