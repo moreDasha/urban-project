@@ -11,8 +11,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
 
-    <link rel="stylesheet" href="css/style.min.css?_v=20230314213020">
-    <script defer src="js/index.min.js?_v=20230314213020"></script>
+    <link rel="stylesheet" href="css/style.min.css?_v=20230318214810">
+    <script defer src="js/index.min.js?_v=20230318214810"></script>
 
     <title>УРБАН | Главная</title>
 </head>
@@ -61,14 +61,14 @@
         <div class="tabbar">
     <div class="tabbar__container container">
         <div class="tabbar__button-wrapper">
-            <button class="tabbar__button">
+            <a class="tabbar__button" id="buttonPopular" href="popular_page.html">
                 <p class="tabbar__button-text">Популярное</p>
-            </button>
+            </a>
         </div>
         <div class="tabbar__button-wrapper tabbar__button-wrapper_little">
-            <button class="tabbar__button tabbar__button_little  activ-button">
+            <a class="tabbar__button tabbar__button_little" id="buttonFresh" href="index.html">
                 <p class="tabbar__button-text">Свежее</p>
-            </button>
+            </a>
         </div>
         
     </div>
@@ -81,29 +81,31 @@
         <div class="card-item-wrapper">
 
             <div class="img-card-item element-hidden">
-                <div class="img-card-item__img-wrapper">
-                    <picture><source srcset="img/img1.webp" type="image/webp"><img class="img-card-item__img" src="img/img1.png" alt="news photo"></picture>
-                </div>
-                <div class="img-card-item__img-mask"></div>
-                <div class="card-item-sign">Город</div>
-                <h2 class="img-card-item__title">
-                    <a class="img-card-item__title-link" href="detail_page.html">
-                        Как продать квартиру в ипотеке
-                    </a>
-                </h2>
-                <div class="img-card-item__button-box card-item-button-box">
-                    <svg class="card-item-button-box__button card-item-button-box__button_down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
-                    </svg>
-                    <p class="card-item-button-box__open-count">513</p>
-                    <svg class="card-item-button-box__button card-item-button-box__button_up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
-                    </svg>
-                    <svg class="card-item-button-box__button card-item-button-box__button_message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
-                    </svg>
-                    <p class="card-item-button-box__comment-count">22</p>
-                </div>
+                <a class="img-card-item__link" href="detail_page.html">
+                    <div class="img-card-item__img-wrapper">
+                        <picture><source srcset="img/img1.webp" type="image/webp"><img class="img-card-item__img" src="img/img1.png" alt="news photo"></picture>
+                    </div>
+                    <div class="img-card-item__img-mask"></div>
+                    <div class="card-item-sign">Город</div>
+                    <h2 class="img-card-item__title">
+                        <a class="img-card-item__title-link" href="detail_page.html">
+                            Как продать квартиру в ипотеке?
+                        </a>
+                    </h2>
+                    <div class="img-card-item__button-box card-item-button-box">
+                        <svg class="card-item-button-box__button card-item-button-box__button_down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                        </svg>
+                        <p class="card-item-button-box__open-count">46</p>
+                        <svg class="card-item-button-box__button card-item-button-box__button_up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                        </svg>
+                        <svg class="card-item-button-box__button card-item-button-box__button_message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                        </svg>
+                        <p class="card-item-button-box__comment-count">22</p>
+                    </div>
+                </a>
             </div>
     
             <div class="card-item card-item_turquoise-color element-hidden">
@@ -117,14 +119,14 @@
                     <svg class="card-item-button-box__button card-item-button-box__button_down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
                     </svg>
-                    <p class="card-item-button-box__open-count">513</p>
+                    <p class="card-item-button-box__open-count">16</p>
                     <svg class="card-item-button-box__button card-item-button-box__button_up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
                     </svg>
                     <svg class="card-item-button-box__button card-item-button-box__button_message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
                     </svg>
-                    <p class="card-item-button-box__comment-count">22</p>
+                    <p class="card-item-button-box__comment-count">18</p>
                 </div>
             </div>
         </div>
@@ -142,7 +144,7 @@
                     <svg class="card-item-button-box__button card-item-button-box__button_down card-item-button-box__button_white" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
                     </svg>
-                    <p class="card-item-button-box__open-count">513</p>
+                    <p class="card-item-button-box__open-count">53</p>
                     <svg class="card-item-button-box__button card-item-button-box__button_up card-item-button-box__button_white" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
                     </svg>
@@ -154,29 +156,31 @@
             </div>
     
             <div class="img-card-item element-hidden">
-                <div class="img-card-item__img-wrapper">
-                    <picture><source srcset="img/img2.webp" type="image/webp"><img class="img-card-item__img" src="img/img2.png" alt="news photo"></picture>
-                </div>
-                <div class="img-card-item__img-mask img-card-item__img-mask_dark"></div>
-                <div class="card-item-sign card-item-sign_white">Выбираем</div>
-                <h2 class="img-card-item__title">
-                    <a class="img-card-item__title-link" href="#">
-                        Объём выдачи жилищных кредитов за&nbsp;2021 год вырос на&nbsp;30%
-                    </a>
-                </h2>
-                <div class="img-card-item__button-box card-item-button-box">
-                    <svg class="card-item-button-box__button card-item-button-box__button_down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
-                    </svg>
-                    <p class="card-item-button-box__open-count">513</p>
-                    <svg class="card-item-button-box__button card-item-button-box__button_up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
-                    </svg>
-                    <svg class="card-item-button-box__button card-item-button-box__button_message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
-                    </svg>
-                    <p class="card-item-button-box__comment-count">22</p>
-                </div>
+                <a class="img-card-item__link" href="#">
+                    <div class="img-card-item__img-wrapper">
+                        <picture><source srcset="img/img2.webp" type="image/webp"><img class="img-card-item__img" src="img/img2.png" alt="news photo"></picture>
+                    </div>
+                    <div class="img-card-item__img-mask img-card-item__img-mask_dark"></div>
+                    <div class="card-item-sign card-item-sign_white">Выбираем</div>
+                    <h2 class="img-card-item__title">
+                        <a class="img-card-item__title-link" href="#">
+                            Объём выдачи жилищных кредитов за&nbsp;2021 год вырос на&nbsp;30%
+                        </a>
+                    </h2>
+                    <div class="img-card-item__button-box card-item-button-box">
+                        <svg class="card-item-button-box__button card-item-button-box__button_down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                        </svg>
+                        <p class="card-item-button-box__open-count">27</p>
+                        <svg class="card-item-button-box__button card-item-button-box__button_up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                        </svg>
+                        <svg class="card-item-button-box__button card-item-button-box__button_message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                        </svg>
+                        <p class="card-item-button-box__comment-count">20</p>
+                    </div>
+                </a>
             </div>
         </div>
 
@@ -197,14 +201,14 @@
                     <svg class="card-item-button-box__button card-item-button-box__button_down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
                     </svg>
-                    <p class="card-item-button-box__open-count">513</p>
+                    <p class="card-item-button-box__open-count">81</p>
                     <svg class="card-item-button-box__button card-item-button-box__button_up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
                     </svg>
                     <svg class="card-item-button-box__button card-item-button-box__button_message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
                     </svg>
-                    <p class="card-item-button-box__comment-count">22</p>
+                    <p class="card-item-button-box__comment-count">4</p>
                 </div>
             </div>
         </div>
@@ -222,14 +226,14 @@
                     <svg class="card-item-button-box__button card-item-button-box__button_down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
                     </svg>
-                    <p class="card-item-button-box__open-count">513</p>
+                    <p class="card-item-button-box__open-count">42</p>
                     <svg class="card-item-button-box__button card-item-button-box__button_up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
                     </svg>
                     <svg class="card-item-button-box__button card-item-button-box__button_message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
                     </svg>
-                    <p class="card-item-button-box__comment-count">22</p>
+                    <p class="card-item-button-box__comment-count">10</p>
                 </div>
             </div>
             <div class="card-item card-item_blue-color element-hidden">
@@ -243,14 +247,14 @@
                     <svg class="card-item-button-box__button card-item-button-box__button_down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
                     </svg>
-                    <p class="card-item-button-box__open-count">513</p>
+                    <p class="card-item-button-box__open-count">21</p>
                     <svg class="card-item-button-box__button card-item-button-box__button_up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
                     </svg>
                     <svg class="card-item-button-box__button card-item-button-box__button_message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
                     </svg>
-                    <p class="card-item-button-box__comment-count">22</p>
+                    <p class="card-item-button-box__comment-count">16</p>
                 </div>
             </div>
         </div>
@@ -347,29 +351,31 @@
     <div class="card-item-wrapper">
 
         <div class="img-card-item element-hidden">
-            <div class="img-card-item__img-wrapper">
-                <picture><source srcset="img/news2.1.webp" type="image/webp"><img class="img-card-item__img" src="img/news2.1.png" alt="news photo"></picture>
-            </div>
-            <div class="img-card-item__img-mask"></div>
-            <div class="card-item-sign">Выбираем</div>
-            <h2 class="img-card-item__title">
-                <a class="img-card-item__title-link" href="#">
-                    Перспективные районы Казани для покупки квартиры
-                </a>
-            </h2>
-            <div class="img-card-item__button-box card-item-button-box">
-                <svg class="card-item-button-box__button card-item-button-box__button_down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
-                </svg>
-                <p class="card-item-button-box__open-count">2</p>
-                <svg class="card-item-button-box__button card-item-button-box__button_up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
-                </svg>
-                <svg class="card-item-button-box__button card-item-button-box__button_message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
-                </svg>
-                <p class="card-item-button-box__comment-count">42</p>
-            </div>
+            <a class="img-card-item__link" href="#">
+                <div class="img-card-item__img-wrapper">
+                    <picture><source srcset="img/news2.1.webp" type="image/webp"><img class="img-card-item__img" src="img/news2.1.png" alt="news photo"></picture>
+                </div>
+                <div class="img-card-item__img-mask"></div>
+                <div class="card-item-sign">Выбираем</div>
+                <h2 class="img-card-item__title">
+                    <a class="img-card-item__title-link" href="#">
+                        Перспективные районы Казани для покупки квартиры
+                    </a>
+                </h2>
+                <div class="img-card-item__button-box card-item-button-box">
+                    <svg class="card-item-button-box__button card-item-button-box__button_down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                    </svg>
+                    <p class="card-item-button-box__open-count">8</p>
+                    <svg class="card-item-button-box__button card-item-button-box__button_up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                    </svg>
+                    <svg class="card-item-button-box__button card-item-button-box__button_message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                    </svg>
+                    <p class="card-item-button-box__comment-count">42</p>
+                </div>
+            </a>
         </div>
 
         <div class="card-item card-item_turquoise-color element-hidden">
@@ -383,7 +389,7 @@
                 <svg class="card-item-button-box__button card-item-button-box__button_down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
                 </svg>
-                <p class="card-item-button-box__open-count">2</p>
+                <p class="card-item-button-box__open-count">39</p>
                 <svg class="card-item-button-box__button card-item-button-box__button_up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
                 </svg>
@@ -408,7 +414,7 @@
                 <svg class="card-item-button-box__button card-item-button-box__button_down card-item-button-box__button_white" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
                 </svg>
-                <p class="card-item-button-box__open-count">71</p>
+                <p class="card-item-button-box__open-count">33</p>
                 <svg class="card-item-button-box__button card-item-button-box__button_up card-item-button-box__button_white" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
                 </svg>
@@ -420,30 +426,32 @@
         </div>
 
         <div class="img-card-item element-hidden">
-            <div class="img-card-item__img-wrapper">
-                <picture><source srcset="img/news2.2.webp" type="image/webp"><img class="img-card-item__img" src="img/news2.2.png" alt="news photo"></picture>
-            </div>
-            <div class="img-card-item__img-mask img-card-item__img-mask_dark"></div>
-            <div class="card-item-sign card-item-sign_white">Живем</div>
-            <img class="img-card-item__video-button"src="img/Vector.svg" alt="">
-            <h2 class="img-card-item__title">
-                <a class="img-card-item__title-link" href="#">
-                    Как платить налог на недвижимость
-                </a>
-            </h2>
-            <div class="img-card-item__button-box card-item-button-box">
-                <svg class="card-item-button-box__button card-item-button-box__button_down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
-                </svg>
-                <p class="card-item-button-box__open-count">71</p>
-                <svg class="card-item-button-box__button card-item-button-box__button_up" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
-                </svg>
-                <svg class="card-item-button-box__button card-item-button-box__button_message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
-                </svg>
-                <p class="card-item-button-box__comment-count">0</p>
-            </div>
+            <a class="img-card-item__link" href="#">
+                <div class="img-card-item__img-wrapper">
+                    <picture><source srcset="img/news2.2.webp" type="image/webp"><img class="img-card-item__img" src="img/news2.2.png" alt="news photo"></picture>
+                </div>
+                <div class="img-card-item__img-mask img-card-item__img-mask_dark"></div>
+                <div class="card-item-sign card-item-sign_white">Живем</div>
+                <img class="img-card-item__video-button" src="img/Vector.svg" alt="">
+                <h2 class="img-card-item__title">
+                    <a class="img-card-item__title-link" href="#">
+                        Как платить налог на недвижимость
+                    </a>
+                </h2>
+                <div class="img-card-item__button-box card-item-button-box">
+                    <svg class="card-item-button-box__button card-item-button-box__button_down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
+                    </svg>
+                    <p class="card-item-button-box__open-count">11</p>
+                    <svg class="card-item-button-box__button card-item-button-box__button_up" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
+                    </svg>
+                    <svg class="card-item-button-box__button card-item-button-box__button_message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
+                    </svg>
+                    <p class="card-item-button-box__comment-count">0</p>
+                </div>
+            </a>
         </div>
     </div>
 
@@ -451,7 +459,7 @@
 
         <div class="img-card-item element-hidden">
             <div class="img-card-item__img-wrapper">
-                <picture><source srcset="img/news2.3.webp" type="image/webp"><img class="img-card-item__img" src="img/news2.3.png" alt="news photo"></picture>
+                <picture><source srcset="img/news2.3.webp" type="image/webp"><img class="img-card-item__img" src="img/news2.3.jpeg" alt="news photo"></picture>
             </div>
             <div class="img-card-item__img-mask img-card-item__img-mask_dark"></div>
             <div class="card-item-sign card-item-sign_white">Живем</div>
@@ -464,7 +472,7 @@
                 <svg class="card-item-button-box__button card-item-button-box__button_down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
                 </svg>
-                <p class="card-item-button-box__open-count">513</p>
+                <p class="card-item-button-box__open-count">55</p>
                 <svg class="card-item-button-box__button card-item-button-box__button_up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
                 </svg>
@@ -489,7 +497,7 @@
                 <svg class="card-item-button-box__button card-item-button-box__button_down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
                 </svg>
-                <p class="card-item-button-box__open-count">513</p>
+                <p class="card-item-button-box__open-count">70</p>
                 <svg class="card-item-button-box__button card-item-button-box__button_up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
                 </svg>
@@ -510,7 +518,7 @@
                 <svg class="card-item-button-box__button card-item-button-box__button_down" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.25 11.8047L14.5 19.0547L21.75 11.8047"/>
                 </svg>
-                <p class="card-item-button-box__open-count">71</p>
+                <p class="card-item-button-box__open-count">44</p>
                 <svg class="card-item-button-box__button card-item-button-box__button_up" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22.3789 19.0547L15.1289 11.8047L7.87891 19.0547"/>
                 </svg>
@@ -718,7 +726,7 @@
                 <svg class="card-item-button-box__button card-item-button-box__button_message-square" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.5039 10.8789C15.5039 11.2546 15.3547 11.615 15.089 11.8806C14.8233 12.1463 14.463 12.2956 14.0872 12.2956H5.58724L2.75391 15.1289V3.79557C2.75391 3.41985 2.90316 3.05951 3.16884 2.79384C3.43451 2.52816 3.79485 2.37891 4.17057 2.37891H14.0872C14.463 2.37891 14.8233 2.52816 15.089 2.79384C15.3547 3.05951 15.5039 3.41985 15.5039 3.79557V10.8789Z"/>
                 </svg>
-                <p class="card-item-button-box__comment-count">0</p>
+                <p class="card-item-button-box__comment-count">1</p>
             </div>
         </div>
     </div>
