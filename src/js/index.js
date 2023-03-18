@@ -833,15 +833,17 @@ window.addEventListener("scroll", function() {
     });
 
 //таб бар
-const tabbarPopular = document.getElementById('tabbar-popular');
-const buttonPopular = document.getElementById('buttonPopular');
-const buttonFresh = document.getElementById('buttonFresh');
+if (document.body.contains(document.querySelector('.tabbar-section'))) {
+    const tabbarPopular = document.getElementById('tabbar-popular');
+    const buttonPopular = document.getElementById('buttonPopular');
+    const buttonFresh = document.getElementById('buttonFresh');
 
-if (document.body.contains(tabbarPopular)) {
+    if (document.body.contains(tabbarPopular)) {
     buttonPopular.classList.add('activ-button');
-} else {
-    buttonFresh.classList.add('activ-button');
-};
+    } else {
+        buttonFresh.classList.add('activ-button');
+    };
+}
 
 
 //запрет скролла при открытом бургер-меню
