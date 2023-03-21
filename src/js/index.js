@@ -23,6 +23,14 @@ window.addEventListener('scroll', () => {
     lastScroll = getScrollPosition();
 });
 
+//
+const mainSection = document.getElementById('main-page');
+const iconHome = document.getElementById('icon-home');
+if (document.body.contains(mainSection)) {
+    iconHome.classList.add('link-active')
+} else {
+    iconHome.classList.remove('link-active')
+}
 
 //генерация карточек "популярное"
 const cardsBlockFirst = document.getElementById("cards-part-first");
