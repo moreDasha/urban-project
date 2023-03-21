@@ -875,7 +875,7 @@ burgerButton.addEventListener('click', function() {
 });
 
 //аккордион
-const accordionButton = document.querySelectorAll('.footer-nav-menu__title-button');
+const accordionButton = document.querySelectorAll('.footer-nav-menu__title-wrap');
 const accordionContent = document.querySelectorAll('.footer-nav-menu');
 for (let currentAccordionButton of accordionButton) {
     currentAccordionButton.addEventListener("click", function() {
@@ -886,6 +886,19 @@ for (let currentAccordionButton of accordionButton) {
         })
     })
 };
+
+//чекбокс
+const checkboxButton = document.getElementById('checkBoxButton');
+const inputs = document.querySelectorAll('.check-box-part__input');
+const checkboxPart = document.getElementById('check-box-part');
+
+if (mainContainer.contains(checkboxPart)) {
+    checkboxButton.addEventListener("click", function() {
+        inputs.forEach((el) => {
+            el.checked = false;
+        })
+    });
+}
 
 //сео
 const seoButton = document.querySelector('.seo-text-part__button');

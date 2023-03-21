@@ -1,0 +1,147 @@
+.detail-footer-part
+    width: 100%
+    margin-bottom: 112px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.detail-footer-hashtags
+    margin-right: 10px
+    display: flex
+    &__item
+        margin-right: calc(12px + 20 * (100vw / 1280))
+        &:last-child
+            margin-right: 0
+    &__link
+        text-decoration: none
+        color: $icon-color
+        font-size: 16px
+
+.detail-footer-icon-wrap
+    margin-right: 10px
+    display: flex
+    &__item
+        margin-right: calc(18px + 30 * (100vw / 1280))
+        display: flex
+        align-items: center
+        &:last-child
+            margin-right: 0
+    &__link
+        display: flex
+        align-items: center
+        text-decoration: none
+    &__icon-svg
+        width: 27px
+        height: 27px
+        margin-right: 12px
+        fill: none
+        stroke: $text-color
+        stroke-width: 1.3px
+        stroke-linecap: round 
+        stroke-linejoin: round
+        opacity: 0.8
+        &_last
+            margin-right: 0
+    &__icon
+        width: 32px
+        max-height: 32px
+        margin-right: 12px
+        opacity: 0.8
+        &_last
+            margin-right: 0
+    &__count
+        font-size: 16px
+        color: $text-color
+        opacity: 0.8
+        &_up
+            margin-right: 12px
+
+.detail-footer-resources
+    display: flex
+    align-items: center
+    &__share-text
+        display: none
+    &__icon
+        width: 27px
+        height: 27px
+
+@media (any-hover: hover)
+    .detail-footer-icon-wrap__icon-svg_bookmark:hover
+        cursor: pointer
+        fill: $text-color
+    .detail-footer-resources__icon:hover
+        cursor: pointer
+
+
+@media (max-width: 1024px)
+    .detail-footer-part
+        margin-bottom: 96px
+    .detail-footer-hashtags
+        &__link
+            font-size: 14px
+    .detail-footer-icon-wrap
+        &__item
+            margin-right: 32px
+            &:last-child
+                margin-right: 0
+        &__icon-svg
+            width: 24px
+            height: 24px
+            margin-right: 8px
+            &_last
+                margin-right: 0
+        &__icon
+            width: 29px
+            max-height: 29px
+            margin-right: 8px
+            &_last
+                margin-right: 0
+        &__count
+            font-size: 14px
+            &_up
+                margin-right: 8px
+    .detail-footer-resources
+        &__icon
+            width: 24px
+            height: 24px
+
+@media (max-width: 910px)
+    .detail-footer-part
+        margin-bottom: 72px
+        flex-wrap: wrap
+    .detail-footer-hashtags
+        width: 100%
+        margin-bottom: 32px
+        &__item
+            margin-right: 24px
+            &:last-child
+                margin-right: 0
+        &__link
+            font-size: 16px
+    .detail-footer-resources
+        &__share-text
+            margin-right: 12px
+            display: block
+            font-size: 14px
+            color: $text-color
+            opacity: 0.6
+
+
+@media (max-width: 650px)
+    .detail-footer-part
+        margin-bottom: 64px
+        flex-direction: column
+        justify-content: flex-start
+    .detail-footer-hashtags
+        justify-content: space-between
+        &__item
+            margin-right: 7px
+    .detail-footer-icon-wrap
+        width: 100%
+        margin-bottom: 32px
+        margin-right: 0
+        justify-content: space-between
+        &__item
+            margin-right: 7px
+    .detail-footer-resources
+        align-self: flex-end
