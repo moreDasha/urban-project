@@ -1520,12 +1520,9 @@ html {
 .apartments-slider {
   position: relative;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  overflow: hidden;
 }
 
 .apartments-slider_detail {
@@ -1537,6 +1534,7 @@ html {
   z-index: 3;
   height: 40px;
   width: 40px;
+  border: none;
   border-radius: 100px;
   background-color: #FFFFFF;
   display: -webkit-box;
@@ -1550,8 +1548,8 @@ html {
           align-items: center;
 }
 
-.apartments-slider__button:hover {
-  cursor: pointer;
+.apartments-slider__button:disabled {
+  opacity: 0.6;
 }
 
 .apartments-slider__button_left {
@@ -1580,8 +1578,22 @@ html {
           transform: rotate(-90deg);
 }
 
+.apartments-slider__track {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 24px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 .apartments-slider__item {
-  width: 31.75%;
+  min-width: 31.75%;
   border-bottom: 1px solid rgba(22, 41, 63, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3851,11 +3863,7 @@ html {
   }
 
   .apartments-slider__item {
-    width: 48.8%;
-  }
-
-  .apartments-slider__item_third {
-    display: none;
+    min-width: 48%;
   }
 
   .apartments-slider__img-wrap {
@@ -4382,12 +4390,13 @@ html {
     right: 3%;
   }
 
-  .apartments-slider__item {
-    width: 250px;
+  .apartments-slider__track {
+    gap: 0;
   }
 
-  .apartments-slider__item_second {
-    display: none;
+  .apartments-slider__item {
+    min-width: 95.2%;
+    margin: 0 12px;
   }
 
   .bank-cards-part__wrap {
@@ -4567,6 +4576,10 @@ html {
   .apartments-slider__button-pointer-right {
     width: 20px;
     height: 20px;
+  }
+
+  .apartments-slider__item {
+    min-width: 92.6%;
   }
 
   .apartments-slider__title {
@@ -4988,11 +5001,6 @@ html {
   .apartment-search-filter__button:hover {
     background-color: #0E0865;
     color: #FFFFFF;
-  }
-
-  .apartments-slider__button:hover {
-    cursor: pointer;
-    opacity: 60%;
   }
 
   .calculator__button:hover {
