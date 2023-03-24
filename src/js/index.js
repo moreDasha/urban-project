@@ -4,6 +4,7 @@ import * as flsFunctions from "./modules/functions.js";
 //проверка поддержки webp
 flsFunctions.isWebp();
 
+
 //выплывающий хэдр
 let lastScroll = 0;
 const header = document.querySelector('.header');
@@ -13,17 +14,17 @@ const containHide = () => header.classList.contains('hide');
 
 window.addEventListener('scroll', () => {
     if(getScrollPosition() > lastScroll && !containHide()) {
-        //scroll down
+        //скролл вниз
         header.classList.add('hide');
     }
     else if(getScrollPosition() < lastScroll && containHide()) {
-        //scroll up
+        //скролл наверх
         header.classList.remove('hide');
     }
     lastScroll = getScrollPosition();
 });
 
-//
+//кнопка "домой" в нижнем статичном меню
 const mainSection = document.getElementById('main-page');
 const iconHome = document.getElementById('icon-home');
 if (document.body.contains(mainSection)) {
@@ -802,6 +803,7 @@ if (mainContainer.contains(cardsBlockThird)) {
     cardsBlockThird.innerHTML = generateCardsThird();
 }
 
+
 //плавное появление секций
 function onEntry(entry) {
   entry.forEach(change => {
@@ -821,6 +823,7 @@ for (let elm of elemHidden) {
   observer.observe(elm);
 };
 
+
 //кнопка вверх
 const buttonUp = document.getElementById('button-up');
 let pageHeight = document.documentElement.clientHeight;
@@ -828,11 +831,11 @@ let pageHeight = document.documentElement.clientHeight;
 buttonUp.addEventListener("click", function() {
     window.scrollTo({
         top: 0, 
-        left: pageXOffset, 
+        left: scrollX,
         behavior: 'smooth',
     });
 });
-
+//появление кнопки
 window.addEventListener("scroll", function() {
     if (window.pageYOffset > pageHeight) {
         buttonUp.style.opacity = '1'
@@ -881,6 +884,66 @@ burgerButton.addEventListener('click', function() {
         startScroll();
     }
 });
+
+
+
+//слайдер
+const sliderTrack = document.querySelector('.apartments-slider__track');
+const sliderItem = document.querySelector('.apartments-slider__item');
+
+//на сколько двигаемся
+let movePosition;
+//сколько карточек видно
+let slidesShow;
+//сколько карточек пролистано
+let count = 0;
+
+//пролистывание
+const toScroll = () => {
+    sliderTrack.style.transform = 'translateX(-'+count*movePosition+'px)';
+};
+
+//следим за размерами карточек, их отображаемым количеством и позицией трекера
+const getPosition = () => {
+    movePosition = sliderItem.clientWidth + 24;
+    slidesShow = sliderTrack.clientWidth / sliderItem.clientWidth;
+    toScroll();
+};
+window.addEventListener('resize', getPosition);
+getPosition();
+
+//общее количество карточек
+const itemsCount = document.querySelectorAll('.apartments-slider__item').length;
+
+//кнопки
+const buttonForward = document.querySelector('.apartments-slider__button_right');
+const buttonBack = document.querySelector('.apartments-slider__button_left');
+
+//выключение кнопок
+const buttonOff = () => {
+    buttonForward.disabled = count >= itemsCount - slidesShow;
+    buttonBack.disabled = count === 0;
+};
+
+//выключаем кнопку назад по умолчанию
+buttonOff();
+//листаем вперед
+buttonForward.addEventListener("click", function() {
+    //trackPosition -= movePosition;
+    count++;
+    toScroll();
+    buttonOff();
+});
+//листаем назад
+buttonBack.addEventListener("click", function() {
+    //trackPosition += movePosition;
+    count--;
+    toScroll();
+    buttonOff();
+});
+
+
+
 
 //аккордион
 const accordionButton = document.querySelectorAll('.footer-nav-menu__title-wrap');
