@@ -10,8 +10,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
 
-    <link rel="stylesheet" href="css/style.min.css?_v=20230325151808">
-    <script defer src="js/index.min.js?_v=20230325151808"></script>
+    <link rel="stylesheet" href="css/style.min.css?_v=20230326152529">
+    <script defer src="js/index.min.js?_v=20230326152529"></script>
 
     <title>Урбан | Популярное</title>
 </head>
@@ -81,38 +81,100 @@
     <h4 class="apartment-search-filter__title title-blue">
         &#35; Ищу квартиру
     </h4>
-    <div class="apartment-search-filter__wrap search-filter">
-        <div class="search-filter__item input-block input-block_area">
-            <h5 class="input-block__title">Район</h5>
-            <div class="input-block__block">
-                <p class="input-block__block-value">Любой</p>
-                <img class="input-block__block-button" src="img/chevron-down.svg" alt="button down">
+    <form class="apartment-search-filter__wrap search-filter" action="#">
+        
+        <div class="search-filter__item-wrap search-filter__item-wrap_area area-input">
+            <div class="search-filter__item">
+                <h5 class="input-block__title">Район</h5>
+                <div class="input-block__block input-for-checkbox" id="area-input">
+                    <p class="input-block__block-value area">Любой</p>
+                    <img class="input-block__block-button" src="img/chevron-down.svg" alt="button down">
+                </div>
+            </div>
+            <div class="search-filter__area-checkbox search-filter-checkbox">
+                <ul class="search-filter-checkbox__list">
+                    <li class="search-filter-checkbox__item">
+                        <input class="search-filter-checkbox__input area-input" type="checkbox" id="area1" name="area" value="Авиастроительный">
+                        <label class="search-filter-checkbox__label" for="area1">Авиастроительный</label>
+                    </li>
+                    <li class="search-filter-checkbox__item">
+                        <input class="search-filter-checkbox__input area-input" type="checkbox" id="area2" name="area" value="Вахитовский">
+                        <label class="search-filter-checkbox__label" for="area2">Вахитовский</label>
+                    </li>
+                    <li class="search-filter-checkbox__item">
+                        <input class="search-filter-checkbox__input area-input" type="checkbox" id="area3" name="area" value="Кировский">
+                        <label class="search-filter-checkbox__label" for="area3">Кировский</label>
+                    </li>
+                    <li class="search-filter-checkbox__item">
+                        <input class="search-filter-checkbox__input area-input" type="checkbox" id="area4" name="area" value="Московский">
+                        <label class="search-filter-checkbox__label" for="area4">Московский</label>
+                    </li>
+                    <li class="search-filter-checkbox__item">
+                        <input class="search-filter-checkbox__input area-input" type="checkbox" id="area5" name="area" value="Ново-Савиновский">
+                        <label class="search-filter-checkbox__label" for="area5">Ново-Савиновский</label>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="search-filter__item input-block input-block_room">
-            <h5 class="input-block__title">Комнат</h5>
-            <div class="input-block__block">
-                <p class="input-block__block-value">Любое</p>
-                <img class="input-block__block-button" src="img/chevron-down.svg" alt="button down">
+
+        <div class="search-filter__item-wrap search-filter__item-wrap_room room-input">
+            <div class="search-filter__item">
+                <h5 class="input-block__title">Комнат</h5>
+                <div class="input-block__block input-for-checkbox" id="room-input">
+                    <p class="input-block__block-value room">Любое</p>
+                    <img class="input-block__block-button" src="img/chevron-down.svg" alt="button down">
+                </div>
+            </div>
+            <div class="search-filter__room-checkbox search-filter-checkbox">
+                <ul class="search-filter-checkbox__list">
+                    <li class="search-filter-checkbox__item">
+                        <input class="search-filter-checkbox__input room-input" type="checkbox" id="room1" name="room" value="1">
+                        <label class="search-filter-checkbox__label" for="room1">1</label>
+                    </li>
+                    <li class="search-filter-checkbox__item">
+                        <input class="search-filter-checkbox__input room-input" type="checkbox" id="room2" name="room" value="2">
+                        <label class="search-filter-checkbox__label" for="room2">2</label>
+                    </li>
+                    <li class="search-filter-checkbox__item">
+                        <input class="search-filter-checkbox__input room-input" type="checkbox" id="room3" name="room" value="3">
+                        <label class="search-filter-checkbox__label" for="room3">3</label>
+                    </li>
+                    <li class="search-filter-checkbox__item">
+                        <input class="search-filter-checkbox__input room-input" type="checkbox" id="room4" name="room" value="4">
+                        <label class="search-filter-checkbox__label" for="room4">4</label>
+                    </li>
+                    <li class="search-filter-checkbox__item">
+                        <input class="search-filter-checkbox__input room-input" type="checkbox" id="room5" name="room" value="5">
+                        <label class="search-filter-checkbox__label" for="room5">5</label>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="search-filter__item input-block input-block_square">
-            <h5 class="input-block__title">Площадь</h5>
-            <div class="input-block__block">
-                <p class="input-block__block-value">от</p>
-                <p class="input-block__block-value">&#8212; до</p>
-                <p class="input-block__block-value input-block__block-value_thick">м&#178;</p>
+
+        <div class="search-filter__item-wrap search-filter__item-wrap_square">
+            <div class="search-filter__item">
+                <h5 class="input-block__title">Площадь</h5>
+                <div class="input-block__block">
+                    <input class="search-filter__input" type="number" name="square" placeholder="от">
+                    <span>&#8212;</span>
+                    <input class="search-filter__input" type="number" name="square" placeholder="до">
+                    <span>м&#178;</span>
+                </div>
             </div>
         </div>
-        <div class="search-filter__item input-block input-block_price">
-            <h5 class="input-block__title">Цена</h5>
-            <div class="input-block__block">
-                <p class="input-block__block-value">от</p>
-                <p class="input-block__block-value">&#8212; до</p>
-                <p class="input-block__block-value input-block__block-value_thick">&#8381;</p>
+
+        <div class="search-filter__item-wrap search-filter__item-wrap_price">
+            <div class="search-filter__item">
+                <h5 class="input-block__title">Цена</h5>
+                <div class="input-block__block">
+                    <input class="search-filter__input" type="number" name="price" placeholder="от">
+                    <span>&#8212;</span>
+                    <input class="search-filter__input" type="number" name="price" placeholder="до">
+                    <span>м&#178;</span>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
     <button class="apartment-search-filter__button">
         Показать 109 объектов
     </button>
