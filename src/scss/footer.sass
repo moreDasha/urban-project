@@ -22,6 +22,7 @@
         width: 35px
         height: 35px
         border-radius: 100px
+        border: 1px solid $icon-color
         background-color: $icon-color
         transition: all 0.4s ease-in-out
     &__link
@@ -65,7 +66,7 @@
         text-decoration: none
         font-size: 16px
         color: $text-color
-        opacity: 100%
+        opacity: 1
         transition: all 0.4s ease-in-out
     &__border
         display: none
@@ -89,7 +90,7 @@
     &__title
         font-size: 13px
         color: $text-color
-        opacity: 60%
+        opacity: 0.6
         &_thick
             font-weight: 700
             &:hover
@@ -97,7 +98,6 @@
 
 @media (any-hover: hover)
     .icon-part__item:hover
-        border: 1px solid $icon-color
         background-color: $background-color
         cursor: pointer
     .icon-part__item:hover .icon-part__link-icon-white
@@ -105,7 +105,7 @@
     .icon-part__item:hover .icon-part__link-icon-blue
         fill: $background-color
     .footer-nav-menu__link:hover
-        opacity: 60%
+        opacity: 0.6
 
 
 @media (max-width: 1024px)

@@ -4,12 +4,6 @@
     flex-direction: column
     justify-content: flex-start
     font-size: 18px
-    &_area
-        width: 22.95%
-    &_room
-        width: 15%
-    &_square
-        width: 28.42%
     &_price
         width: 28.42%
     &_target
@@ -18,7 +12,7 @@
         margin-bottom: 4px
         font-size: calc(9px + 5 * (100vw / 1280))
         color: $grey-color
-        opacity: 80%
+        opacity: 0.8
     &__block
         position: relative
         height: 50px
@@ -30,14 +24,16 @@
         justify-content: space-between
         align-items: center
         &_more
-            padding: 0 30%
+            padding: 0
+            justify-content: center
     &__block-value
-        opacity: 60%
+        opacity: 0.6
         &_thick
             font-weight: 700
-            opacity: 80%
+            opacity: 0.8
         &_more
-            opacity: 80%
+            opacity: 0.8
+            margin-right: 8px
     &__roller
         position: absolute
         bottom: -7.5px
@@ -51,7 +47,7 @@
     &__block-button
         height: 26px
         width: 26px
-        opacity: 80%
+        transition: all .3s ease-in-out
         &:hover
             cursor: pointer
     &__block-button-add
@@ -86,18 +82,9 @@
             font-size: 16px
         &__block
             height: 50px
-            &_more
-                padding: 0 45.7%
         &__block-button
             height: 26px
             width: 26px
         &__block-button-add
             height: 10.5px
             width: 10.5px
-
-
-@media (max-width: 910px)
-    .input-block
-        &__block
-            &_more
-                padding: 0 135px

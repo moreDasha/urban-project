@@ -885,6 +885,104 @@ burgerButton.addEventListener('click', function() {
     }
 });
 
+//фильтер квартир
+
+//появление чек-боксов
+const inputForCheckbox = document.querySelectorAll('.input-for-checkbox');
+const searchFilterWrap = document.querySelectorAll('.search-filter__item-wrap');
+for (let currentInputForCheckbox of inputForCheckbox) {
+    currentInputForCheckbox.addEventListener('click', function() {
+        searchFilterWrap.forEach((el) => {
+            if (el.classList.contains(currentInputForCheckbox.id)) {
+                el.classList.toggle('input-active');
+            }
+        })
+    })
+};
+//закрытие чек-боксов при клике вне их
+document.addEventListener( 'click', (e) => {
+    searchFilterWrap.forEach((wrap) => {
+        const includesSearchFilterWrap = e.composedPath().includes(wrap);
+        if (! includesSearchFilterWrap) {
+            wrap.classList.remove('input-active');
+        }
+    });
+});
+
+
+//отображение контента в инпутах
+const areaArray = document.querySelectorAll('.area-input');
+const roomArray = document.querySelectorAll('.room-input');
+const areaInput = document.querySelector('.area');
+const roomInput = document.querySelector('.room');
+let areaCount = 0;
+let roomCount = 0;
+
+//добавляем первый вариант
+const addFirstChose = (input, value) => {
+    input.textContent = value;
+    input.classList.add('chosen');
+};
+//добавляем последующие варианты
+const addNextChose = (input, value) => {
+    input.textContent += `, ${value}`
+};
+//удаляем выбранные варианты
+const removeChose = (input, value) => {
+    if (input.textContent.indexOf(`${value}, `) === -1) {
+        input.textContent = input.textContent.replace(`, ${value}`, '');
+    } else {
+        input.textContent = input.textContent.replace(`${value}, `, '');
+    }
+};
+
+//выбираем район
+areaArray.forEach((el) => {
+    el.addEventListener('click', function() {
+        if (el.checked) {
+            if (areaInput.classList.contains('chosen')) {
+                areaCount ++;
+                addNextChose(areaInput, el.value);
+            } else {
+                areaCount ++;
+                addFirstChose(areaInput, el.value);
+            };
+        } else if (el.checked === false) {
+            if (areaCount > 1) {
+                areaCount--;
+                removeChose(areaInput, el.value);
+            } else if (areaCount === 1) {
+                areaCount = 0;
+                areaInput.textContent = 'Любой';
+                areaInput.classList.remove('chosen');
+            };
+        }
+    })
+});
+//выбираем комнаты
+roomArray.forEach((el) => {
+    el.addEventListener('click', function() {
+        if (el.checked) {
+            if (roomInput.classList.contains('chosen')) {
+                roomCount ++;
+                addNextChose(roomInput, el.value);
+            } else {
+                roomCount ++;
+                addFirstChose(roomInput, el.value);
+            }
+        } else if (el.checked === false) {
+            let value = el.value
+            if (roomCount > 1) {
+                roomCount--;
+                removeChose(roomInput, el.value);
+            } else if (roomCount === 1) {
+                roomCount = 0;
+                roomInput.textContent = 'Любое';
+                roomInput.classList.remove('chosen');
+            };
+        }
+    })
+});
 
 
 //слайдер
