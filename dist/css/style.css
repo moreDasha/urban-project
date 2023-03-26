@@ -873,7 +873,7 @@ html {
   border-left: 1.5px solid #16293F;
   font-size: 13px;
   color: #16293F;
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .nav-part {
@@ -903,7 +903,7 @@ html {
   text-decoration: none;
   font-size: 16px;
   color: #16293F;
-  opacity: 60%;
+  opacity: 0.6;
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -922,7 +922,7 @@ html {
 .icon-box__item {
   width: 24px;
   height: 24px;
-  opacity: 80%;
+  opacity: 0.8;
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -1301,7 +1301,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   font-size: 16px;
-  opacity: 60%;
+  opacity: 0.6;
   margin-bottom: 8px;
   z-index: 2;
 }
@@ -1513,6 +1513,157 @@ html {
           justify-content: space-between;
 }
 
+.search-filter__item-wrap_area {
+  position: relative;
+  width: 22.95%;
+}
+
+.search-filter__item-wrap_room {
+  position: relative;
+  width: 15%;
+}
+
+.search-filter__item-wrap_square {
+  width: 28.42%;
+}
+
+.search-filter__item-wrap_price {
+  width: 28.42%;
+}
+
+.search-filter__item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 18px;
+}
+
+.search-filter__input {
+  width: 36%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-family: "Inter";
+  font-weight: 500;
+}
+
+.search-filter__input::-webkit-input-placeholder {
+  font-size: 18px;
+  font-family: "Inter";
+  font-weight: 500;
+}
+
+.search-filter__input::-moz-placeholder {
+  font-size: 18px;
+  font-family: "Inter";
+  font-weight: 500;
+}
+
+.search-filter__input:-ms-input-placeholder {
+  font-size: 18px;
+  font-family: "Inter";
+  font-weight: 500;
+}
+
+.search-filter__input::-ms-input-placeholder {
+  font-size: 18px;
+  font-family: "Inter";
+  font-weight: 500;
+}
+
+.search-filter__input::placeholder {
+  font-size: 18px;
+  font-family: "Inter";
+  font-weight: 500;
+}
+
+.input-block__block-value.chosen {
+  opacity: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+.search-filter__input::-webkit-outer-spin-button,
+.search-filter__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.search-filter__input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.search-filter-checkbox {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  top: 77px;
+  left: 0;
+  padding: 12px 5px 0 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #0E0865;
+  background-color: #FFFFFF;
+}
+
+.search-filter-checkbox__item {
+  margin-bottom: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-filter-checkbox__input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  border: 1px solid #16293F;
+  opacity: 0.6;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-filter-checkbox__input:checked {
+  opacity: 1;
+  background-color: #0E0865;
+}
+
+.search-filter-checkbox__label {
+  font-size: 18px;
+}
+
+.search-filter__item-wrap.input-active .input-block__block {
+  border: 1px solid #0E0865;
+}
+
+.search-filter__item-wrap.input-active .search-filter-checkbox {
+  display: block;
+}
+
+.search-filter__item-wrap.input-active .input-block__block-button {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .apartments-cards-part {
   margin-bottom: 112px;
 }
@@ -1520,12 +1671,9 @@ html {
 .apartments-slider {
   position: relative;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  overflow: hidden;
 }
 
 .apartments-slider_detail {
@@ -1535,23 +1683,16 @@ html {
 .apartments-slider__button {
   position: absolute;
   z-index: 3;
+  padding: 5px;
   height: 40px;
   width: 40px;
-  border-radius: 100px;
+  border: none;
+  border-radius: 100%;
   background-color: #FFFFFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.apartments-slider__button:hover {
-  cursor: pointer;
+.apartments-slider__button:disabled {
+  opacity: 0.6;
 }
 
 .apartments-slider__button_left {
@@ -1580,8 +1721,22 @@ html {
           transform: rotate(-90deg);
 }
 
+.apartments-slider__track {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 .apartments-slider__item {
-  width: 31.75%;
+  min-width: 31.75%;
+  margin-right: 24px;
   border-bottom: 1px solid rgba(22, 41, 63, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1632,7 +1787,7 @@ html {
   margin-bottom: 12px;
   font-size: 14px;
   color: #16293F;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .input-block {
@@ -1650,18 +1805,6 @@ html {
   font-size: 18px;
 }
 
-.input-block_area {
-  width: 22.95%;
-}
-
-.input-block_room {
-  width: 15%;
-}
-
-.input-block_square {
-  width: 28.42%;
-}
-
 .input-block_price {
   width: 28.42%;
 }
@@ -1674,7 +1817,7 @@ html {
   margin-bottom: 4px;
   font-size: calc(9px + 0.390625vw);
   color: #16293F;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .input-block__block {
@@ -1696,20 +1839,24 @@ html {
 }
 
 .input-block__block_more {
-  padding: 0 30%;
+  padding: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .input-block__block-value {
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .input-block__block-value_thick {
   font-weight: 700;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .input-block__block-value_more {
-  opacity: 80%;
+  opacity: 0.8;
+  margin-right: 8px;
 }
 
 .input-block__roller {
@@ -1729,7 +1876,9 @@ html {
 .input-block__block-button {
   height: 26px;
   width: 26px;
-  opacity: 80%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .input-block__block-button:hover {
@@ -1871,7 +2020,7 @@ html {
 
 .bank-cards-item__name {
   margin-bottom: 48px;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .bank-cards-item__price {
@@ -1884,7 +2033,7 @@ html {
 }
 
 .bank-cards-item__description {
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .description-part {
@@ -2617,7 +2766,7 @@ html {
   margin-bottom: 24px;
   font-size: 24px;
   color: #16293F;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .seo-text-part__text-wrap {
@@ -2633,7 +2782,7 @@ html {
   font-size: 13px;
   line-height: 15.73px;
   color: #16293F;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .seo-text-part__text-mask {
@@ -2716,6 +2865,7 @@ html {
   width: 35px;
   height: 35px;
   border-radius: 100px;
+  border: 1px solid #293389;
   background-color: #293389;
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -2796,7 +2946,7 @@ html {
   text-decoration: none;
   font-size: 16px;
   color: #16293F;
-  opacity: 100%;
+  opacity: 1;
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -2845,7 +2995,7 @@ html {
 .footer-bottom-part__title {
   font-size: 13px;
   color: #16293F;
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .footer-bottom-part__title_thick {
@@ -2859,6 +3009,16 @@ html {
 @media (min-width: 1281px) {
   .message-button {
     left: calc(50% + 512px + 15px);
+  }
+}
+
+@media (max-width: 1230px) {
+  .search-filter-checkbox__label {
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
   }
 }
 
@@ -3046,6 +3206,34 @@ html {
 
   .search-filter {
     margin-bottom: 24px;
+  }
+
+  .search-filter__item {
+    font-size: 16px;
+  }
+
+  .search-filter-checkbox__input {
+    font-size: 16px;
+  }
+
+  .search-filter-checkbox__input::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+
+  .search-filter-checkbox__input::-moz-placeholder {
+    font-size: 16px;
+  }
+
+  .search-filter-checkbox__input:-ms-input-placeholder {
+    font-size: 16px;
+  }
+
+  .search-filter-checkbox__input::-ms-input-placeholder {
+    font-size: 16px;
+  }
+
+  .search-filter-checkbox__input::placeholder {
+    font-size: 16px;
   }
 
   .apartments-cards-part {
@@ -3695,7 +3883,7 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    opacity: 60%;
+    opacity: 0.6;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -3746,7 +3934,7 @@ html {
   }
 
   .link-active {
-    opacity: 100%;
+    opacity: 1;
   }
 
   .bottom-menu-section.burger-menu-open .bottom-menu__burger-span:nth-child(2) {
@@ -3846,16 +4034,28 @@ html {
             justify-content: space-between;
   }
 
+  .search-filter__item-wrap_area {
+    width: 100%;
+  }
+
+  .search-filter__item-wrap_room {
+    width: 100%;
+  }
+
+  .search-filter__item-wrap_square {
+    width: 100%;
+  }
+
+  .search-filter__item-wrap_price {
+    width: 100%;
+  }
+
   .apartments-cards-part {
     margin-bottom: 72px;
   }
 
   .apartments-slider__item {
-    width: 48.8%;
-  }
-
-  .apartments-slider__item_third {
-    display: none;
+    min-width: 48%;
   }
 
   .apartments-slider__img-wrap {
@@ -3883,10 +4083,6 @@ html {
     height: 50px;
   }
 
-  .input-block__block_more {
-    padding: 0 45.7%;
-  }
-
   .input-block__block-button {
     height: 26px;
     width: 26px;
@@ -3895,10 +4091,6 @@ html {
   .input-block__block-button-add {
     height: 10.5px;
     width: 10.5px;
-  }
-
-  .input-block__block_more {
-    padding: 0 135px;
   }
 
   .calculator-part {
@@ -4383,11 +4575,8 @@ html {
   }
 
   .apartments-slider__item {
-    width: 250px;
-  }
-
-  .apartments-slider__item_second {
-    display: none;
+    min-width: 95.2%;
+    margin: 0 12px;
   }
 
   .bank-cards-part__wrap {
@@ -4567,6 +4756,10 @@ html {
   .apartments-slider__button-pointer-right {
     width: 20px;
     height: 20px;
+  }
+
+  .apartments-slider__item {
+    min-width: 92.6%;
   }
 
   .apartments-slider__title {
@@ -4902,12 +5095,12 @@ html {
 
 @media (any-hover: hover) {
   .nav-menu__link:hover {
-    opacity: 100%;
+    opacity: 1;
   }
 
   .icon-box__item:hover {
     cursor: pointer;
-    opacity: 100%;
+    opacity: 1;
   }
 
   .category-menu__link:hover {
@@ -4951,7 +5144,7 @@ html {
   }
 
   .bottom-menu__link:hover {
-    opacity: 100%;
+    opacity: 1;
     cursor: pointer;
   }
 
@@ -4990,9 +5183,12 @@ html {
     color: #FFFFFF;
   }
 
-  .apartments-slider__button:hover {
+  .search-filter__input:hover {
+    border-bottom: 1px solid #16293F;
+  }
+
+  .input-block__block:hover {
     cursor: pointer;
-    opacity: 60%;
   }
 
   .calculator__button:hover {
@@ -5002,7 +5198,7 @@ html {
 
   .bank-cards-part__button:hover {
     cursor: pointer;
-    opacity: 60%;
+    opacity: 0.6;
   }
 
   .description-part-icon-wrap__icon_bookmark:hover {
@@ -5044,7 +5240,6 @@ html {
   }
 
   .icon-part__item:hover {
-    border: 1px solid #293389;
     background-color: #FFFFFF;
     cursor: pointer;
   }
@@ -5058,6 +5253,6 @@ html {
   }
 
   .footer-nav-menu__link:hover {
-    opacity: 60%;
+    opacity: 0.6;
   }
 }
