@@ -1,0 +1,271 @@
+.footer
+    display: flex
+    flex-direction: column
+
+.footer-link-part
+    border-top: 1.5px solid
+    border-image: linear-gradient(to right, rgba(31, 218, 227, .6), rgba(60, 75, 148, .6), rgba(177, 124, 231, .6))
+    border-image-slice: 1
+    &__container
+        min-height: 74px
+        padding: 0 128px
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+.icon-part
+    width: 325px
+    padding-right: 85px
+    display: flex
+    justify-content: space-between
+    &__item
+        width: 35px
+        height: 35px
+        border-radius: 100px
+        border: 1px solid $icon-color
+        background-color: $icon-color
+        transition: all 0.4s ease-in-out
+    &__link
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+    &__link-icon
+        width: 19.7px
+        height: 19.7px
+        fill: none
+    &__link-icon-white
+        fill: $background-color
+        transition: all 0.4s ease-in-out
+    &__link-icon-blue
+        fill: $icon-color
+        transition: all 0.4s ease-in-out
+
+.footer-menu-part
+    border-top: 1.5px solid
+    border-image: linear-gradient(to right, rgba(31, 218, 227, .6), rgba(60, 75, 148, .6), rgba(177, 124, 231, .6))
+    border-image-slice: 1
+    &__container
+        padding: 32px 22.46% 32px 128px
+        display: flex
+        justify-content: space-between
+
+.footer-nav-menu
+    &__title-button
+        display: none
+    &__title
+        margin-bottom: 20px
+        font-size: 20px
+        color: $icon-color
+    &__item
+        margin-bottom: 12px
+        &:last-child
+            margin-bottom: 0
+    &__link
+        text-decoration: none
+        font-size: 16px
+        color: $text-color
+        opacity: 1
+        transition: all 0.4s ease-in-out
+    &__border
+        display: none
+
+.footer-bottom-part
+    border-top: 1.5px solid
+    border-image: linear-gradient(to right, rgba(31, 218, 227, .6), rgba(60, 75, 148, .6), rgba(177, 124, 231, .6))
+    border-image-slice: 1
+    &__container
+        padding: 18px 197px 20px 128px
+        display: flex
+        justify-content: space-between
+    &__ilar-logo-wrap
+        min-width: 140px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__ilar-logo
+        width: 47px
+        height: 13px
+    &__title
+        font-size: 13px
+        color: $text-color
+        opacity: 0.6
+        &_thick
+            font-weight: 700
+            &:hover
+                cursor: pointer
+
+@media (any-hover: hover)
+    .icon-part__item:hover
+        background-color: $background-color
+        cursor: pointer
+    .icon-part__item:hover .icon-part__link-icon-white
+        fill: $icon-color
+    .icon-part__item:hover .icon-part__link-icon-blue
+        fill: $background-color
+    .footer-nav-menu__link:hover
+        opacity: 0.6
+
+
+@media (max-width: 1024px)
+    .footer-link-part
+        &__container
+            min-height: 65px
+            padding: 0 88px
+    .icon-part
+        width: 270px
+        padding-right: 60px
+        &__item
+            width: 32px
+            height: 32px
+        &__link-icon
+            width: 18px
+            height: 18px
+    .footer-menu-part
+        &__container
+            padding: 24px 22.46% 24px 88px
+    .footer-nav-menu
+        &__title
+            margin-bottom: 16px
+            font-size: 18px
+        &__link
+            font-size: 14px
+    .footer-bottom-part
+        &__container
+            padding: 16px 120px 16px 88px
+        &__ilar-logo-wrap
+            min-width: 123px
+        &__ilar-logo
+            width: 39px
+            height: 11px
+        &__title
+            font-size: 12px
+
+
+@media (max-width: 910px)
+    .footer-link-part
+        border-top: 1px solid
+        &__container
+            min-height: 156px
+            padding-top: 16px
+            padding-bottom: 24px
+            flex-direction: column
+            align-items: flex-start
+    .icon-part
+        width: 290px
+        padding-right: 0px
+        &__item
+            width: 43px
+            height: 43px
+        &__link-icon
+            width: 24px
+            height: 24px
+    .footer-menu-part
+        border-top: 1px solid
+        &__container
+            padding: 0
+            margin: 0
+            max-width: 100%
+            flex-direction: column
+    .footer-nav-menu
+        position: relative
+        &__title-button
+            display: block
+            transition: all 0.2s ease-in-out
+        &__title-wrap
+            max-width: 768px
+            min-height: 70px
+            padding: 0 48px
+            margin: 0 auto
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &__title
+            margin: 0
+        &__title-button
+            width: 28px
+            height: 28px
+        &__content
+            max-width: 768px
+            min-height: 0
+            margin: 0 auto
+            padding: 0 48px
+            opacity: 0
+            transition: all 0.2s ease-in-out
+        &__item
+            height: 0
+            margin: 0
+            transition: all 0.15s ease-in-out
+        &__link
+            display: none
+        &__border
+            position: absolute
+            bottom: 0
+            left: 0
+            display: inline
+            width: 100%
+            height: 1px
+            background-image: linear-gradient(to right, rgba(31, 218, 227, .6), rgba(60, 75, 148, .6), rgba(177, 124, 231, .6))
+    .footer-nav-menu.footer-nav-menu-open .footer-nav-menu__content
+        padding-bottom: 14px
+        min-height: 80px
+        opacity: 1
+        transition: all 0.3s ease-in-out
+    .footer-nav-menu.footer-nav-menu-open .footer-nav-menu__item
+        height: 100%
+        margin-bottom: 10px
+    .footer-nav-menu.footer-nav-menu-open .footer-nav-menu__link
+        display: block
+    .footer-nav-menu.footer-nav-menu-open .footer-nav-menu__title-button
+        transform: rotate(180deg)
+    .footer-bottom-part 
+        &__container
+            flex-direction: column
+            padding-top: 24px
+            padding-bottom: 26px
+        &__ilar-logo-wrap
+            width: 124px
+            margin-bottom: 12px
+        &__title
+            margin-bottom: 12px
+            &_logo
+                margin-bottom: 0
+    @media (any-hover: hover)
+        .footer-nav-menu__title-wrap:hover
+            cursor: pointer
+
+
+
+@media (max-width: 500px)
+    .footer-link-part
+        &__container
+            min-height: 151px
+            padding-top: 16px
+            padding-bottom: 24px
+    .icon-part
+        width: 250px
+        &__item
+            width: 37px
+            height: 37px
+        &__link-icon
+            width: 21px
+            height: 21px
+    .footer-menu-part
+        border-top: 1px solid
+        &__container
+            padding: 0
+            margin: 0
+            max-width: 100%
+    .footer-nav-menu
+        &__title-wrap
+            max-width: 360px
+            padding: 0 16px
+        &__content
+            max-width: 360px
+            padding: 0 16px
+            margin: 0 auto
+    .footer-bottom-part
+        &__container
+            padding-top: 24px
+            padding-bottom: 32px

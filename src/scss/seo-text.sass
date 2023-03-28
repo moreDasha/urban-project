@@ -1,0 +1,80 @@
+.seo-text-part
+    margin-bottom: 112px
+    display: flex
+    flex-direction: column
+    &__title
+        margin-bottom: 24px
+        font-size: 24px
+        color: $grey-color
+        opacity: 0.8
+    &__text-wrap
+        position: relative
+        margin-bottom: 8px
+        min-height: 48px
+        width: 100%
+    &__text
+        height: 48px
+        overflow: hidden
+        font-size: 13px
+        line-height: 15.73px
+        color: $grey-color
+        opacity: 0.8
+    &__text-mask
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        background: linear-gradient(to top, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0))
+        transition: all 0.2s ease-in-out
+    &__button
+        font-size: 13px
+        color: #293389
+        transition: all 0.3s ease-in-out
+
+.seo-text-part__text-wrap.seo-text-open .seo-text-part__text
+    height: 100%
+.seo-text-part__text-wrap.seo-text-open .seo-text-part__text-mask
+    opacity: 0
+    transition: all 0.5s ease-in-out
+
+@media (any-hover: hover)
+    .seo-text-part__button:hover
+        cursor: pointer
+        color: #652989
+
+@media (max-width: 1024px)
+    .seo-text-part
+        margin-bottom: 96px
+        &__title
+            margin-bottom: 22px
+            font-size: 22px
+        &__text
+            height: 45px
+            font-size: 12px
+            line-height: 14.52px
+        &__button
+            font-size: 12px
+
+
+@media (max-width: 910px)
+    .seo-text-part
+        margin-bottom: 72px
+        &__title
+            margin-bottom: 19px
+            font-size: 18px
+        &__text
+            height: 35px
+            font-size: 14px
+            line-height: 17px
+        &__button
+            font-size: 14px
+
+
+@media (max-width: 500px)
+    .seo-text-part
+        margin-bottom: 64px
+        &__text
+            height: 50px
+        &__title
+            margin-bottom: 16px

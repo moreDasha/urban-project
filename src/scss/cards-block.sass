@@ -1,0 +1,320 @@
+.cards-part
+    margin-bottom: 88px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.card-item-wrapper
+    width: 48.8%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &_third
+        width: 31.75%
+        justify-content: flex-end
+
+.element-hidden
+    opacity: 0
+    transform: translateY(20%)
+
+.element-show
+    opacity: 1
+    transform: translateY(0)
+    transition: all 1s ease-in-out
+
+.img-card-item
+    position: relative
+    width: 100%
+    margin-bottom: 24px
+    border-radius: 10px 10px 0 0
+    overflow: hidden
+    border-bottom: 1px solid $text-color
+    color: $text-color
+    &_reclame
+        border-bottom: none
+    &__img-wrapper
+        position: relative
+        z-index: 1
+        width: 100%
+        height: 310px
+        overflow: hidden
+        border-radius: 10px 10px 0 0
+        margin-bottom: 12px
+        border-bottom: 4px solid
+        border-image: linear-gradient(to right, rgba(31, 218, 227, 1), rgba(60, 75, 148, 1), rgba(177, 124, 231, 1))
+        border-image-slice: 1
+        &_reclame
+            margin-bottom: 0
+            border-radius: 10px
+            border-bottom: none
+            border-image: none
+            height: 452px
+    &__img
+        width: 100%
+        height: 100%
+        border-radius: 10px 10px 0 0
+        object-fit: cover
+        object-position: center
+        will-change: transform
+        transition: all 0.4s ease-in-out
+    &__img-mask
+        position: absolute
+        z-index: 2
+        width: 100%
+        height: 41%
+        border-radius: 10px 10px 0 0
+        background: linear-gradient(to bottom, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0))
+        top: 0
+        right: 0
+        &_dark
+            background: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, 0))
+    &__video-button
+        position: absolute
+        z-index: 5
+        top: 111.5px
+        left:50%
+        transform: translate(-50%, 0)
+        width: 67.67px
+        height: 87px
+    &__title
+        width: 95%
+        padding-left: 16px
+        margin-bottom: min(39px, 10%)
+        font-size: calc(18px + 4 * (100vw / 1280))
+        font-weight: 700
+        &_third
+            font-size: calc(14px + 4 * (100vw / 1280))
+            margin-bottom: min(49px, 20%)
+    &__title-link
+        text-decoration: none
+        color: $grey-color
+    &__button-box
+        padding-left: 16px
+
+.card-item-sign
+    position: absolute
+    z-index: 4
+    height: 25px
+    padding: 4px 8px
+    border: 1px solid $text-color
+    border-radius: 100px
+    top: 16px
+    left: 16px
+    font-size: 14px
+    color: $text-color
+    &_white
+        border: 1px solid $background-color
+        color: $background-color
+
+.card-item-button-box
+    display: flex
+    align-items: center
+    font-size: 16px
+    opacity: 0.6
+    margin-bottom: 8px
+    z-index: 2
+    &_white
+        color: $background-color
+    &__button
+        width: 29px
+        height: 29px
+        stroke-width: 1.82
+        stroke: $text-color
+        fill: none
+        stroke-linecap: round
+        stroke-linejoin: round
+        &_down
+            margin-right: 11.63px
+        &_up
+            margin-right: 32px
+        &_white
+            stroke: $background-color
+        &_message-square
+            width: 17px
+            height: 17px
+            margin-right: 12px
+    &__open-count
+        margin-right: 12px
+
+.card-item
+    align-self: flex-end
+    position: relative
+    width: 100%
+    min-height: 214px
+    padding-top: 73px
+    padding-left: 16px
+    border-radius: 10px
+    margin-bottom: 24px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    color: $text-color
+    &_turquoise-color
+        background-image: linear-gradient(to right, #4EC3BB, #B4E9E3)
+    &_purple-color
+        background-image: linear-gradient(to right, #343D91, #8185C8)
+        color: $background-color
+    &_blue-color
+        background-image: linear-gradient(to right, #74BFE6, #B2DAE9)
+    &_white-color
+        border: 1px solid $text-color
+        background: $background-color
+    &__title
+        width: 90%
+        font-size: calc(14px + 4 * (100vw / 1280))
+        font-weight: 700
+        z-index: 2
+    &__title-link
+        text-decoration: none
+        color: $text-color
+        &_white
+            color: $background-color
+
+.card-item_turquoise-color::before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    min-height: 100%
+    border-radius: 10px
+    background: linear-gradient(to right, #0AB2A7, #4EC3BB, #B4E9E3)
+    opacity: 0
+    transition: all 0.3s ease-in-out
+
+.card-item_purple-color::before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    min-height: 100%
+    border-radius: 10px
+    background: linear-gradient(to right, #1B2686, #555EAF, #8185C8 )
+    opacity: 0
+    transition: all 0.3s ease-in-out
+
+.card-item_blue-color::before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    min-height: 100%
+    border-radius: 10px
+    background: linear-gradient(to right, #4FAADA, #74BFE6, #B2DAE9)
+    opacity: 0
+    transition: all 0.3s ease-in-out
+
+
+@media (any-hover: hover)
+    .img-card-item:hover
+        cursor: pointer
+    .img-card-item:hover .img-card-item__img
+        transform: scale(1.1)
+    .img-card-item:hover .img-card-item__title
+        text-decoration: underline
+    .card-item:hover
+        cursor: pointer
+    .card-item:hover:before
+        opacity: 1
+    .card-item_purple-color:hover:before
+        opacity: 1
+    .card-item:hover .card-item__title
+        text-decoration: underline
+
+
+@media (max-width: 1024px)
+    .cards-part
+        margin-bottom: 72px
+    .img-card-item
+        &__img-wrapper
+            height: 256px
+            &_reclame
+                height: 376px
+        &__title
+            margin-bottom: min(29px, 10%)
+            font-size: calc(16px + 4 * (100vw / 1024))
+            &_third
+                font-size: calc(12px + 4 * (100vw / 1280))
+                margin-bottom: min(39px, 17%)
+        &__video-button
+            top: 90.5px
+            width: 58px
+            height: 75px
+    .card-item-button-box
+        font-size: 14px
+        &__button
+            width: 24px
+            height: 24px
+            &_down
+                margin-right: 8px
+            &_up
+                margin-right: 24px
+            &_message-square
+                width: 14px
+                height: 14px
+                margin-right: 8px
+        &__open-count
+            margin-right: 8px
+    .card-item
+        min-height: 176px
+        padding-top: min(65px, 28%)
+        &__title
+            width: 95%
+            margin-bottom: 10px
+            font-size: calc(12px + 4 * (100vw / 1024))
+
+
+@media (max-width: 910px)
+    .cards-part
+        margin-bottom: 40px
+    .card-item-wrapper
+        width: 100%
+    .img-card-item
+        margin-bottom: 32px
+        &__img-wrapper
+            height: 426px
+            &_reclame
+                height: 328px
+        &__img
+            height: 110%
+        &__img-mask
+            height: 49%
+        &__title
+            margin-bottom: 16px
+            font-size: 20px
+            &_third
+                font-size: 20px
+                margin-bottom: 16px
+        &__video-button
+            top: 148px
+            width: 101px
+            height: 130px
+    .card-item
+        min-height: 124px
+        padding-top: 57px
+        margin-bottom: 32px
+        &__title
+            margin-bottom: 10px
+            font-size: 16px
+
+
+
+@media (max-width: 500px)
+    .cards-part
+        margin-bottom: 32px
+    .img-card-item
+        &__img-wrapper
+            height: 208px
+            &_reclame
+                height: 160px
+        &__title
+            font-size: 18px
+        &__video-button
+            display: none
+    .card-item
+        min-height: 140px
+        &__title
+            margin-bottom: 16px
+            font-size: 14px

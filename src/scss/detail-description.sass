@@ -1,0 +1,73 @@
+.description-part
+    padding: 160px 0 56px
+    display: flex
+    font-size: 14px
+    color: $text-color
+    &__text
+        opacity: 0.8
+        margin-right: 56px
+        span
+            opacity: 0.8
+        &_blue
+            margin-right: 48px
+            opacity: 1
+    &__text-link
+        text-decoration: none
+        color: $icon-color
+    &__info-wrap
+        display: flex
+
+.description-part-icon-wrap
+    margin-right: 48px
+    display: flex
+    align-items: center
+    &__item
+        display: flex
+        align-items: center
+        margin-right: 32px
+        &:last-child
+            margin-right: 0
+    &__link
+        text-decoration: none
+        display: flex
+        align-items: center
+    &__icon
+        width: 18px
+        height: 18px
+        margin-right: 4px
+        fill: none
+        stroke: $text-color
+        stroke-width: 1.5px
+        stroke-linecap: round 
+        stroke-linejoin: round
+        opacity: 0.6
+        &_bookmark
+            margin-right: 0
+    &__count
+        font-size: 13px
+        color: $text-color
+        opacity: 0.6
+
+
+
+@media (any-hover: hover)
+    .description-part-icon-wrap__icon_bookmark:hover
+        cursor: pointer
+        fill: $text-color
+
+@media (max-width: 1024px)
+    .description-part
+        padding: 144px 0 48px
+        font-size: 13px
+
+@media (max-width: 910px)
+    .description-part
+        padding: 82px 0 12px
+    .description-part__icon-wrap
+        display: none
+    .description-part__info-wrap
+        display: none
+
+@media (max-width: 500px)
+    .description-part
+        padding: 74px 0 6px

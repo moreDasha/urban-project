@@ -1,0 +1,180 @@
+.title-blue
+    margin-bottom: 40px
+    font-size: 32px
+    color: $title-blue-color
+    font-weight: 700
+
+.apartment-search-filter
+    margin-bottom: 112px
+    display: flex
+    flex-direction: column
+    &__button
+        margin: 0 auto
+        height: 50px
+        width: 31.83%
+        border: 1px solid $title-blue-color
+        border-radius: 5px
+        background-color: $background-color
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 18px
+        font-weight: 700
+        color: $title-blue-color
+        transition: all 0.3s ease-in-out
+
+.search-filter
+    width: 100%
+    margin-bottom: 32px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    &__item-wrap
+        &_area
+            position: relative
+            width: 22.95%
+        &_room
+            position: relative
+            width: 15%
+        &_square
+            width: 28.42%
+        &_price
+            width: 28.42%
+    &__item
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        font-size: 18px
+    &__input
+        width: 36%
+        border: none
+        outline: none
+        font-size: 18px
+        font-family: "Inter"
+        font-weight: 500
+        &::placeholder
+            font-size: 18px
+            font-family: "Inter"
+            font-weight: 500
+
+.input-block__block-value.chosen
+    opacity: 1
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+
+.search-filter__input::-webkit-outer-spin-button,
+.search-filter__input::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+ 
+.search-filter__input[type=number]
+  -moz-appearance: textfield
+
+.search-filter-checkbox
+    display: none
+    position: absolute
+    z-index: 3
+    top: 77px
+    left: 0
+    padding: 12px 5px 0 10px
+    width: 100%
+    border-radius: 5px
+    border: 1px solid $title-blue-color
+    background-color: $background-color
+    &__item
+        margin-bottom: 12px
+        display: flex
+        align-items: center
+    &__input
+        appearance: none
+        margin-right: 10px
+        width: 15px
+        height: 15px
+        border-radius: 2px
+        border: 1px solid $grey-color
+        opacity: 0.6
+        transition: all .3s ease-in-out
+        &:checked
+            opacity: 1
+            background-color:  $title-blue-color
+    &__label
+        font-size: 18px
+
+.search-filter__item-wrap.input-active .input-block__block
+    border: 1px solid $title-blue-color
+
+.search-filter__item-wrap.input-active .search-filter-checkbox
+    display: block
+
+.search-filter__item-wrap.input-active .input-block__block-button
+    transform: rotate(180deg)
+
+@media (any-hover: hover)
+    .apartment-search-filter__button:hover
+        background-color: $title-blue-color
+        color: $background-color
+    .search-filter__input:hover
+        border-bottom: 1px solid $grey-color
+    .input-block__block:hover
+        cursor: pointer
+
+@media (max-width: 1230px)
+    .search-filter-checkbox
+        &__label
+            font-size: 16px
+            overflow: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
+
+@media (max-width: 1024px)
+    .title-blue
+        margin-bottom: 32px
+        font-size: 30px
+    .apartment-search-filter
+        margin-bottom: 96px
+        &__button
+            height: 48px
+            font-size: 16px
+    .search-filter
+        margin-bottom: 24px
+        &__item
+            font-size: 16px
+    .search-filter-checkbox
+        &__input
+            font-size: 16px
+            &::placeholder
+                font-size: 16px
+
+
+@media (max-width: 910px)
+    .title-blue
+        margin-bottom: 24px
+        font-size: 26px
+    .apartment-search-filter
+        margin-bottom: 72px
+        &__button
+            height: 50px
+            width: 100%
+    .search-filter
+        min-height: 332px
+        margin-bottom: 37px
+        flex-direction: column
+        justify-content: space-between
+        &__item-wrap
+            &_area
+                width: 100%
+            &_room
+                width: 100%
+            &_square
+                width: 100%
+            &_price
+                width: 100%
+
+
+@media (max-width: 500px)
+    .title-blue
+        font-size: 24px
+    .apartment-search-filter
+        margin-bottom: 64px

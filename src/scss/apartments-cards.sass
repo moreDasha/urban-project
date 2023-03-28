@@ -1,0 +1,161 @@
+.apartments-cards-part
+    margin-bottom: 112px
+
+.apartments-slider
+    position: relative
+    width: 100%
+    border-top-right-radius: 10px
+    border-top-left-radius: 10px
+    overflow: hidden
+    &_detail
+        margin-bottom: 32px
+    &__button
+        position: absolute
+        z-index: 3
+        padding: 5px
+        height: 40px
+        width: 40px
+        border: none
+        border-radius: 100%
+        background-color: $background-color
+        &:disabled
+            opacity: 0.6
+        &_left
+            top: 45.78%
+            left: 16px
+        &_right
+            top: 45.78%
+            right: 16px
+    &__button-pointer-left
+        width: 30px
+        height: 30px
+        transform: rotate(90deg)
+    &__button-pointer-right
+        width: 30px
+        height: 30px
+        transform: rotate(-90deg)
+    &__track
+        width: 100%
+        display: flex
+        justify-content: space-between
+        transition: all .3s ease-in-out
+    &__item
+        min-width: 31.75%
+        margin-right: 24px
+        border-bottom: 1px solid rgba(22, 41, 63, 0.8)
+        display: flex
+        flex-direction: column
+        &:hover
+            cursor: pointer
+    &__img-wrap
+        width: 100%
+        height: 325px
+        overflow: hidden
+        border-top-right-radius: 10px
+        border-top-left-radius: 10px
+        margin-bottom: 12px
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+    &__title
+        margin-bottom: 12px
+        font-size: 18px
+        font-weight: 700
+        color: #293389
+    &__price
+        margin-bottom: 33px
+        font-size: 20px
+        font-weight: 700
+        color: #16293F
+    &__adress
+        margin-bottom: 12px
+        font-size: 14px
+        color: #16293F
+        opacity: 0.8
+
+
+@media (max-width: 1024px)
+    .apartments-cards-part
+        margin-bottom: 96px
+    .apartments-slider
+        &_detail
+            margin-bottom: 24px
+        &__img-wrap
+            height: 267px
+        &__img
+            width: 120%
+            height: 110%
+        &__title
+            font-size: 16px
+        &__price
+            margin-bottom: 28px
+            font-size: 18px
+        &__adress
+            font-size: 12px
+
+
+
+@media (max-width: 910px)
+    .apartments-cards-part
+        margin-bottom: 72px
+    .apartments-slider
+        &__item
+            min-width: 48%
+        &__img-wrap
+            height: 328px
+        &__price
+            margin-bottom: 31px
+        &__adress
+            font-size: 13px
+            margin-bottom: 10px
+
+@media (max-width: 600px)
+    .apartments-slider
+        justify-content: center
+        &__button
+            border: 1px solid black
+            &_left
+                left: 3%
+            &_right
+                right: 3%
+        &__item
+            min-width: 95.2%
+            margin: 0 12px
+
+
+@media (max-width: 500px)
+    .apartments-cards-part
+        margin-bottom: 64px
+    .apartments-slider
+        &__img-wrap
+            height: 250px
+        &__button
+            height: 30px
+            width: 30px
+            &_left
+                top: 43%
+                left: 0
+            &_right
+                top: 43%
+                right: 0
+        &__button-pointer-left
+            width: 20px
+            height: 20px
+        &__button-pointer-right
+            width: 20px
+            height: 20px
+        &__item
+            min-width: 92.6%
+        &__title
+            margin-bottom: 8px
+            font-size: 14px
+            line-height: 19.3px
+        &__price
+            margin-bottom: 8px
+            font-size: 16px
+            line-height: 19.3px
+        &__adress
+            margin-bottom: 8px
+            font-size: 12px

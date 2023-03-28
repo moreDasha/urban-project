@@ -1,0 +1,415 @@
+.detail-main-text-part
+    margin-bottom: 80px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.about-article-part
+    &__description
+        margin-bottom: 56px
+        font-size: 22px
+        line-height: 26.63px
+        color: $text-color
+    &__statistics-img
+        width: 100%
+        margin-bottom: 56px
+    &__footnote
+        padding-left: 24px
+        border-left: 2px solid $icon-color
+        margin-bottom: 56px
+        font-family: "NotoSerif"
+        font-style: normal
+        font-size: 18px
+        line-height: 24.52px
+
+.article-title
+    width: 100%
+    margin-bottom: 32px
+    font-size: 26px
+    font-weight: 700
+    color: $title-blue-color
+    text-align: left
+    &_sub
+        font-size: 22px
+        font-weight: 500
+    &_list
+        font-size: 20px
+        font-weight: 500
+
+.article-nav-menu
+    margin-bottom: 56px
+    &__item
+        margin-bottom: 16px
+        &:last-child
+            margin-bottom: 0
+    &__link
+        font-size: 20px
+        line-height: 24.2px
+        color: $icon-color
+
+.article-main-text
+    margin-bottom: 16px
+    font-family: "NotoSerif"
+    font-style: normal
+    font-size: 18px
+    line-height: 24.52px
+    color: $text-color
+    span
+        font-weight: bold
+    &_last
+        margin-bottom: 56px
+
+.article-text-italics
+    margin-bottom: 16px
+    font-family: "NotoSerif"
+    font-style: italic
+    font-size: 18px
+    line-height: 24.51px
+    color: $text-color
+    &_last
+        margin-bottom: 56px
+
+.specialist-comment-blue
+    width: 100%
+    padding: 32px 0
+    margin-bottom: 56px
+    border-radius: 10px
+    background-color: #D8EAFC
+    display: flex
+    justify-content: center
+    &_last
+        margin-bottom: 0
+    &__specialist
+        width: 100%
+        margin-bottom: 32px
+    &__description-wrap
+        width: 85%
+    &__comment
+        font-size: 22px
+        line-height: 26.63px
+        color: $text-color
+
+.specialist-comment-white-wrap
+    position: relative
+    width: 100%
+    height: 272px
+    border-radius: 10px
+    margin-bottom: 56px
+    background: linear-gradient(to right, rgba(31, 218, 227, 1), rgba(60, 75, 148, 1), rgba(177, 124, 231, 1))
+.specialist-comment-white
+    position: absolute
+    z-index: 2
+    top: 1px
+    left: 1px
+    width: 99.8%
+    height: 270px
+    border-radius: 10px
+    background-color: $background-color
+    display: flex
+    justify-content: center
+    align-items: center
+    &__comment
+        margin-bottom: 32px
+        font-family: "NotoSerif"
+        font-style: normal
+        font-size: 22px
+        line-height: 29.96px
+        color: $text-color
+    &__specialist
+        width: 100%
+    &__description-wrap
+        width: 85%
+
+.detail-main-img
+    width: 100%
+    &__sign
+        padding: 12px 0
+        border-bottom: 1px solid $text-color
+        margin-bottom: 56px
+        font-size: 16px
+        line-height: 19.36px
+        color: $text-color
+        opacity: 0.8
+
+.article-main-text-list
+    width: 100%
+    padding-left: 32px
+    margin-bottom: 16px
+    font-family: "NotoSerif"
+    font-style: normal
+    font-size: 18px
+    line-height: 24.52px
+    color: $text-color
+    &_circle
+        margin-bottom: 0
+        list-style-type: disc
+        color: $icon-color
+    &_last
+        margin-bottom: 56px
+    &__items
+        padding-left: 4px
+        margin-bottom: 16px
+        &:last-child
+            margin-bottom: 0
+        span
+            color: $text-color
+
+.detail-main-video
+    width: 100%
+    margin-bottom: 56px
+    &__video
+        width: 100%
+        height: 405px
+
+.detail-main-link
+    width: 100%
+    border-radius: 10px
+    border: 1px solid $text-color
+    margin-bottom: 56px
+    display: flex
+    overflow: hidden
+    text-decoration: none
+    &__img-wrap
+        position: relative
+        z-index: 3
+        width: 23%
+        border-top-left-radius: 10px
+        border-bottom-left-radius: 10px
+        margin-right: 16px
+        overflow: hidden
+    &__img
+        display: block
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+        will-change: transform
+        transition: all 0.3s ease-in-out
+    &__discription-wrap
+        padding: 24px 15px 40px 0
+    &__subtitle
+        margin-bottom: min(20px, 4.5%)
+        font-size: 18px
+        font-weight: 700
+        color: $title-blue-color
+    &__title
+        font-size: calc(15px + 5 * (100vw / 1280))
+        font-weight: 700
+        color: $text-color
+
+
+@media (any-hover: hover)
+    .detail-main-link:hover .detail-main-link__img
+        transform: scale(1.06)
+    .detail-main-link:hover .detail-main-link__title
+        text-decoration: underline
+
+@media (max-width: 1024px)
+    .detail-main-text-part
+        margin-bottom: 72px
+    .about-article-part
+        &__description
+            margin-bottom: 48px
+            font-size: 20px
+            line-height: 24.2px
+        &__statistics-img
+            margin-bottom: 48px
+        &__footnote
+            margin-bottom: 48px
+            font-size: 16px
+            line-height: 21.79px
+    .article-title
+        margin-bottom: 24px
+        font-size: 24px
+        &_sub
+            font-size: 20px
+        &_list
+            margin-bottom: 12px
+            font-size: 18px
+    .article-nav-menu
+        margin-bottom: 48px
+        &__item
+            margin-bottom: 12px
+        &__link
+            font-size: 18px
+            line-height: 21.78px
+    .article-main-text
+        margin-bottom: 12px
+        font-size: 16px
+        line-height: 21.79px
+        &_last
+            margin-bottom: 48px
+    .article-text-italics
+        margin-bottom: 12px
+        font-size: 16px
+        line-height: 21.79px
+        &_last
+            margin-bottom: 48px
+    .specialist-comment-blue
+        padding: 48px 0
+        margin-bottom: 48px
+        &_last
+            margin-bottom: 0
+        &__specialist
+            margin-bottom: 24px
+        &__comment
+            font-size: 20px
+            line-height: 24.2px
+    .specialist-comment-white-wrap
+        height: 245px
+        margin-bottom: 48px
+    .specialist-comment-white
+        width: 99.73%
+        height: 243px
+        padding: 0 16px
+        &__comment
+            margin-bottom: 24px
+            font-size: 20px
+            line-height: 27.24px
+    .detail-main-img
+        &__sign
+            margin-bottom: 48px
+            font-size: 14px
+            line-height: 16.94px
+    .article-main-text-list
+        margin-bottom: 12px
+        font-size: 16px
+        line-height: 21.79px
+        &_circle
+            margin-bottom: 0
+        &_last
+            margin-bottom: 48px
+        &__items
+            margin-bottom: 12px
+    .detail-main-video
+        margin-bottom: 48px
+        &__video
+            height: 380px
+    .detail-main-link
+        margin-bottom: 48px
+        &__discription-wrap
+            padding: 16px 15px 45px 0
+        &__subtitle
+            margin-bottom: 18px
+            font-size: 16px
+        &__title
+            font-size: 18px
+
+@media (max-width: 910px)
+    .about-article-part
+        margin-bottom: 64px
+        &__footnote
+            padding-left: 12px
+            margin-bottom: 48px
+            font-size: 14px
+            line-height: 19.07px
+    .article-title
+        font-size: 22px
+        &_sub
+            margin-bottom: 12px
+    .article-nav-menu
+        &__link
+            font-size: 16px
+            line-height: 19.36px
+    .article-main-text
+        font-size: 14px
+        line-height: 19.07px
+    .article-text-italics
+        font-size: 14px
+        line-height: 19.07px
+    .specialist-comment-blue
+        padding: 32px 16px
+        &_last
+            margin-bottom: 0
+        &__specialist
+            margin-bottom: 32px
+    .specialist-comment-white-wrap
+        height: 190px
+    .specialist-comment-white
+        width: 99.66%
+        height: 188px
+        &__comment
+            margin-bottom: 32px
+            font-size: 18px
+            line-height: 24.52px
+    .article-main-text-list
+        font-size: 14px
+        line-height: 19.07px
+    .detail-main-link
+        &__discription-wrap
+            padding: 16px 15px 40px 0
+
+@media (max-width: 650px)
+    .specialist-comment-white
+        width: 99.57%
+        &__comment
+            margin-bottom: 23px
+            font-size: 16px
+            line-height: 21.79px
+
+@media (max-width: 500px)
+    .about-article-part
+        margin-bottom: 56px
+        &__description
+            margin-bottom: 40px
+            font-size: 18px
+            line-height: 21.78px
+        &__statistics-img
+            margin-bottom: 40px
+        &__footnote
+            margin-bottom: 56px
+    .article-title
+        margin-bottom: 32px
+        font-size: 20px
+        &_sub
+            font-size: 18px
+        &_list
+            font-size: 16px
+    .article-nav-menu
+        margin-bottom: 40px
+    .article-main-text
+        &_last
+            margin-bottom: 40px
+    .article-text-italics
+        &_last
+            margin-bottom: 40px
+    .specialist-comment-blue
+        padding: 32px 16px
+        margin-bottom: 40px
+        &_last
+            margin-bottom: 0
+        &__comment
+            font-size: 18px
+            line-height: 21.78px
+    .specialist-comment-white-wrap
+        height: 235px
+        margin-bottom: 40px
+    .specialist-comment-white
+        width: 99.37%
+        height: 233px
+        padding: 0 12px
+    .detail-main-img
+        &__sign
+            margin-bottom: 40px
+            font-size: 13px
+            line-height: 15.73px
+    .article-main-text-list
+        padding-left: 24px
+        &_last
+            margin-bottom: 40px
+    .detail-main-video
+        margin-bottom: 40px
+        &__video
+            height: 185px
+    .detail-main-link
+        margin-bottom: 40px
+        &__img-wrap
+            margin-right: 12px
+        &__discription-wrap
+            width: 70%
+            padding: 12px 10px 24px 0
+        &__subtitle
+            margin-bottom: 12px
+            font-size: 14px
+        &__title
+            font-size: 16px

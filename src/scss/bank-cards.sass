@@ -1,0 +1,192 @@
+.bank-cards-part
+    margin-bottom: 112px
+    display: flex
+    flex-direction: column
+    &__wrap
+        width: 100%
+        display: flex
+        justify-content: space-between
+    &__button
+        display: none
+
+.bank-cards-item-border
+    position: relative
+    width: 31.75%
+    height: 412px
+    border-radius: 12px
+    background: linear-gradient(to right, rgba(31, 218, 227, 1), rgba(60, 75, 148, 1), rgba(177, 124, 231, 1))
+
+.bank-cards-item
+    position: absolute
+    z-index: 2
+    top: 1px
+    left: 1px
+    width: 99.38%
+    height: 410px
+    padding: 23px 16px 41px 16px
+    border-radius: 12px
+    display: flex
+    flex-direction: column
+    background-color: $background-color
+    color: black
+    font-size: 18px
+    &:hover
+        cursor: pointer
+    &__emblem
+        margin-bottom: 48px
+        height: 28.5px
+        &_sber
+            width: 172.5px
+        &_alfa
+            height: 25px
+        &_vtb
+            width: 76.7px
+    &__percent
+        margin-bottom: 24px
+        font-size: 32px
+        font-weight: 700
+    &__name
+        margin-bottom: 48px
+        opacity: 0.8
+    &__price
+        margin-bottom: 40px
+        font-weight: 700
+    &__term
+        margin-bottom: 16px
+    &__description
+        opacity: 0.6
+
+@media (max-width: 1110px)
+    .bank-cards-item
+        font-size: 15px
+
+
+@media (max-width: 1024px)
+    .bank-cards-part
+        margin-bottom: 96px
+    .bank-cards-item-border
+            height: 340px
+            border-radius: 10px
+    .bank-cards-item
+            height: 338px
+            padding: 24px 16px 24px 16px
+            border-radius: 10px
+            font-size: 16px
+            line-height: 14.46px
+            &__emblem
+                margin-bottom: 45px
+                height: 23px
+                &_sber
+                    width: 136px
+                &_alfa
+                    height: 21.5px
+                &_vtb
+                    width: 63px
+            &__percent
+                margin-bottom: 8px
+                font-size: 30px
+                line-height: 27.12px
+            &__name
+                margin-bottom: 40px
+            &__price
+                margin-bottom: 32px
+            &__description
+                line-height: 19.36px
+
+
+@media (max-width: 910px)
+    .bank-cards-part
+        margin-bottom: 72px
+    .bank-cards-item-border
+        width: 48.8%
+        &_third
+            display: none
+    .bank-cards-item
+        width: 99.2%
+        &__emblem
+            &_alfa
+                height: 18.6px
+
+@media (max-width: 600px)
+    .bank-cards-part
+        &__wrap
+            position: relative
+            justify-content: center
+        &__button
+            display: block
+            position: absolute
+            z-index: 5
+            height: 40px
+            width: 40px
+            border-radius: 100px
+            border: 1px solid black
+            background-color: $background-color
+            display: flex
+            justify-content: center
+            align-items: center
+            transition: all 0.3s ease-in-out
+            &_left
+                top: 45%
+                left: 3%
+            &_right
+                top: 45%
+                right: 3%
+        &__button-pointer-left
+            width: 30px
+            height: 30px
+            transform: rotate(90deg)
+        &__button-pointer-right
+            width: 30px
+            height: 30px
+            transform: rotate(-90deg)
+    .bank-cards-item-border
+        width: 250px
+        &_second
+            display: none
+    .bank-cards-item
+        width: 248px
+
+@media (any-hover: hover)
+    .bank-cards-part__button:hover
+        cursor: pointer
+        opacity: 0.6
+
+
+@media (max-width: 500px)
+    .bank-cards-part
+        margin-bottom:64px
+        &__button
+            width: 30px
+            height: 30px
+            &_left
+                left: 0
+            &_right
+                right: 0
+        &__button-pointer-left
+            width: 20px
+            height: 20px
+        &__button-pointer-right
+            width: 20px
+            height: 20px
+    .bank-cards-item-border
+            height: 258px
+    .bank-cards-item
+            height: 256px
+            padding: 16px 8px 12px 8px
+            font-size: 14px
+            line-height: 12.66px
+            &__emblem
+                margin-bottom: 28px
+                height: 18px
+                &_sber
+                    width: 106px
+            &__percent
+                font-size: 25px
+                line-height: 22.6px
+            &__name
+                margin-bottom: 24px
+            &__price
+                margin-bottom: 24px
+            &__description
+                line-height: 16.94px
+

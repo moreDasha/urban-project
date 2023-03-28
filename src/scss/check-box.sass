@@ -1,0 +1,91 @@
+.check-box-part
+    margin-bottom: 112px
+    &__wrap
+        width: 325px
+        padding: 32px 30px 48px 30px
+        border: 1px solid rgba(22, 41, 63, 0.2)
+    &__title
+        padding-bottom: 17px
+        border-bottom: 1px solid rgba(22, 41, 63, 0.1)
+        font-size: 20px
+        font-weight: 700
+    &__radiobuttons
+        padding: 27px 0
+        border-bottom: 1px solid rgba(22, 41, 63, 0.1)
+        display: flex
+        flex-direction: column
+    &__choice
+        margin-bottom: 23px
+        display: flex
+        align-items: center
+        font-size: 16px
+        color: $text-color
+        &:last-child
+            margin-bottom: 0
+    &__value
+        opacity: 0.8
+    &__input
+        margin-right: 15px
+        appearance: none
+        width: 15px
+        height: 15px
+        border-radius: 100%
+        border: 1px solid rgba(22, 41, 63, 0.8)
+        transition: all 0.3s ease-in-out
+        &:checked
+            border: 5px solid $text-color
+    &__button-wrap
+        padding-top: 15px
+        margin-bottom: 37px
+    &__button
+        width: 87px
+        height: 30px
+        border: 1px solid $text-color
+        background-color: $text-color
+        color: $background-color
+        font-size: 15px
+        font-weight: 700
+        transition: all 0.3s ease-in-out
+        &:active
+            font-size: 12px
+    &__view-result
+        display: flex
+        justify-content: center
+        opacity: 0.8
+        font-size: 14px
+        color: $text-color
+        text-align: center
+
+
+
+@media (any-hover: hover)
+    .check-box-part__button:hover
+        background-color: $background-color
+        color: $text-color
+    .check-box-part__input:hover
+        cursor: pointer
+
+
+@media (max-width: 1024px)
+    .check-box-part
+        margin-bottom: 96px
+        &__wrap
+            width: 290px
+        &__title
+            font-size: 18px
+
+
+@media (max-width: 910px)
+    .check-box-part
+        margin-bottom: 72px
+        &__wrap
+            width: 328px
+
+
+@media (max-width: 500px)
+    .check-box-part
+        margin-bottom: 64px
+        &__wrap
+            width: 100%
+        &__choice
+            font-size: 14px
