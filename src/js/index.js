@@ -863,13 +863,16 @@ const stopScroll =() => {
         scrollPosition = window.scrollY;
         document.body.style.cssText = `
         overflow: hidden;
+        position: fixed;
+        top: -${scrollPosition}px;
+        left: 0;
         height: 100vh;
         width: 100vw;
         `;
     };
 const startScroll = () => {
     document.body.style.cssText = '';
-    window.scroll({top: scrollPosition})
+    window.scroll({top: scrollPosition});
 };
 
 //бургер-меню
